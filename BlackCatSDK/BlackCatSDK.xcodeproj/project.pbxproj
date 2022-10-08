@@ -11,6 +11,14 @@
 		8EC953C028EB25DA00E239CC /* BlackCatSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC953BF28EB25DA00E239CC /* BlackCatSDKTests.swift */; };
 		8EC953C128EB25DA00E239CC /* BlackCatSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EC953B328EB25DA00E239CC /* BlackCatSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8EC953CB28EB25E500E239CC /* BlackCatSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */; };
+		B1D3362D28F1C92F00826636 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3362C28F1C92F00826636 /* ReusableCell.swift */; };
+		B1D3362F28F1C95500826636 /* UICollectionView+ReusableKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3362E28F1C95500826636 /* UICollectionView+ReusableKit.swift */; };
+		B1D3363128F1C97700826636 /* UITableView+ReusableKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3363028F1C97700826636 /* UITableView+ReusableKit.swift */; };
+		B1D3363328F1C98C00826636 /* UICollectionView+RxReusableKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3363228F1C98C00826636 /* UICollectionView+RxReusableKit.swift */; };
+		B1D3363528F1C9AC00826636 /* UITableView+RxReusableKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3363428F1C9AC00826636 /* UITableView+RxReusableKit.swift */; };
+		B1D3363B28F1CA7100826636 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B1D3363A28F1CA7100826636 /* RxCocoa */; };
+		B1D3363D28F1CA7100826636 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = B1D3363C28F1CA7100826636 /* RxRelay */; };
+		B1D3363F28F1CA7100826636 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B1D3363E28F1CA7100826636 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +37,11 @@
 		8EC953BA28EB25DA00E239CC /* BlackCatSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackCatSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC953BF28EB25DA00E239CC /* BlackCatSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCatSDKTests.swift; sourceTree = "<group>"; };
 		8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCatSDK.swift; sourceTree = "<group>"; };
+		B1D3362C28F1C92F00826636 /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
+		B1D3362E28F1C95500826636 /* UICollectionView+ReusableKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReusableKit.swift"; sourceTree = "<group>"; };
+		B1D3363028F1C97700826636 /* UITableView+ReusableKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ReusableKit.swift"; sourceTree = "<group>"; };
+		B1D3363228F1C98C00826636 /* UICollectionView+RxReusableKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RxReusableKit.swift"; sourceTree = "<group>"; };
+		B1D3363428F1C9AC00826636 /* UITableView+RxReusableKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RxReusableKit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1D3363F28F1CA7100826636 /* RxSwift in Frameworks */,
+				B1D3363D28F1CA7100826636 /* RxRelay in Frameworks */,
+				B1D3363B28F1CA7100826636 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +87,7 @@
 		8EC953B228EB25DA00E239CC /* BlackCatSDK */ = {
 			isa = PBXGroup;
 			children = (
+				B1D3362A28F1C8DA00826636 /* ThirdParty */,
 				8EC953B328EB25DA00E239CC /* BlackCatSDK.h */,
 				8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */,
 			);
@@ -83,6 +100,26 @@
 				8EC953BF28EB25DA00E239CC /* BlackCatSDKTests.swift */,
 			);
 			path = BlackCatSDKTests;
+			sourceTree = "<group>";
+		};
+		B1D3362A28F1C8DA00826636 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				B1D3362B28F1C8EA00826636 /* ReusableKit */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		B1D3362B28F1C8EA00826636 /* ReusableKit */ = {
+			isa = PBXGroup;
+			children = (
+				B1D3362C28F1C92F00826636 /* ReusableCell.swift */,
+				B1D3362E28F1C95500826636 /* UICollectionView+ReusableKit.swift */,
+				B1D3363028F1C97700826636 /* UITableView+ReusableKit.swift */,
+				B1D3363228F1C98C00826636 /* UICollectionView+RxReusableKit.swift */,
+				B1D3363428F1C9AC00826636 /* UITableView+RxReusableKit.swift */,
+			);
+			path = ReusableKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,6 +150,11 @@
 			dependencies = (
 			);
 			name = BlackCatSDK;
+			packageProductDependencies = (
+				B1D3363A28F1CA7100826636 /* RxCocoa */,
+				B1D3363C28F1CA7100826636 /* RxRelay */,
+				B1D3363E28F1CA7100826636 /* RxSwift */,
+			);
 			productName = BlackCatSDK;
 			productReference = 8EC953B028EB25DA00E239CC /* BlackCatSDK.framework */;
 			productType = "com.apple.product-type.framework";
@@ -162,6 +204,9 @@
 				Base,
 			);
 			mainGroup = 8EC953A628EB25DA00E239CC;
+			packageReferences = (
+				B1D3363928F1CA7100826636 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 8EC953B128EB25DA00E239CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,7 +239,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1D3363328F1C98C00826636 /* UICollectionView+RxReusableKit.swift in Sources */,
+				B1D3362F28F1C95500826636 /* UICollectionView+ReusableKit.swift in Sources */,
+				B1D3362D28F1C92F00826636 /* ReusableCell.swift in Sources */,
+				B1D3363528F1C9AC00826636 /* UITableView+RxReusableKit.swift in Sources */,
 				8EC953CB28EB25E500E239CC /* BlackCatSDK.swift in Sources */,
+				B1D3363128F1C97700826636 /* UITableView+ReusableKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -325,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -349,6 +399,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,6 +427,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,6 +506,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B1D3363928F1CA7100826636 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B1D3363A28F1CA7100826636 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1D3363928F1CA7100826636 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		B1D3363C28F1CA7100826636 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1D3363928F1CA7100826636 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		B1D3363E28F1CA7100826636 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1D3363928F1CA7100826636 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8EC953A728EB25DA00E239CC /* Project object */;
 }
