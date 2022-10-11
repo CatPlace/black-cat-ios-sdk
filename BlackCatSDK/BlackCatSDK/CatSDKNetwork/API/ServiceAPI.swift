@@ -9,7 +9,7 @@ import Foundation
 
 import Moya
 
-public protocol ServiceAPI: TargetType {
+protocol ServiceAPI: TargetType {
     associatedtype Response: Decodable
 
     // TODO: - baseURL, headers 등 공통으로 쓸 부분은 차후에 extension으로 빼겠습니다.

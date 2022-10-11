@@ -7,4 +7,4 @@
 
 import Foundation
 
-public enum DTO { }
+enum DTO { }

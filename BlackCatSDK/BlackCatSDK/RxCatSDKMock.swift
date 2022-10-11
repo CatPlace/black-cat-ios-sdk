@@ -9,7 +9,7 @@ import Foundation
 
 import RxSwift
 
-public class RxCatSDK {
+public class RxCatSDKMock {
     private init() { }
 
     private static let networkService = NetworkService()

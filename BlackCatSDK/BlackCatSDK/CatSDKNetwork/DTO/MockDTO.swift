@@ -8,7 +8,7 @@
 import Foundation
 
 extension DTO {
-    public struct Mock: Decodable {
+    struct Mock: Decodable {
         public let postId: Int
         public let id: Int
         public let name: String
