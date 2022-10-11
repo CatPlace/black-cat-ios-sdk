@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		78B00B4428F41E2600A9915D /* BCPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B00B4328F41E2600A9915D /* BCPageControl.swift */; };
-		78B00B4728F41E3800A9915D /* BasePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B00B4628F41E3800A9915D /* BasePageControl.swift */; };
-		78B00B4928F41E4500A9915D /* PageControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B00B4828F41E4500A9915D /* PageControllable.swift */; };
-		78B00B4B28F41E5200A9915D /* PageControlLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B00B4A28F41E5200A9915D /* PageControlLayer.swift */; };
+		78B00B5528F5611700A9915D /* CatPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B00B5028F5611700A9915D /* CatPageControl.swift */; };
+		78B00B5628F5611700A9915D /* PageControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B00B5228F5611700A9915D /* PageControllable.swift */; };
+		78B00B5728F5611700A9915D /* BasePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B00B5328F5611700A9915D /* BasePageControl.swift */; };
+		78B00B5828F5611700A9915D /* PageControlLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B00B5428F5611700A9915D /* PageControlLayer.swift */; };
 		8EC953BB28EB25DA00E239CC /* BlackCatSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC953B028EB25DA00E239CC /* BlackCatSDK.framework */; };
 		8EC953C028EB25DA00E239CC /* BlackCatSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC953BF28EB25DA00E239CC /* BlackCatSDKTests.swift */; };
 		8EC953C128EB25DA00E239CC /* BlackCatSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EC953B328EB25DA00E239CC /* BlackCatSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,10 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		78B00B4328F41E2600A9915D /* BCPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BCPageControl.swift; path = ../../BCPageControl.swift; sourceTree = "<group>"; };
-		78B00B4628F41E3800A9915D /* BasePageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageControl.swift; sourceTree = "<group>"; };
-		78B00B4828F41E4500A9915D /* PageControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControllable.swift; sourceTree = "<group>"; };
-		78B00B4A28F41E5200A9915D /* PageControlLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlLayer.swift; sourceTree = "<group>"; };
+		78B00B5028F5611700A9915D /* CatPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatPageControl.swift; sourceTree = "<group>"; };
+		78B00B5228F5611700A9915D /* PageControllable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControllable.swift; sourceTree = "<group>"; };
+		78B00B5328F5611700A9915D /* BasePageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePageControl.swift; sourceTree = "<group>"; };
+		78B00B5428F5611700A9915D /* PageControlLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControlLayer.swift; sourceTree = "<group>"; };
 		8EC953B028EB25DA00E239CC /* BlackCatSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlackCatSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC953B328EB25DA00E239CC /* BlackCatSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlackCatSDK.h; sourceTree = "<group>"; };
 		8EC953BA28EB25DA00E239CC /* BlackCatSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackCatSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,22 +74,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		78B00B2A28F41DF500A9915D /* BCPageControl */ = {
+		78B00B4F28F5611700A9915D /* CatPageControl */ = {
 			isa = PBXGroup;
 			children = (
-				78B00B4528F41E2C00A9915D /* Core */,
-				78B00B4328F41E2600A9915D /* BCPageControl.swift */,
+				78B00B5128F5611700A9915D /* Core */,
+				78B00B5028F5611700A9915D /* CatPageControl.swift */,
 			);
-			name = BCPageControl;
-			path = "../../../../black-cat-ios/BlackCat/Magazine/Commons/BCPageControl";
+			path = CatPageControl;
 			sourceTree = "<group>";
 		};
-		78B00B4528F41E2C00A9915D /* Core */ = {
+		78B00B5128F5611700A9915D /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				78B00B4628F41E3800A9915D /* BasePageControl.swift */,
-				78B00B4828F41E4500A9915D /* PageControllable.swift */,
-				78B00B4A28F41E5200A9915D /* PageControlLayer.swift */,
+				78B00B5228F5611700A9915D /* PageControllable.swift */,
+				78B00B5328F5611700A9915D /* BasePageControl.swift */,
+				78B00B5428F5611700A9915D /* PageControlLayer.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -133,7 +132,7 @@
 		B1D3362A28F1C8DA00826636 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				78B00B2A28F41DF500A9915D /* BCPageControl */,
+				78B00B4F28F5611700A9915D /* CatPageControl */,
 				B1D3362B28F1C8EA00826636 /* ReusableKit */,
 			);
 			path = ThirdParty;
@@ -268,16 +267,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78B00B4B28F41E5200A9915D /* PageControlLayer.swift in Sources */,
+				78B00B5828F5611700A9915D /* PageControlLayer.swift in Sources */,
 				B1D3363328F1C98C00826636 /* UICollectionView+RxReusableKit.swift in Sources */,
-				78B00B4728F41E3800A9915D /* BasePageControl.swift in Sources */,
+				78B00B5528F5611700A9915D /* CatPageControl.swift in Sources */,
 				B1D3362F28F1C95500826636 /* UICollectionView+ReusableKit.swift in Sources */,
 				B1D3362D28F1C92F00826636 /* ReusableCell.swift in Sources */,
 				B1D3363528F1C9AC00826636 /* UITableView+RxReusableKit.swift in Sources */,
+				78B00B5728F5611700A9915D /* BasePageControl.swift in Sources */,
 				8EC953CB28EB25E500E239CC /* BlackCatSDK.swift in Sources */,
 				B1D3363128F1C97700826636 /* UITableView+ReusableKit.swift in Sources */,
-				78B00B4428F41E2600A9915D /* BCPageControl.swift in Sources */,
-				78B00B4928F41E4500A9915D /* PageControllable.swift in Sources */,
+				78B00B5628F5611700A9915D /* PageControllable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
