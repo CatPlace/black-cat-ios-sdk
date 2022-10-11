@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E366B1628F5282D00D13BB2 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8E366B1528F5282D00D13BB2 /* RxCocoa */; };
+		8E366B1828F5282D00D13BB2 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 8E366B1728F5282D00D13BB2 /* RxRelay */; };
+		8E366B1A28F5282D00D13BB2 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8E366B1928F5282D00D13BB2 /* RxSwift */; };
+		8E49917128F5206F00742533 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 8E49917028F5206F00742533 /* Moya */; };
+		8E49917328F5206F00742533 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 8E49917228F5206F00742533 /* ReactiveMoya */; };
+		8E49917528F5206F00742533 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 8E49917428F5206F00742533 /* RxMoya */; };
 		78B00B4428F41E2600A9915D /* BCPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B00B4328F41E2600A9915D /* BCPageControl.swift */; };
 		78B00B4728F41E3800A9915D /* BasePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B00B4628F41E3800A9915D /* BasePageControl.swift */; };
 		78B00B4928F41E4500A9915D /* PageControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B00B4828F41E4500A9915D /* PageControllable.swift */; };
@@ -15,14 +21,21 @@
 		8EC953C028EB25DA00E239CC /* BlackCatSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC953BF28EB25DA00E239CC /* BlackCatSDKTests.swift */; };
 		8EC953C128EB25DA00E239CC /* BlackCatSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EC953B328EB25DA00E239CC /* BlackCatSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8EC953CB28EB25E500E239CC /* BlackCatSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */; };
+		8EE81F9B28F41F0F001DB7E1 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81F9A28F41F0F001DB7E1 /* MockAPI.swift */; };
+		8EE81F9E28F423F5001DB7E1 /* CatSDKMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81F9D28F423F5001DB7E1 /* CatSDKMock.swift */; };
+		8EE81FA128F424BB001DB7E1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81FA028F424BB001DB7E1 /* Model.swift */; };
+		8EE81FA328F424C6001DB7E1 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81FA228F424C6001DB7E1 /* Mock.swift */; };
+		8EE81FA728F43144001DB7E1 /* RxCatSDKMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81FA628F43144001DB7E1 /* RxCatSDKMock.swift */; };
+		8EE81FAA28F43250001DB7E1 /* DTOtoModelConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81FA928F43250001DB7E1 /* DTOtoModelConverter.swift */; };
+		8EE9A0DE28F3FCF2003D7761 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9A0DD28F3FCF2003D7761 /* NetworkService.swift */; };
+		8EE9A0E028F3FEBF003D7761 /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9A0DF28F3FEBF003D7761 /* DTO.swift */; };
+		8EE9A0E228F3FECB003D7761 /* MockDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9A0E128F3FECB003D7761 /* MockDTO.swift */; };
+		8EE9A0E728F40388003D7761 /* ServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9A0E628F40388003D7761 /* ServiceAPI.swift */; };
 		B1D3362D28F1C92F00826636 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3362C28F1C92F00826636 /* ReusableCell.swift */; };
 		B1D3362F28F1C95500826636 /* UICollectionView+ReusableKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3362E28F1C95500826636 /* UICollectionView+ReusableKit.swift */; };
 		B1D3363128F1C97700826636 /* UITableView+ReusableKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3363028F1C97700826636 /* UITableView+ReusableKit.swift */; };
 		B1D3363328F1C98C00826636 /* UICollectionView+RxReusableKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3363228F1C98C00826636 /* UICollectionView+RxReusableKit.swift */; };
 		B1D3363528F1C9AC00826636 /* UITableView+RxReusableKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3363428F1C9AC00826636 /* UITableView+RxReusableKit.swift */; };
-		B1D3363B28F1CA7100826636 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B1D3363A28F1CA7100826636 /* RxCocoa */; };
-		B1D3363D28F1CA7100826636 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = B1D3363C28F1CA7100826636 /* RxRelay */; };
-		B1D3363F28F1CA7100826636 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B1D3363E28F1CA7100826636 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +58,16 @@
 		8EC953BA28EB25DA00E239CC /* BlackCatSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackCatSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC953BF28EB25DA00E239CC /* BlackCatSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCatSDKTests.swift; sourceTree = "<group>"; };
 		8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCatSDK.swift; sourceTree = "<group>"; };
+		8EE81F9A28F41F0F001DB7E1 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
+		8EE81F9D28F423F5001DB7E1 /* CatSDKMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKMock.swift; sourceTree = "<group>"; };
+		8EE81FA028F424BB001DB7E1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		8EE81FA228F424C6001DB7E1 /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
+		8EE81FA628F43144001DB7E1 /* RxCatSDKMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCatSDKMock.swift; sourceTree = "<group>"; };
+		8EE81FA928F43250001DB7E1 /* DTOtoModelConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTOtoModelConverter.swift; sourceTree = "<group>"; };
+		8EE9A0DD28F3FCF2003D7761 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		8EE9A0DF28F3FEBF003D7761 /* DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTO.swift; sourceTree = "<group>"; };
+		8EE9A0E128F3FECB003D7761 /* MockDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDTO.swift; sourceTree = "<group>"; };
+		8EE9A0E628F40388003D7761 /* ServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAPI.swift; sourceTree = "<group>"; };
 		B1D3362C28F1C92F00826636 /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
 		B1D3362E28F1C95500826636 /* UICollectionView+ReusableKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReusableKit.swift"; sourceTree = "<group>"; };
 		B1D3363028F1C97700826636 /* UITableView+ReusableKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ReusableKit.swift"; sourceTree = "<group>"; };
@@ -57,9 +80,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1D3363F28F1CA7100826636 /* RxSwift in Frameworks */,
-				B1D3363D28F1CA7100826636 /* RxRelay in Frameworks */,
-				B1D3363B28F1CA7100826636 /* RxCocoa in Frameworks */,
+				8E366B1A28F5282D00D13BB2 /* RxSwift in Frameworks */,
+				8E366B1828F5282D00D13BB2 /* RxRelay in Frameworks */,
+				8E49917528F5206F00742533 /* RxMoya in Frameworks */,
+				8E49917128F5206F00742533 /* Moya in Frameworks */,
+				8E366B1628F5282D00D13BB2 /* RxCocoa in Frameworks */,
+				8E49917328F5206F00742533 /* ReactiveMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +100,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E366B2128F5550D00D13BB2 /* DTOtoModelConverter */ = {
+			isa = PBXGroup;
+			children = (
+				8EE81FA928F43250001DB7E1 /* DTOtoModelConverter.swift */,
+			);
+			path = DTOtoModelConverter;
 		78B00B2A28F41DF500A9915D /* BCPageControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,9 +147,13 @@
 		8EC953B228EB25DA00E239CC /* BlackCatSDK */ = {
 			isa = PBXGroup;
 			children = (
+				8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */,
+				8EE81F9D28F423F5001DB7E1 /* CatSDKMock.swift */,
+				8EE81FA628F43144001DB7E1 /* RxCatSDKMock.swift */,
+				8EE9A0DB28F3FBCE003D7761 /* CatSDKNetwork */,
+				8EE81F9F28F4249B001DB7E1 /* Model */,
 				B1D3362A28F1C8DA00826636 /* ThirdParty */,
 				8EC953B328EB25DA00E239CC /* BlackCatSDK.h */,
-				8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */,
 			);
 			path = BlackCatSDK;
 			sourceTree = "<group>";
@@ -128,6 +164,52 @@
 				8EC953BF28EB25DA00E239CC /* BlackCatSDKTests.swift */,
 			);
 			path = BlackCatSDKTests;
+			sourceTree = "<group>";
+		};
+		8EE81F9C28F4207B001DB7E1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8EE9A0DD28F3FCF2003D7761 /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8EE81F9F28F4249B001DB7E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8EE81FA028F424BB001DB7E1 /* Model.swift */,
+				8EE81FA228F424C6001DB7E1 /* Mock.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8EE9A0DB28F3FBCE003D7761 /* CatSDKNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				8EE81F9C28F4207B001DB7E1 /* Network */,
+				8EE9A0DC28F3FC88003D7761 /* DTO */,
+				8EE9A0E528F40329003D7761 /* API */,
+				8E366B2128F5550D00D13BB2 /* DTOtoModelConverter */,
+			);
+			path = CatSDKNetwork;
+			sourceTree = "<group>";
+		};
+		8EE9A0DC28F3FC88003D7761 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				8EE9A0DF28F3FEBF003D7761 /* DTO.swift */,
+				8EE9A0E128F3FECB003D7761 /* MockDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		8EE9A0E528F40329003D7761 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8EE9A0E628F40388003D7761 /* ServiceAPI.swift */,
+				8EE81F9A28F41F0F001DB7E1 /* MockAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		B1D3362A28F1C8DA00826636 /* ThirdParty */ = {
@@ -180,9 +262,12 @@
 			);
 			name = BlackCatSDK;
 			packageProductDependencies = (
-				B1D3363A28F1CA7100826636 /* RxCocoa */,
-				B1D3363C28F1CA7100826636 /* RxRelay */,
-				B1D3363E28F1CA7100826636 /* RxSwift */,
+				8E49917028F5206F00742533 /* Moya */,
+				8E49917228F5206F00742533 /* ReactiveMoya */,
+				8E49917428F5206F00742533 /* RxMoya */,
+				8E366B1528F5282D00D13BB2 /* RxCocoa */,
+				8E366B1728F5282D00D13BB2 /* RxRelay */,
+				8E366B1928F5282D00D13BB2 /* RxSwift */,
 			);
 			productName = BlackCatSDK;
 			productReference = 8EC953B028EB25DA00E239CC /* BlackCatSDK.framework */;
@@ -234,7 +319,8 @@
 			);
 			mainGroup = 8EC953A628EB25DA00E239CC;
 			packageReferences = (
-				B1D3363928F1CA7100826636 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				8E49916F28F5206F00742533 /* XCRemoteSwiftPackageReference "Moya" */,
+				8E366B1428F5282D00D13BB2 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 8EC953B128EB25DA00E239CC /* Products */;
 			projectDirPath = "";
@@ -268,14 +354,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EE81F9E28F423F5001DB7E1 /* CatSDKMock.swift in Sources */,
+				8EE81FAA28F43250001DB7E1 /* DTOtoModelConverter.swift in Sources */,
 				78B00B4B28F41E5200A9915D /* PageControlLayer.swift in Sources */,
 				B1D3363328F1C98C00826636 /* UICollectionView+RxReusableKit.swift in Sources */,
 				78B00B4728F41E3800A9915D /* BasePageControl.swift in Sources */,
 				B1D3362F28F1C95500826636 /* UICollectionView+ReusableKit.swift in Sources */,
+				8EE9A0E228F3FECB003D7761 /* MockDTO.swift in Sources */,
 				B1D3362D28F1C92F00826636 /* ReusableCell.swift in Sources */,
+				8EE81F9B28F41F0F001DB7E1 /* MockAPI.swift in Sources */,
+				8EE9A0E028F3FEBF003D7761 /* DTO.swift in Sources */,
+				8EE81FA128F424BB001DB7E1 /* Model.swift in Sources */,
 				B1D3363528F1C9AC00826636 /* UITableView+RxReusableKit.swift in Sources */,
+				8EE9A0E728F40388003D7761 /* ServiceAPI.swift in Sources */,
 				8EC953CB28EB25E500E239CC /* BlackCatSDK.swift in Sources */,
+				8EE81FA328F424C6001DB7E1 /* Mock.swift in Sources */,
 				B1D3363128F1C97700826636 /* UITableView+ReusableKit.swift in Sources */,
+				8EE81FA728F43144001DB7E1 /* RxCatSDKMock.swift in Sources */,
+				8EE9A0DE28F3FCF2003D7761 /* NetworkService.swift in Sources */,
 				78B00B4428F41E2600A9915D /* BCPageControl.swift in Sources */,
 				78B00B4928F41E4500A9915D /* PageControllable.swift in Sources */,
 			);
@@ -541,31 +637,54 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B1D3363928F1CA7100826636 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		8E366B1428F5282D00D13BB2 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
 			requirement = {
 				kind = upToNextMinorVersion;
 				minimumVersion = 6.5.0;
 			};
 		};
+		8E49916F28F5206F00742533 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = exactVersion;
+				version = 15.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B1D3363A28F1CA7100826636 /* RxCocoa */ = {
+		8E366B1528F5282D00D13BB2 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B1D3363928F1CA7100826636 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 8E366B1428F5282D00D13BB2 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
 		};
-		B1D3363C28F1CA7100826636 /* RxRelay */ = {
+		8E366B1728F5282D00D13BB2 /* RxRelay */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B1D3363928F1CA7100826636 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 8E366B1428F5282D00D13BB2 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxRelay;
 		};
-		B1D3363E28F1CA7100826636 /* RxSwift */ = {
+		8E366B1928F5282D00D13BB2 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B1D3363928F1CA7100826636 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 8E366B1428F5282D00D13BB2 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		8E49917028F5206F00742533 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E49916F28F5206F00742533 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		8E49917228F5206F00742533 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E49916F28F5206F00742533 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		8E49917428F5206F00742533 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E49916F28F5206F00742533 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
