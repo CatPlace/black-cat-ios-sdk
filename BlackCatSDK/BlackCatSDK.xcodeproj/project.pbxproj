@@ -103,8 +103,8 @@
 		781C5F7728F5F2810022C8F3 /* CatPageControl */ = {
 			isa = PBXGroup;
 			children = (
-				781C5F7828F5F2810022C8F3 /* Core */,
 				781C5F7C28F5F2810022C8F3 /* CatPageControl.swift */,
+				781C5F7828F5F2810022C8F3 /* Core */,
 			);
 			path = CatPageControl;
 			sourceTree = "<group>";
