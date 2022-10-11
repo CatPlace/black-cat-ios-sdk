@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E12BABC28F568070029F535 /* RxCatSDKMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E12BAAC28F568070029F535 /* RxCatSDKMock.swift */; };
+		8E12BABD28F568070029F535 /* MockDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E12BAAF28F568070029F535 /* MockDTO.swift */; };
+		8E12BABE28F568070029F535 /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E12BAB028F568070029F535 /* DTO.swift */; };
+		8E12BABF28F568070029F535 /* DTOtoModelConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E12BAB228F568070029F535 /* DTOtoModelConverter.swift */; };
+		8E12BAC028F568070029F535 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E12BAB428F568070029F535 /* NetworkService.swift */; };
+		8E12BAC128F568070029F535 /* ServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E12BAB628F568070029F535 /* ServiceAPI.swift */; };
+		8E12BAC228F568070029F535 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E12BAB728F568070029F535 /* MockAPI.swift */; };
+		8E12BAC328F568070029F535 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E12BAB928F568070029F535 /* Model.swift */; };
+		8E12BAC428F568070029F535 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E12BABA28F568070029F535 /* Mock.swift */; };
+		8E12BAC528F568070029F535 /* CatSDKMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E12BABB28F568070029F535 /* CatSDKMock.swift */; };
 		8EC953BB28EB25DA00E239CC /* BlackCatSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC953B028EB25DA00E239CC /* BlackCatSDK.framework */; };
 		8EC953C028EB25DA00E239CC /* BlackCatSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC953BF28EB25DA00E239CC /* BlackCatSDKTests.swift */; };
 		8EC953C128EB25DA00E239CC /* BlackCatSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EC953B328EB25DA00E239CC /* BlackCatSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -32,6 +42,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E12BAAC28F568070029F535 /* RxCatSDKMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCatSDKMock.swift; sourceTree = "<group>"; };
+		8E12BAAF28F568070029F535 /* MockDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockDTO.swift; sourceTree = "<group>"; };
+		8E12BAB028F568070029F535 /* DTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTO.swift; sourceTree = "<group>"; };
+		8E12BAB228F568070029F535 /* DTOtoModelConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTOtoModelConverter.swift; sourceTree = "<group>"; };
+		8E12BAB428F568070029F535 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		8E12BAB628F568070029F535 /* ServiceAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceAPI.swift; sourceTree = "<group>"; };
+		8E12BAB728F568070029F535 /* MockAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
+		8E12BAB928F568070029F535 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		8E12BABA28F568070029F535 /* Mock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
+		8E12BABB28F568070029F535 /* CatSDKMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatSDKMock.swift; sourceTree = "<group>"; };
 		8EC953B028EB25DA00E239CC /* BlackCatSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlackCatSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC953B328EB25DA00E239CC /* BlackCatSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlackCatSDK.h; sourceTree = "<group>"; };
 		8EC953BA28EB25DA00E239CC /* BlackCatSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackCatSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +86,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E12BAAD28F568070029F535 /* CatSDKNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				8E12BAAE28F568070029F535 /* DTO */,
+				8E12BAB128F568070029F535 /* DTOtoModelConverter */,
+				8E12BAB328F568070029F535 /* Network */,
+				8E12BAB528F568070029F535 /* API */,
+			);
+			path = CatSDKNetwork;
+			sourceTree = "<group>";
+		};
+		8E12BAAE28F568070029F535 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				8E12BAAF28F568070029F535 /* MockDTO.swift */,
+				8E12BAB028F568070029F535 /* DTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		8E12BAB128F568070029F535 /* DTOtoModelConverter */ = {
+			isa = PBXGroup;
+			children = (
+				8E12BAB228F568070029F535 /* DTOtoModelConverter.swift */,
+			);
+			path = DTOtoModelConverter;
+			sourceTree = "<group>";
+		};
+		8E12BAB328F568070029F535 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8E12BAB428F568070029F535 /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8E12BAB528F568070029F535 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8E12BAB628F568070029F535 /* ServiceAPI.swift */,
+				8E12BAB728F568070029F535 /* MockAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8E12BAB828F568070029F535 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E12BAB928F568070029F535 /* Model.swift */,
+				8E12BABA28F568070029F535 /* Mock.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8EC953A628EB25DA00E239CC = {
 			isa = PBXGroup;
 			children = (
@@ -87,9 +161,13 @@
 		8EC953B228EB25DA00E239CC /* BlackCatSDK */ = {
 			isa = PBXGroup;
 			children = (
+				8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */,
+				8E12BABB28F568070029F535 /* CatSDKMock.swift */,
+				8E12BAAC28F568070029F535 /* RxCatSDKMock.swift */,
+				8E12BAAD28F568070029F535 /* CatSDKNetwork */,
+				8E12BAB828F568070029F535 /* Model */,
 				B1D3362A28F1C8DA00826636 /* ThirdParty */,
 				8EC953B328EB25DA00E239CC /* BlackCatSDK.h */,
-				8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */,
 			);
 			path = BlackCatSDK;
 			sourceTree = "<group>";
@@ -239,12 +317,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E12BAC028F568070029F535 /* NetworkService.swift in Sources */,
 				B1D3363328F1C98C00826636 /* UICollectionView+RxReusableKit.swift in Sources */,
+				8E12BABD28F568070029F535 /* MockDTO.swift in Sources */,
+				8E12BAC228F568070029F535 /* MockAPI.swift in Sources */,
 				B1D3362F28F1C95500826636 /* UICollectionView+ReusableKit.swift in Sources */,
+				8E12BABE28F568070029F535 /* DTO.swift in Sources */,
 				B1D3362D28F1C92F00826636 /* ReusableCell.swift in Sources */,
+				8E12BAC328F568070029F535 /* Model.swift in Sources */,
+				8E12BABF28F568070029F535 /* DTOtoModelConverter.swift in Sources */,
+				8E12BABC28F568070029F535 /* RxCatSDKMock.swift in Sources */,
 				B1D3363528F1C9AC00826636 /* UITableView+RxReusableKit.swift in Sources */,
+				8E12BAC428F568070029F535 /* Mock.swift in Sources */,
 				8EC953CB28EB25E500E239CC /* BlackCatSDK.swift in Sources */,
+				8E12BAC128F568070029F535 /* ServiceAPI.swift in Sources */,
 				B1D3363128F1C97700826636 /* UITableView+ReusableKit.swift in Sources */,
+				8E12BAC528F568070029F535 /* CatSDKMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
