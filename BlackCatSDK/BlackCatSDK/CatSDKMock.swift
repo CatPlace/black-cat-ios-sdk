@@ -14,7 +14,7 @@ public class CatSDKMock {
 
     private static let networkService = NetworkService()
     private static let converter = DTOtoModelConverter()
-    
+
     public static func fetchMockData(completion: @escaping (Result<Model.Mock, Error>) -> Void) {
         networkService.request(MockAPI()) { result in
             switch result {
