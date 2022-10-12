@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		781C5F7D28F5F2810022C8F3 /* PageControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C5F7928F5F2810022C8F3 /* PageControllable.swift */; };
-		781C5F7E28F5F2810022C8F3 /* BasePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C5F7A28F5F2810022C8F3 /* BasePageControl.swift */; };
-		781C5F7F28F5F2810022C8F3 /* PageControlLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C5F7B28F5F2810022C8F3 /* PageControlLayer.swift */; };
-		781C5F8028F5F2810022C8F3 /* CatPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C5F7C28F5F2810022C8F3 /* CatPageControl.swift */; };
+		781C5F7D28F5F2810022C8F3 /* CHIPageControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C5F7928F5F2810022C8F3 /* CHIPageControllable.swift */; };
+		781C5F7E28F5F2810022C8F3 /* CHIBasePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C5F7A28F5F2810022C8F3 /* CHIBasePageControl.swift */; };
+		781C5F7F28F5F2810022C8F3 /* CHILayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C5F7B28F5F2810022C8F3 /* CHILayer.swift */; };
+		781C5F8028F5F2810022C8F3 /* CHIPageControlJaloro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C5F7C28F5F2810022C8F3 /* CHIPageControlJaloro.swift */; };
+		78858BE928F6F05300EC7BF7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 78858BE828F6F05300EC7BF7 /* RealmSwift */; };
 		8E366B1628F5282D00D13BB2 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8E366B1528F5282D00D13BB2 /* RxCocoa */; };
 		8E366B1828F5282D00D13BB2 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 8E366B1728F5282D00D13BB2 /* RxRelay */; };
 		8E366B1A28F5282D00D13BB2 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8E366B1928F5282D00D13BB2 /* RxSwift */; };
@@ -49,10 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		781C5F7928F5F2810022C8F3 /* PageControllable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControllable.swift; sourceTree = "<group>"; };
-		781C5F7A28F5F2810022C8F3 /* BasePageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePageControl.swift; sourceTree = "<group>"; };
-		781C5F7B28F5F2810022C8F3 /* PageControlLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControlLayer.swift; sourceTree = "<group>"; };
-		781C5F7C28F5F2810022C8F3 /* CatPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatPageControl.swift; sourceTree = "<group>"; };
+		781C5F7928F5F2810022C8F3 /* CHIPageControllable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControllable.swift; sourceTree = "<group>"; };
+		781C5F7A28F5F2810022C8F3 /* CHIBasePageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIBasePageControl.swift; sourceTree = "<group>"; };
+		781C5F7B28F5F2810022C8F3 /* CHILayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHILayer.swift; sourceTree = "<group>"; };
+		781C5F7C28F5F2810022C8F3 /* CHIPageControlJaloro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlJaloro.swift; sourceTree = "<group>"; };
 		8EC953B028EB25DA00E239CC /* BlackCatSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlackCatSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC953B328EB25DA00E239CC /* BlackCatSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlackCatSDK.h; sourceTree = "<group>"; };
 		8EC953BA28EB25DA00E239CC /* BlackCatSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackCatSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +83,7 @@
 			files = (
 				8E366B1A28F5282D00D13BB2 /* RxSwift in Frameworks */,
 				8E366B1828F5282D00D13BB2 /* RxRelay in Frameworks */,
+				78858BE928F6F05300EC7BF7 /* RealmSwift in Frameworks */,
 				8E49917528F5206F00742533 /* RxMoya in Frameworks */,
 				8E49917128F5206F00742533 /* Moya in Frameworks */,
 				8E366B1628F5282D00D13BB2 /* RxCocoa in Frameworks */,
@@ -100,21 +102,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		781C5F7728F5F2810022C8F3 /* CatPageControl */ = {
+		781C5F7728F5F2810022C8F3 /* CHIPageControl */ = {
 			isa = PBXGroup;
 			children = (
-				781C5F7C28F5F2810022C8F3 /* CatPageControl.swift */,
+				781C5F7C28F5F2810022C8F3 /* CHIPageControlJaloro.swift */,
 				781C5F7828F5F2810022C8F3 /* Core */,
 			);
-			path = CatPageControl;
+			path = CHIPageControl;
 			sourceTree = "<group>";
 		};
 		781C5F7828F5F2810022C8F3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				781C5F7928F5F2810022C8F3 /* PageControllable.swift */,
-				781C5F7A28F5F2810022C8F3 /* BasePageControl.swift */,
-				781C5F7B28F5F2810022C8F3 /* PageControlLayer.swift */,
+				781C5F7928F5F2810022C8F3 /* CHIPageControllable.swift */,
+				781C5F7A28F5F2810022C8F3 /* CHIBasePageControl.swift */,
+				781C5F7B28F5F2810022C8F3 /* CHILayer.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -216,7 +218,7 @@
 		B1D3362A28F1C8DA00826636 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				781C5F7728F5F2810022C8F3 /* CatPageControl */,
+				781C5F7728F5F2810022C8F3 /* CHIPageControl */,
 				B1D3362B28F1C8EA00826636 /* ReusableKit */,
 			);
 			path = ThirdParty;
@@ -269,6 +271,7 @@
 				8E366B1528F5282D00D13BB2 /* RxCocoa */,
 				8E366B1728F5282D00D13BB2 /* RxRelay */,
 				8E366B1928F5282D00D13BB2 /* RxSwift */,
+				78858BE828F6F05300EC7BF7 /* RealmSwift */,
 			);
 			productName = BlackCatSDK;
 			productReference = 8EC953B028EB25DA00E239CC /* BlackCatSDK.framework */;
@@ -322,6 +325,7 @@
 			packageReferences = (
 				8E49916F28F5206F00742533 /* XCRemoteSwiftPackageReference "Moya" */,
 				8E366B1428F5282D00D13BB2 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				78858BE728F6F05300EC7BF7 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 8EC953B128EB25DA00E239CC /* Products */;
 			projectDirPath = "";
@@ -358,14 +362,14 @@
 				8EE81F9E28F423F5001DB7E1 /* CatSDKMock.swift in Sources */,
 				8EE81FAA28F43250001DB7E1 /* DTOtoModelConverter.swift in Sources */,
 				B1D3363328F1C98C00826636 /* UICollectionView+RxReusableKit.swift in Sources */,
-				781C5F7F28F5F2810022C8F3 /* PageControlLayer.swift in Sources */,
+				781C5F7F28F5F2810022C8F3 /* CHILayer.swift in Sources */,
 				B1D3362F28F1C95500826636 /* UICollectionView+ReusableKit.swift in Sources */,
-				781C5F8028F5F2810022C8F3 /* CatPageControl.swift in Sources */,
+				781C5F8028F5F2810022C8F3 /* CHIPageControlJaloro.swift in Sources */,
 				8EE9A0E228F3FECB003D7761 /* MockDTO.swift in Sources */,
-				781C5F7E28F5F2810022C8F3 /* BasePageControl.swift in Sources */,
+				781C5F7E28F5F2810022C8F3 /* CHIBasePageControl.swift in Sources */,
 				B1D3362D28F1C92F00826636 /* ReusableCell.swift in Sources */,
 				8EE81F9B28F41F0F001DB7E1 /* MockAPI.swift in Sources */,
-				781C5F7D28F5F2810022C8F3 /* PageControllable.swift in Sources */,
+				781C5F7D28F5F2810022C8F3 /* CHIPageControllable.swift in Sources */,
 				8EE9A0E028F3FEBF003D7761 /* DTO.swift in Sources */,
 				8EE81FA128F424BB001DB7E1 /* Model.swift in Sources */,
 				B1D3363528F1C9AC00826636 /* UITableView+RxReusableKit.swift in Sources */,
@@ -638,6 +642,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		78858BE728F6F05300EC7BF7 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		8E366B1428F5282D00D13BB2 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -657,6 +669,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		78858BE828F6F05300EC7BF7 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78858BE728F6F05300EC7BF7 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
 		8E366B1528F5282D00D13BB2 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8E366B1428F5282D00D13BB2 /* XCRemoteSwiftPackageReference "RxSwift" */;

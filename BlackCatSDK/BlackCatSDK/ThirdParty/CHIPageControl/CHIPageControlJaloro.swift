@@ -1,13 +1,13 @@
 //
-//  JHPageControl.swift
+//  CatPageControl.swift
 //  BlackCat
 //
 //  Created by 김지훈 on 2022/10/07.
 //
 
-import Foundation
 import UIKit
-open class CatPageControl: BasePageControl {
+
+open class CHIPageControlJaloro: CHIBasePageControl {
 
     @IBInspectable open var elementWidth: CGFloat = 20 {
         didSet {
@@ -21,8 +21,8 @@ open class CatPageControl: BasePageControl {
         }
     }
 
-    fileprivate var inactive = [PageControlLayer]()
-    fileprivate var active = PageControlLayer()
+    fileprivate var inactive = [CHILayer]()
+    fileprivate var active = CHILayer()
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -34,9 +34,9 @@ open class CatPageControl: BasePageControl {
 
     override func updateNumberOfPages(_ count: Int) {
         inactive.forEach { $0.removeFromSuperlayer() }
-        inactive = [PageControlLayer]()
+        inactive = [CHILayer]()
         inactive = (0..<count).map {_ in
-            let layer = PageControlLayer()
+            let layer = CHILayer()
             self.layer.addSublayer(layer)
             return layer
         }

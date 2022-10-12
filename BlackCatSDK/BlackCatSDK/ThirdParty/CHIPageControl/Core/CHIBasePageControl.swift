@@ -7,7 +7,7 @@
 
 import UIKit
 
-@IBDesignable open class BasePageControl: UIControl, PageControllable {
+@IBDesignable open class CHIBasePageControl: UIControl, CHIPageControllable {
     
     open weak var delegate: BasePageControlDelegate?
 
@@ -215,7 +215,7 @@ import UIKit
     }
 }
 
-extension BasePageControl {
+extension CHIBasePageControl {
     internal func blend(color1: UIColor, color2: UIColor, progress: CGFloat) -> UIColor {
         let l1 = 1 - progress
         let l2 = progress
@@ -230,7 +230,7 @@ extension BasePageControl {
 }
 
 public protocol BasePageControlDelegate: AnyObject {
-    func didTouch(pager: BasePageControl, index: Int)
+    func didTouch(pager: CHIBasePageControl, index: Int)
 }
 
 final class WeakProxy: NSObject {

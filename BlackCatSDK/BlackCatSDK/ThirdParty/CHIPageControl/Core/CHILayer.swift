@@ -7,7 +7,7 @@
 
 import QuartzCore
 
-class PageControlLayer: CAShapeLayer {
+class CHILayer: CAShapeLayer {
 
 
     override init() {

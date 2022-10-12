@@ -5,12 +5,10 @@
 //  Created by 김지훈 on 2022/10/07.
 //
 
-
-import Foundation
 import CoreGraphics
 import UIKit
 
-protocol PageControllable: AnyObject {
+protocol CHIPageControllable: AnyObject {
     var numberOfPages: Int { get set }
     var currentPage: Int { get }
     var progress: Double { get set }
