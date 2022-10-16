@@ -19,6 +19,7 @@
 		8E49917328F5206F00742533 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 8E49917228F5206F00742533 /* ReactiveMoya */; };
 		8E49917528F5206F00742533 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 8E49917428F5206F00742533 /* RxMoya */; };
 		8E6D08FC28FBACB600600774 /* MockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D08FB28FBACB600600774 /* MockModel.swift */; };
+		8E6D090028FBADE500600774 /* RealmServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D08FF28FBADE500600774 /* RealmServiceTests.swift */; };
 		8EC953BB28EB25DA00E239CC /* BlackCatSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC953B028EB25DA00E239CC /* BlackCatSDK.framework */; };
 		8EC953C028EB25DA00E239CC /* BlackCatSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC953BF28EB25DA00E239CC /* BlackCatSDKTests.swift */; };
 		8EC953C128EB25DA00E239CC /* BlackCatSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EC953B328EB25DA00E239CC /* BlackCatSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -59,6 +60,7 @@
 		781C5F7B28F5F2810022C8F3 /* CHILayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHILayer.swift; sourceTree = "<group>"; };
 		781C5F7C28F5F2810022C8F3 /* CHIPageControlJaloro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlJaloro.swift; sourceTree = "<group>"; };
 		8E6D08FB28FBACB600600774 /* MockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockModel.swift; sourceTree = "<group>"; };
+		8E6D08FF28FBADE500600774 /* RealmServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServiceTests.swift; sourceTree = "<group>"; };
 		8EC953B028EB25DA00E239CC /* BlackCatSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlackCatSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC953B328EB25DA00E239CC /* BlackCatSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlackCatSDK.h; sourceTree = "<group>"; };
 		8EC953BA28EB25DA00E239CC /* BlackCatSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackCatSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				8E6D08FB28FBACB600600774 /* MockModel.swift */,
+				8E6D08FF28FBADE500600774 /* RealmServiceTests.swift */,
 			);
 			path = CatSDKRealmTests;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6D090028FBADE500600774 /* RealmServiceTests.swift in Sources */,
 				8EC953C028EB25DA00E239CC /* BlackCatSDKTests.swift in Sources */,
 				8E6D08FC28FBACB600600774 /* MockModel.swift in Sources */,
 			);
