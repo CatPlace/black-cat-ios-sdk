@@ -23,9 +23,21 @@ final class RealmService<T: Object> {
         return Array(realm.objects(T.self))
     }
 
+    func updateByPrimaryKey(_ newItem: T) {
+        try! realm.write {
+            realm.add(newItem, update: .modified)
+        }
+    }
+
     func delete(_ model: T) {
         try! realm.write {
             realm.delete(model)
+        }
+    }
+
+    func deleteAll() {
+        try! realm.write {
+            realm.deleteAll()
         }
     }
 }
