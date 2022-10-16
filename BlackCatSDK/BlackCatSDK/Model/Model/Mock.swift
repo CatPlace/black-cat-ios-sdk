@@ -7,6 +7,8 @@
 
 import Foundation
 
+import RealmSwift
+
 extension Model {
     public struct Mock {
         public let postID: Int
