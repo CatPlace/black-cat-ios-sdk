@@ -18,7 +18,7 @@ protocol NetworkServable {
 }
 
 class NetworkService: NetworkServable {
-    init() { }
+    init() {}
 
     func request<API>(_ api: API, completion: @escaping (Result<API.Response, Error>) -> Void) where API : ServiceAPI {
         let provider = MoyaProvider<API>()
