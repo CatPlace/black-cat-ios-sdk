@@ -34,8 +34,8 @@ public class CatSDKRealmTattooBookmark {
 
     /// 해당 PrimaryKey와 똑같은 PrimaryKey를 가진 TattooBookmark를 반환합니다.
     /// 없다면 nil을 반환합니다.
-    public static func findByPrimaryKey(_ primaryKey: String) -> TattooBookmark? {
-        return realmService.findByPrimaryKey(primaryKey)
+    public static func find(byPrimaryKey key: String) -> TattooBookmark? {
+        return realmService.find(byPrimarykey: key)
     }
 
     /**
@@ -84,8 +84,8 @@ public class CatSDKRealmTattooBookmark {
      - Note: Realm에 반드시 해당 PrimaryKey를 가진 TattooBookmark가 존재해야합니다. 없다면 false를 반환합니다.
      - returns: 성공적으로 삭제되었으면 true, 삭제에 실패하였으면 false를 반환합니다.
      */
-    public static func deleteByPrimaryKey(_ primaryKey: String) -> Bool {
-        return realmService.deleteByPrimaryKey(primaryKey)
+    public static func delete(byPrimaryKey key: String) -> Bool {
+        return realmService.delete(byPrimarykey: key)
     }
 
     /**
@@ -109,8 +109,8 @@ public extension Reactive where Base: CatSDKRealmTattooBookmark {
         return Observable.just(Base.readAll())
     }
 
-    static func findByPrimaryKey(_ primaryKey: String) -> Observable<TattooBookmark?> {
-        return Observable.just(Base.findByPrimaryKey(primaryKey))
+    static func find(byPrimaryKey key: String) -> Observable<TattooBookmark?> {
+        return Observable.just(Base.find(byPrimaryKey: key))
     }
 
     static func find(where query: ((Query<TattooBookmark>) -> Query<Bool>)) -> Observable<[TattooBookmark]> {
@@ -125,8 +125,8 @@ public extension Reactive where Base: CatSDKRealmTattooBookmark {
         return Observable.just(Base.delete(object))
     }
 
-    static func deleteByPrimaryKey(_ primaryKey: String) -> Observable<Bool> {
-        return Observable.just(Base.deleteByPrimaryKey(primaryKey))
+    static func delete(byPrimaryKey key: String) -> Observable<Bool> {
+        return Observable.just(Base.delete(byPrimaryKey: key))
     }
 
     static func deleteAll() -> Observable<Bool> {

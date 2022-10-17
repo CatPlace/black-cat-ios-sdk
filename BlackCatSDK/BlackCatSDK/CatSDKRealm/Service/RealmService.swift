@@ -11,14 +11,13 @@ import RealmSwift
 import RxSwift
 
 final class RealmService<T: Object> {
-    typealias didSuccess = Bool
     private let realm: Realm
 
     init() {
         self.realm = try! Realm()
     }
 
-    func create(with object: T) -> didSuccess {
+    func create(with object: T) -> Bool {
         do {
             try realm.write {
                 realm.add(object)
@@ -36,17 +35,17 @@ final class RealmService<T: Object> {
         return Array(realm.objects(T.self))
     }
 
-    func findByPrimaryKey(_ identifier: String) -> T? {
-        return realm.object(ofType: T.self, forPrimaryKey: identifier)
+    func find(byPrimarykey key: String) -> T? {
+        return realm.object(ofType: T.self, forPrimaryKey: key)
     }
 
     func find(where query: ((Query<T>) -> Query<Bool>)) -> [T] {
         return Array(realm.objects(T.self).where(query))
     }
 
-    func update(with object: T) -> didSuccess {
+    func update(with object: T) -> Bool {
         guard let primaryKey = T.primaryKey(),
-              let object = findByPrimaryKey(primaryKey) else {
+              let object = find(byPrimarykey: primaryKey) else {
             #if DEBUG
             print("해당 PrimaryKey를 가진 Object를 찾을 수 없습니다.")
             #endif
@@ -66,7 +65,7 @@ final class RealmService<T: Object> {
         }
     }
 
-    func delete(_ object: T) -> didSuccess {
+    func delete(_ object: T) -> Bool {
         do {
             try realm.write {
                 realm.delete(object)
@@ -80,9 +79,8 @@ final class RealmService<T: Object> {
         }
     }
 
-    func deleteByPrimaryKey(_ primaryKey: String) -> didSuccess {
-        guard let primaryKey = T.primaryKey(),
-              let object = findByPrimaryKey(primaryKey) else {
+    func delete(byPrimarykey key: String) -> Bool {
+        guard let object = find(byPrimarykey: key) else {
             #if DEBUG
             print("해당 PrimaryKey를 가진 Object를 찾을 수 없습니다.")
             #endif
@@ -102,7 +100,7 @@ final class RealmService<T: Object> {
         }
     }
 
-    func deleteAll() -> didSuccess {
+    func deleteAll() -> Bool {
         let result = readAll()
         do {
             try realm.write {

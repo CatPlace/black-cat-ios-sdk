@@ -193,8 +193,8 @@
 		8ECFE59D28F81BE8007A9F72 /* CatSDKRealm */ = {
 			isa = PBXGroup;
 			children = (
-				8ECFE5A428F91B6F007A9F72 /* Service */,
 				8ECFE5A228F82432007A9F72 /* CatSDKRealmTattooBookmark.swift */,
+				8ECFE5A428F91B6F007A9F72 /* Service */,
 			);
 			path = CatSDKRealm;
 			sourceTree = "<group>";

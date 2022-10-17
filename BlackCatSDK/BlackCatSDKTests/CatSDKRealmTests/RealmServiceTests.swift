@@ -22,10 +22,10 @@ final class RealmServiceTests: XCTestCase {
 
         let mockModel = MockRealmModel(content: "CreateTest")
 
-        sut.deleteAll()
+        _ = sut.deleteAll()
 
         // When
-        sut.create(with: mockModel)
+        _ = sut.create(with: mockModel)
         let first = sut.readAll()
 
         // Then
@@ -36,7 +36,7 @@ final class RealmServiceTests: XCTestCase {
         // Given
         let sut = RealmService<MockRealmModel>()
 
-        sut.deleteAll()
+        _ = sut.deleteAll()
 
         // When
         let willEmptyResult = sut.readAll()
@@ -98,12 +98,12 @@ final class RealmServiceTests: XCTestCase {
         let primaryKey = model.id
         let failedKey = UUID().uuidString
 
-        sut.deleteAll()
-        sut.create(with: model)
+        _ = sut.deleteAll()
+        _ = sut.create(with: model)
 
         // When
-        let successResult = sut.findByPrimaryKey(primaryKey)
-        let nilResult = sut.findByPrimaryKey(failedKey)
+        let successResult = sut.find(byPrimarykey: primaryKey)
+        let nilResult = sut.find(byPrimarykey: failedKey)
 
         // Then
         XCTAssertEqual(successResult?.content, "TargetModel")
@@ -117,10 +117,10 @@ final class RealmServiceTests: XCTestCase {
         let model2 = MockRealmModel(content: "FindModel2")
         let model3 = MockRealmModel(content: "FindModel3")
 
-        sut.deleteAll()
-        sut.create(with: model1)
-        sut.create(with: model2)
-        sut.create(with: model3)
+        _ = sut.deleteAll()
+        _ = sut.create(with: model1)
+        _ = sut.create(with: model2)
+        _ = sut.create(with: model3)
 
         // When
         let result = sut.find { $0.content.contains("asldfkjsadkf") }
