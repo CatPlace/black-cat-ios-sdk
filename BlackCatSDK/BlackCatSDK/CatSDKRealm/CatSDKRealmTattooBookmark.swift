@@ -96,3 +96,40 @@ public class CatSDKRealmTattooBookmark {
         return realmService.deleteAll()
     }
 }
+
+// CatSDKRealmTattooBookmark.rx를 사용할 수 있게 해주는 프로토콜입니다.
+extension CatSDKRealmTattooBookmark: ReactiveCompatible {}
+
+public extension Reactive where Base: CatSDKRealmTattooBookmark {
+    static func create(with object: TattooBookmark) -> Observable<Bool> {
+        return Observable.just(Base.update(with: object))
+    }
+
+    static func readAll() -> Observable<[TattooBookmark]> {
+        return Observable.just(Base.readAll())
+    }
+
+    static func findByPrimaryKey(_ primaryKey: String) -> Observable<TattooBookmark?> {
+        return Observable.just(Base.findByPrimaryKey(primaryKey))
+    }
+
+    static func find(where query: ((Query<TattooBookmark>) -> Query<Bool>)) -> Observable<[TattooBookmark]> {
+        return Observable.just(Base.find(where: query))
+    }
+
+    static func update(with object: TattooBookmark) -> Observable<Bool> {
+        return Observable.just(Base.update(with: object))
+    }
+
+    static func delete(_ object: TattooBookmark) -> Observable<Bool> {
+        return Observable.just(Base.delete(object))
+    }
+
+    static func deleteByPrimaryKey(_ primaryKey: String) -> Observable<Bool> {
+        return Observable.just(Base.deleteByPrimaryKey(primaryKey))
+    }
+
+    static func deleteAll() -> Observable<Bool> {
+        return Observable.just(Base.deleteAll())
+    }
+}
