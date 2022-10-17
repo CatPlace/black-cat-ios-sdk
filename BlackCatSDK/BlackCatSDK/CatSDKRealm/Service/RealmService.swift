@@ -45,6 +45,14 @@ final class RealmService<T: Object> {
     }
 
     func update(with object: T) -> didSuccess {
+        guard let primaryKey = T.primaryKey(),
+              let object = findByPrimaryKey(primaryKey) else {
+            #if DEBUG
+            print("해당 PrimaryKey를 가진 Object를 찾을 수 없습니다.")
+            #endif
+            return false
+        }
+
         do {
             try realm.write {
                 realm.add(object, update: .modified)
@@ -58,10 +66,10 @@ final class RealmService<T: Object> {
         }
     }
 
-    func delete(_ model: T) -> didSuccess {
+    func delete(_ object: T) -> didSuccess {
         do {
             try realm.write {
-                realm.delete(model)
+                realm.delete(object)
             }
             return true
         } catch let error {
@@ -73,10 +81,23 @@ final class RealmService<T: Object> {
     }
 
     func deleteByPrimaryKey(_ primaryKey: String) -> didSuccess {
-        if let object = findByPrimaryKey(primaryKey) {
-            realm.delete(object)
+        guard let primaryKey = T.primaryKey(),
+              let object = findByPrimaryKey(primaryKey) else {
+            #if DEBUG
+            print("해당 PrimaryKey를 가진 Object를 찾을 수 없습니다.")
+            #endif
+            return false
+        }
+
+        do {
+            try realm.write {
+                realm.delete(object)
+            }
             return true
-        } else {
+        } catch let error {
+            #if DEBUG
+            print(error.localizedDescription)
+            #endif
             return false
         }
     }
