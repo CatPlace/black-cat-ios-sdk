@@ -18,9 +18,9 @@ final class RealmServiceTests: XCTestCase {
     func test_RealmService_create() {
 
         // Given
-        let sut = RealmService<MockRealmModel2>()
+        let sut = RealmService<MockRealmModel>()
 
-        let mockModel = MockRealmModel2(content: "CreateTest")
+        let mockModel = MockRealmModel(content: "CreateTest")
 
         sut.deleteAll()
 
@@ -32,14 +32,27 @@ final class RealmServiceTests: XCTestCase {
         XCTAssertEqual(first[0].content, "CreateTest")
     }
 
+    func test_RealmService_readAll() {
+        // Given
+        let sut = RealmService<MockRealmModel>()
+
+        sut.deleteAll()
+
+        // When
+        let willEmptyResult = sut.readAll()
+
+        // Then
+        XCTAssertEqual(willEmptyResult.count, 0)
+    }
+
     func test_RealmService_delete() {
 
         // Given
-        let sut = RealmService<MockRealmModel2>()
+        let sut = RealmService<MockRealmModel>()
 
-        let mockModel1 = MockRealmModel2(content: "DeleteTest1")
-        let mockModel2 = MockRealmModel2(content: "DeleteTest2")
-        let mockModel3 = MockRealmModel2(content: "DeleteTest3")
+        let mockModel1 = MockRealmModel(content: "DeleteTest1")
+        let mockModel2 = MockRealmModel(content: "DeleteTest2")
+        let mockModel3 = MockRealmModel(content: "DeleteTest3")
 
         sut.deleteAll()
 
@@ -55,13 +68,13 @@ final class RealmServiceTests: XCTestCase {
         XCTAssertEqual(result.map { $0.content }, ["DeleteTest1", "DeleteTest3"])
     }
 
-    func test_RealmService_update() {
+    func test_RealmService_updateByPrimaryKey() {
 
         // Given
-        let sut = RealmService<MockRealmModel2>()
+        let sut = RealmService<MockRealmModel>()
 
-        let oldModel = MockRealmModel2(content: "UpdateOldItem")
-        let newModel = MockRealmModel2()
+        let oldModel = MockRealmModel(content: "UpdateOldItem")
+        let newModel = MockRealmModel()
         newModel.id = oldModel.id
         newModel.content = "UpdateNewItem"
 
@@ -74,5 +87,45 @@ final class RealmServiceTests: XCTestCase {
 
         // Then
         XCTAssertEqual(result.map { $0.content }, ["UpdateNewItem"])
+    }
+
+    func test_RealmService_findByPrimaryKey() {
+
+        // Given
+        let sut = RealmService<MockRealmModel>()
+
+        let model = MockRealmModel(content: "TargetModel")
+        let primaryKey = model.id
+        let failedKey = UUID().uuidString
+
+        sut.deleteAll()
+        sut.create(with: model)
+
+        // When
+        let successResult = sut.findByPrimaryKey(primaryKey)
+        let nilResult = sut.findByPrimaryKey(failedKey)
+
+        // Then
+        XCTAssertEqual(successResult?.content, "TargetModel")
+        XCTAssertNil(nilResult)
+    }
+
+    func test_RealmService_find() {
+        let sut = RealmService<MockRealmModel>()
+
+        let model1 = MockRealmModel(content: "FindModel1")
+        let model2 = MockRealmModel(content: "FindModel2")
+        let model3 = MockRealmModel(content: "FindModel3")
+
+        sut.deleteAll()
+        sut.create(with: model1)
+        sut.create(with: model2)
+        sut.create(with: model3)
+
+        // When
+        let result = sut.find { $0.content.contains("asldfkjsadkf") }
+
+        // Then
+        XCTAssertEqual(result.count, 0)
     }
 }
