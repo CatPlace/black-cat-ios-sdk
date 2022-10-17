@@ -82,7 +82,7 @@ final class RealmServiceTests: XCTestCase {
         sut.create(with: oldModel)
 
         // When
-        sut.updateByPrimaryKey(newModel)
+        sut.update(with: newModel)
         let result = sut.readAll()
 
         // Then
