@@ -17,17 +17,16 @@ final class RealmService<T: Object> {
         self.realm = try! Realm()
     }
 
-    func create(with object: T) -> Bool {
+    func create(with object: T) throws {
         do {
             try realm.write {
                 realm.add(object)
             }
-            return true
         } catch let error {
             #if DEBUG
             print(error.localizedDescription)
             #endif
-            return false
+            throw error
         }
     }
 
@@ -35,7 +34,7 @@ final class RealmService<T: Object> {
         return Array(realm.objects(T.self))
     }
 
-    func find(byPrimarykey key: String) -> T? {
+    func find(byPrimaryKey key: String) -> T? {
         return realm.object(ofType: T.self, forPrimaryKey: key)
     }
 
@@ -43,75 +42,75 @@ final class RealmService<T: Object> {
         return Array(realm.objects(T.self).where(query))
     }
 
-    func update(with object: T) -> Bool {
+    func update(with object: T) throws {
         guard let primaryKey = T.primaryKey(),
-              let object = find(byPrimarykey: primaryKey) else {
+              let object = find(byPrimaryKey: primaryKey) else {
             #if DEBUG
             print("해당 PrimaryKey를 가진 Object를 찾을 수 없습니다.")
             #endif
-            return false
+            return
         }
 
         do {
             try realm.write {
                 realm.add(object, update: .modified)
             }
-            return true
         } catch let error {
             #if DEBUG
             print(error.localizedDescription)
             #endif
-            return false
+            throw error
         }
     }
 
-    func delete(_ object: T) -> Bool {
+    func delete(_ object: T) throws {
         do {
             try realm.write {
                 realm.delete(object)
             }
-            return true
         } catch let error {
             #if DEBUG
             print(error.localizedDescription)
             #endif
-            return false
+            throw error
         }
     }
 
-    func delete(byPrimarykey key: String) -> Bool {
-        guard let object = find(byPrimarykey: key) else {
+    func delete(byPrimarykey key: String) throws {
+        guard let object = find(byPrimaryKey: key) else {
             #if DEBUG
             print("해당 PrimaryKey를 가진 Object를 찾을 수 없습니다.")
             #endif
-            return false
+            throw RealmError.unableToFindPrimaryKey
         }
 
         do {
             try realm.write {
                 realm.delete(object)
             }
-            return true
         } catch let error {
             #if DEBUG
             print(error.localizedDescription)
             #endif
-            return false
+            throw error
         }
     }
 
-    func deleteAll() -> Bool {
+     func deleteAll() throws {
         let result = readAll()
         do {
             try realm.write {
                 realm.delete(result)
             }
-            return true
         } catch let error {
             #if DEBUG
             print(error.localizedDescription)
             #endif
-            return false
+            throw error
         }
     }
+}
+
+enum RealmError: Error {
+    case unableToFindPrimaryKey
 }
