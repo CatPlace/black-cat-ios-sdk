@@ -20,12 +20,13 @@
 		8E49917528F5206F00742533 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 8E49917428F5206F00742533 /* RxMoya */; };
 		8E6D08FC28FBACB600600774 /* MockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D08FB28FBACB600600774 /* MockModel.swift */; };
 		8E6D090028FBADE500600774 /* RealmServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D08FF28FBADE500600774 /* RealmServiceTests.swift */; };
+		8E77DCD928FE918E00255961 /* CatSDKRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E77DCD828FE918E00255961 /* CatSDKRealm.swift */; };
+		8E77DCDD28FFAEA400255961 /* CatSDKRealm+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E77DCDC28FFAEA400255961 /* CatSDKRealm+Rx.swift */; };
 		8EC953BB28EB25DA00E239CC /* BlackCatSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC953B028EB25DA00E239CC /* BlackCatSDK.framework */; };
 		8EC953C028EB25DA00E239CC /* BlackCatSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC953BF28EB25DA00E239CC /* BlackCatSDKTests.swift */; };
 		8EC953C128EB25DA00E239CC /* BlackCatSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EC953B328EB25DA00E239CC /* BlackCatSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8EC953CB28EB25E500E239CC /* BlackCatSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */; };
 		8ECFE5A128F821CA007A9F72 /* TattooBookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE5A028F821CA007A9F72 /* TattooBookmark.swift */; };
-		8ECFE5A328F82432007A9F72 /* CatSDKRealmTattooBookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE5A228F82432007A9F72 /* CatSDKRealmTattooBookmark.swift */; };
 		8ECFE5A628F91B81007A9F72 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE5A528F91B81007A9F72 /* RealmService.swift */; };
 		8EE81F9B28F41F0F001DB7E1 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81F9A28F41F0F001DB7E1 /* MockAPI.swift */; };
 		8EE81F9E28F423F5001DB7E1 /* CatSDKMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81F9D28F423F5001DB7E1 /* CatSDKMock.swift */; };
@@ -61,13 +62,14 @@
 		781C5F7C28F5F2810022C8F3 /* CHIPageControlJaloro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlJaloro.swift; sourceTree = "<group>"; };
 		8E6D08FB28FBACB600600774 /* MockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockModel.swift; sourceTree = "<group>"; };
 		8E6D08FF28FBADE500600774 /* RealmServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServiceTests.swift; sourceTree = "<group>"; };
+		8E77DCD828FE918E00255961 /* CatSDKRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKRealm.swift; sourceTree = "<group>"; };
+		8E77DCDC28FFAEA400255961 /* CatSDKRealm+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatSDKRealm+Rx.swift"; sourceTree = "<group>"; };
 		8EC953B028EB25DA00E239CC /* BlackCatSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlackCatSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC953B328EB25DA00E239CC /* BlackCatSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlackCatSDK.h; sourceTree = "<group>"; };
 		8EC953BA28EB25DA00E239CC /* BlackCatSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackCatSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC953BF28EB25DA00E239CC /* BlackCatSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCatSDKTests.swift; sourceTree = "<group>"; };
 		8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCatSDK.swift; sourceTree = "<group>"; };
 		8ECFE5A028F821CA007A9F72 /* TattooBookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooBookmark.swift; sourceTree = "<group>"; };
-		8ECFE5A228F82432007A9F72 /* CatSDKRealmTattooBookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKRealmTattooBookmark.swift; sourceTree = "<group>"; };
 		8ECFE5A528F91B81007A9F72 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		8EE81F9A28F41F0F001DB7E1 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
 		8EE81F9D28F423F5001DB7E1 /* CatSDKMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKMock.swift; sourceTree = "<group>"; };
@@ -191,7 +193,8 @@
 		8ECFE59D28F81BE8007A9F72 /* CatSDKRealm */ = {
 			isa = PBXGroup;
 			children = (
-				8ECFE5A228F82432007A9F72 /* CatSDKRealmTattooBookmark.swift */,
+				8E77DCD828FE918E00255961 /* CatSDKRealm.swift */,
+				8E77DCDC28FFAEA400255961 /* CatSDKRealm+Rx.swift */,
 				8ECFE5A428F91B6F007A9F72 /* Service */,
 			);
 			path = CatSDKRealm;
@@ -418,7 +421,6 @@
 				8EE81FAA28F43250001DB7E1 /* DTOtoModelConverter.swift in Sources */,
 				B1D3363328F1C98C00826636 /* UICollectionView+RxReusableKit.swift in Sources */,
 				781C5F7F28F5F2810022C8F3 /* CHILayer.swift in Sources */,
-				8ECFE5A328F82432007A9F72 /* CatSDKRealmTattooBookmark.swift in Sources */,
 				8ECFE5A628F91B81007A9F72 /* RealmService.swift in Sources */,
 				B1D3362F28F1C95500826636 /* UICollectionView+ReusableKit.swift in Sources */,
 				781C5F8028F5F2810022C8F3 /* CHIPageControlJaloro.swift in Sources */,
@@ -437,6 +439,8 @@
 				B1D3363128F1C97700826636 /* UITableView+ReusableKit.swift in Sources */,
 				8EE81FA728F43144001DB7E1 /* RxCatSDKMock.swift in Sources */,
 				8EE9A0DE28F3FCF2003D7761 /* NetworkService.swift in Sources */,
+				8E77DCD928FE918E00255961 /* CatSDKRealm.swift in Sources */,
+				8E77DCDD28FFAEA400255961 /* CatSDKRealm+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
