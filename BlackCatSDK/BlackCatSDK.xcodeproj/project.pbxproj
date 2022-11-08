@@ -37,14 +37,11 @@
 		8E49917528F5206F00742533 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 8E49917428F5206F00742533 /* RxMoya */; };
 		8E6D08FC28FBACB600600774 /* MockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D08FB28FBACB600600774 /* MockModel.swift */; };
 		8E6D090028FBADE500600774 /* RealmServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D08FF28FBADE500600774 /* RealmServiceTests.swift */; };
-		8E77DCD928FE918E00255961 /* CatSDKRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E77DCD828FE918E00255961 /* CatSDKRealm.swift */; };
-		8E77DCDD28FFAEA400255961 /* CatSDKRealm+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E77DCDC28FFAEA400255961 /* CatSDKRealm+Rx.swift */; };
 		8EC953BB28EB25DA00E239CC /* BlackCatSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC953B028EB25DA00E239CC /* BlackCatSDK.framework */; };
 		8EC953C028EB25DA00E239CC /* BlackCatSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC953BF28EB25DA00E239CC /* BlackCatSDKTests.swift */; };
 		8EC953C128EB25DA00E239CC /* BlackCatSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EC953B328EB25DA00E239CC /* BlackCatSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8EC953CB28EB25E500E239CC /* BlackCatSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */; };
 		8ECFE5A128F821CA007A9F72 /* TattooBookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE5A028F821CA007A9F72 /* TattooBookmark.swift */; };
-		8ECFE5A628F91B81007A9F72 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE5A528F91B81007A9F72 /* RealmService.swift */; };
 		8EE81FA128F424BB001DB7E1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81FA028F424BB001DB7E1 /* Model.swift */; };
 		8EE81FA328F424C6001DB7E1 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81FA228F424C6001DB7E1 /* Mock.swift */; };
 		8EE81FAA28F43250001DB7E1 /* DTOtoModelConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81FA928F43250001DB7E1 /* DTOtoModelConverter.swift */; };
@@ -92,15 +89,12 @@
 		8E361A66291A530600785F62 /* CreateMagazine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMagazine.swift; sourceTree = "<group>"; };
 		8E6D08FB28FBACB600600774 /* MockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockModel.swift; sourceTree = "<group>"; };
 		8E6D08FF28FBADE500600774 /* RealmServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServiceTests.swift; sourceTree = "<group>"; };
-		8E77DCD828FE918E00255961 /* CatSDKRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKRealm.swift; sourceTree = "<group>"; };
-		8E77DCDC28FFAEA400255961 /* CatSDKRealm+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatSDKRealm+Rx.swift"; sourceTree = "<group>"; };
 		8EC953B028EB25DA00E239CC /* BlackCatSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlackCatSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC953B328EB25DA00E239CC /* BlackCatSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlackCatSDK.h; sourceTree = "<group>"; };
 		8EC953BA28EB25DA00E239CC /* BlackCatSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackCatSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC953BF28EB25DA00E239CC /* BlackCatSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCatSDKTests.swift; sourceTree = "<group>"; };
 		8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCatSDK.swift; sourceTree = "<group>"; };
 		8ECFE5A028F821CA007A9F72 /* TattooBookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooBookmark.swift; sourceTree = "<group>"; };
-		8ECFE5A528F91B81007A9F72 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		8EE81FA028F424BB001DB7E1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8EE81FA228F424C6001DB7E1 /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
 		8EE81FA928F43250001DB7E1 /* DTOtoModelConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTOtoModelConverter.swift; sourceTree = "<group>"; };
@@ -268,7 +262,6 @@
 			isa = PBXGroup;
 			children = (
 				8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */,
-				8ECFE59D28F81BE8007A9F72 /* CatSDKRealm */,
 				8EE9A0DB28F3FBCE003D7761 /* CatSDKNetwork */,
 				8EE81F9F28F4249B001DB7E1 /* Model */,
 				B1D3362A28F1C8DA00826636 /* ThirdParty */,
@@ -284,16 +277,6 @@
 				8EC953BF28EB25DA00E239CC /* BlackCatSDKTests.swift */,
 			);
 			path = BlackCatSDKTests;
-			sourceTree = "<group>";
-		};
-		8ECFE59D28F81BE8007A9F72 /* CatSDKRealm */ = {
-			isa = PBXGroup;
-			children = (
-				8E77DCD828FE918E00255961 /* CatSDKRealm.swift */,
-				8E77DCDC28FFAEA400255961 /* CatSDKRealm+Rx.swift */,
-				8ECFE5A428F91B6F007A9F72 /* Service */,
-			);
-			path = CatSDKRealm;
 			sourceTree = "<group>";
 		};
 		8ECFE59E28F821AE007A9F72 /* Model */ = {
@@ -313,14 +296,6 @@
 				8ECFE5A028F821CA007A9F72 /* TattooBookmark.swift */,
 			);
 			path = RealmModel;
-			sourceTree = "<group>";
-		};
-		8ECFE5A428F91B6F007A9F72 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				8ECFE5A528F91B81007A9F72 /* RealmService.swift */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		8EE81F9C28F4207B001DB7E1 /* Network */ = {
@@ -525,7 +500,6 @@
 				8E361A59291A441500785F62 /* MagazineModel.swift in Sources */,
 				B1D3363328F1C98C00826636 /* UICollectionView+RxReusableKit.swift in Sources */,
 				781C5F7F28F5F2810022C8F3 /* CHILayer.swift in Sources */,
-				8ECFE5A628F91B81007A9F72 /* RealmService.swift in Sources */,
 				B1D3362F28F1C95500826636 /* UICollectionView+ReusableKit.swift in Sources */,
 				781C5F8028F5F2810022C8F3 /* CHIPageControlJaloro.swift in Sources */,
 				8E361A63291A4DBB00785F62 /* PostMagazineAPI.swift in Sources */,
@@ -555,8 +529,6 @@
 				8E361A3D291A186600785F62 /* CategoryListDTO.swift in Sources */,
 				B1D3363128F1C97700826636 /* UITableView+ReusableKit.swift in Sources */,
 				8EE9A0DE28F3FCF2003D7761 /* NetworkService.swift in Sources */,
-				8E77DCD928FE918E00255961 /* CatSDKRealm.swift in Sources */,
-				8E77DCDD28FFAEA400255961 /* CatSDKRealm+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
