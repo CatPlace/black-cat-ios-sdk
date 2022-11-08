@@ -13,7 +13,7 @@ import RxSwift
 public class CatSDKNetworkCategory: CatSDKNetworkable {
     private init() {}
 
-    public static func fetchList(completion: @escaping (Result<[Model.Category], Error>) -> Void) {
+    public static func fetchCategories(completion: @escaping (Result<[Model.Category], Error>) -> Void) {
         networkService.request(CategoryListAPI()) { result in
             switch result {
             case .success(let DTO):
@@ -26,7 +26,7 @@ public class CatSDKNetworkCategory: CatSDKNetworkable {
 }
 
 extension Reactive where Base: CatSDKNetworkCategory {
-    public static func fetchList() -> Observable<[Model.Category]> {
+    public static func fetchCategories() -> Observable<[Model.Category]> {
         Base.networkService.rx.request(CategoryListAPI())
             .compactMap { Base.converter.convertCategoryListDTOToModel($0) }
             .asObservable()
