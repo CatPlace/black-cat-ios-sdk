@@ -5,6 +5,7 @@
 //  Created by SeYeong on 2022/10/16.
 //
 
+import BlackCatSDK
 import Foundation
 
 import RealmSwift
