@@ -9,14 +9,17 @@ import Foundation
 
 import Moya
 
-protocol ServiceAPI: TargetType {
+public protocol ServiceAPI: TargetType {
     associatedtype Response: Decodable
 
-    // TODO: - baseURL, headers 등 공통으로 쓸 부분은 차후에 extension으로 빼겠습니다.
-
-    var baseURL: URL { get }
     var path: String { get }
     var method: Moya.Method { get }
     var task: Moya.Task { get }
-    var headers: [String : String]? { get }
+}
+
+extension ServiceAPI {
+    var baseURL: URL {
+        return URL(string: "https://blackcat.pe.kr/api/v1/")!
+    }
+    var headers: [String : String]? { nil }
 }
