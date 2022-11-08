@@ -14,4 +14,10 @@ class DTOtoModelConverter {
                      email: DTO.email,
                      body: DTO.body)
     }
+
+    func convertCategoryListDTOToModel(_ DTO: DTO.Category) -> [Model.Category] {
+        return DTO.list.map { detail in
+                .init(id: detail.id, name: detail.name, count: detail.count)
+        }
+    }
 }
