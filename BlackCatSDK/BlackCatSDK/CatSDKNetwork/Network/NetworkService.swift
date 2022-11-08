@@ -22,10 +22,10 @@ class NetworkService: NetworkServable {
     func request<API>(
         _ api: API,
         completion: @escaping (Result<API.Response, Error>) -> Void
-    )
-    where API : ServiceAPI
-    {
+    ) where API : ServiceAPI {
+
         let provider = MoyaProvider<API>()
+
         provider.request(api) { result in
             switch result {
             case .success(let response):
