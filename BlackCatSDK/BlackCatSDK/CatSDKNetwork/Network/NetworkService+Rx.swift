@@ -9,8 +9,6 @@ import Foundation
 
 import RxCocoa
 import RxSwift
-import RxMoya
-import Moya
 
 extension NetworkService: ReactiveCompatible {}
 

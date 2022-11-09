@@ -13,5 +13,5 @@ public protocol CatSDKNetworkable: ReactiveCompatible {}
 
 extension CatSDKNetworkable {
     static var networkService: NetworkService { NetworkService() }
-    static var converter: DTOtoModelConverter { DTOtoModelConverter() }
+    static var converter: DTOConverter { DTOConverter() }
 }
