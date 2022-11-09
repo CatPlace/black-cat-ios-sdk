@@ -7,7 +7,16 @@
 
 import Foundation
 
-class DTOtoModelConverter {
+struct DTOConverter {
+
+    struct Category {
+        static func convertCategoryListDTOToModel(_ DTO: DTO.Category) -> [Model.Category] {
+            return DTO.list.map { detail in
+                    .init(id: detail.id, name: detail.name, count: detail.count)
+            }
+        }
+    }
+
     func convertCategoryListDTOToModel(_ DTO: DTO.Category) -> [Model.Category] {
         return DTO.list.map { detail in
                 .init(id: detail.id, name: detail.name, count: detail.count)
@@ -25,8 +34,7 @@ class DTOtoModelConverter {
     }
 
     func convertMagazineDetailDTOToModel(_ DTO: DTO.MagazineDetail) -> Model.MagazineDetail {
-        return .init(title: DTO.title,
-                     imageURLString: DTO.imageUrl,
+        return .init(status: DTO.status,
                      cellInfos: DTO.cellInfos.map { .init(type: $0.cellType,
                                                           text: $0.text,
                                                           fontSize: $0.fontSize,
@@ -40,7 +48,10 @@ class DTOtoModelConverter {
                                                           layoutLeadingInset: $0.layoutLeadingInset,
                                                           layoutTrailingInset: $0.layoutTrailingInset,
                                                           layoutTopInset: $0.layoutTopInset,
-                                                          layoutBottomInset: $0.layoutBottomInset) } )
+                                                          layoutBottomInset: $0.layoutBottomInset) },
+                     error: DTO.error,
+                     code: DTO.code
+        )
     }
 
     func createPostMagazineRequest(_ model: Model.CreateMagazine.Request) -> PostMagazineAPI.Request {
