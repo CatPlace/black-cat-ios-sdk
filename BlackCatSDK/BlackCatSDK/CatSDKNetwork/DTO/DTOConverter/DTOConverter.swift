@@ -8,22 +8,28 @@
 import Foundation
 
 struct DTOConverter {
-
-    struct Category {
-        static func convertCategoryListDTOToModel(_ DTO: DTO.Category) -> [Model.Category] {
-            return DTO.list.map { detail in
-                    .init(id: detail.id, name: detail.name, count: detail.count)
-            }
-        }
+    enum Category {
+        func abc(_ DTO: DTO.Category.List) { }
     }
-
-    func convertCategoryListDTOToModel(_ DTO: DTO.Category) -> [Model.Category] {
-        return DTO.list.map { detail in
+    func convertCategoryListDTOToModel(_ DTO: DTO.Category.List) -> [Model.Category] {
+        return DTO.category.map { detail in
                 .init(id: detail.id, name: detail.name, count: detail.count)
         }
     }
 
-    func convertMagazineListDTOToModel(_ DTO: DTO.MagazineList) -> [Model.Magazine] {
+    func convertTattooListDTOToModel(_ DTO: DTO.Tattoo.List) -> [Model.Tattoo] {
+        return DTO.tattoos.map { tattoo in
+                .init(id: tattoo.id,
+                      price: tattoo.price,
+                      tattooistName: tattoo.tattooistName,
+                      description: tattoo.description,
+                      liked: tattoo.liked,
+                      imageURLStrings: tattoo.imageUrls,
+                      address: tattoo.address)
+        }
+    }
+
+    func convertMagazineListDTOToModel(_ DTO: DTO.Magazine.List) -> [Model.Magazine] {
         return DTO.data.magazines.map { magazine in
                 .init(id: magazine.id,
                       title: magazine.title,
@@ -33,7 +39,7 @@ struct DTOConverter {
         }
     }
 
-    func convertMagazineDetailDTOToModel(_ DTO: DTO.MagazineDetail) -> Model.MagazineDetail {
+    func convertMagazineDetailDTOToModel(_ DTO: DTO.Magazine.Detail) -> Model.MagazineDetail {
         return .init(status: DTO.status,
                      cellInfos: DTO.cellInfos.map { .init(type: $0.cellType,
                                                           text: $0.text,
@@ -74,7 +80,7 @@ struct DTOConverter {
         })
     }
 
-    func convertPostMagazineDTOToModel(_ DTO: DTO.PostMagazine) -> Model.CreateMagazine.Response {
+    func convertPostMagazineDTOToModel(_ DTO: DTO.Magazine.Post) -> Model.CreateMagazine.Response {
         .init(status: DTO.status,
               magazine: .init(id: DTO.magazine.id,
                               title: DTO.magazine.title,
@@ -83,5 +89,13 @@ struct DTOConverter {
               error: DTO.error,
               code: DTO.code
         )
+    }
+
+    func convertAddressDTOToModel(_ DTO: DTO.Address.Search) -> [Model.Address] {
+        DTO.addresses.map { address in
+                .init(id: address.id,
+                      zipCode: address.zipCode,
+                      address: address.address)
+        }
     }
 }
