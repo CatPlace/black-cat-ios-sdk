@@ -7,8 +7,8 @@
 
 import Foundation
 
-extension DTO {
-    struct MagazineDetail: Decodable {
+extension DTO.Magazine {
+    struct Detail: Decodable {
         let status: String
         let cellInfos: [CellInfo]
         let error: String?

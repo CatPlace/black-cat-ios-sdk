@@ -7,8 +7,8 @@
 
 import Foundation
 
-extension DTO {
-    struct PostMagazine: Decodable {
+extension DTO.Magazine {
+    struct Post: Decodable {
         let status: String
         let magazine: Magazine
         let error: String?

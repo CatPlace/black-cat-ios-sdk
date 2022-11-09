@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 struct MagazineDetailAPI: ServiceAPI {
-    typealias Response = DTO.MagazineDetail
+    typealias Response = DTO.Magazine.Detail
 
     let id: Int
     init(id: Int) {

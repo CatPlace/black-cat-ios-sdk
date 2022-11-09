@@ -10,9 +10,12 @@ import Foundation
 import Moya
 
 struct PostMagazineAPI: ServiceAPI {
-    typealias Response = DTO.PostMagazine
+    typealias Response = DTO.Magazine.Post
 
     var request: Request
+    init(request: Request) {
+        self.request = request
+    }
     var path: String = "magazines"
     var method: Moya.Method { .post }
     var task: Moya.Task {

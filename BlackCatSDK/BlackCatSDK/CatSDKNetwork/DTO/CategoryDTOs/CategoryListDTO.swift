@@ -7,11 +7,11 @@
 
 import Foundation
 
-extension DTO {
-    struct Category: Decodable {
-        let list: [CategoryDetail]
+extension DTO.Category {
+    struct List: Decodable {
+        let category: [Category]
 
-        struct CategoryDetail: Decodable {
+        struct Category: Decodable {
             let id: Int
             let name: String
             let count: Int

@@ -7,4 +7,9 @@
 
 import Foundation
 
-enum DTO { }
+enum DTO {
+    enum Category {}
+    enum Tattoo {}
+    enum Magazine {}
+    enum Address {}
+}

@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 struct MagazineListAPI: ServiceAPI {
-    typealias Response = DTO.MagazineList
+    typealias Response = DTO.Magazine.List
 
     var path: String = "magazines"
     var method: Moya.Method { .get }
