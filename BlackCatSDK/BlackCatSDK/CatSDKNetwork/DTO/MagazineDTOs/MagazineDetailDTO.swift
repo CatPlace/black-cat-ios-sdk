@@ -9,9 +9,10 @@ import Foundation
 
 extension DTO {
     struct MagazineDetail: Decodable {
-        let title: String
-        let imageUrl: String?
+        let status: String
         let cellInfos: [CellInfo]
+        let error: String?
+        let code: Int
 
         struct CellInfo: Decodable {
            let cellType: String
@@ -31,7 +32,7 @@ extension DTO {
         }
 
         enum CodingKeys: String, CodingKey {
-            case title, imageUrl
+            case status, error, code
             case cellInfos = "data"
         }
     }

@@ -9,9 +9,10 @@ import Foundation
 
 extension Model {
     public struct MagazineDetail {
-        let title: String
-        let imageURLString: String?
+        let status: String
         let cellInfos: [CellInfo]
+        let error: String?
+        let code: Int
 
         public struct CellInfo {
             let type: String
