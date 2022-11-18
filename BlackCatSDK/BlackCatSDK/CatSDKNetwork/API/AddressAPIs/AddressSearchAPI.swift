@@ -20,5 +20,8 @@ struct AddressSearchAPI: ServiceAPI {
     }
     var path: String = "addresses/search"
     var method: Moya.Method { .get }
-    var task: Moya.Task { .requestPlain }
+    var task: Moya.Task { .requestParameters(parameters: [
+        "page": page,
+        "size": size
+    ], encoding: URLEncoding.queryString)}
 }

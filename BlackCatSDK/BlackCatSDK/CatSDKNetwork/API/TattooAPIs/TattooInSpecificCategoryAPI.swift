@@ -24,7 +24,10 @@ struct TattooInSpecificCategoryAPI: ServiceAPI {
         self.page = page
         self.size = size
     }
-    var path: String = "tattoos/categories/categoryId"
+    var path: String {"tattoos/categories/\(categoryID)" }
     var method: Moya.Method { .get }
-    var task: Moya.Task { .requestPlain }
+    var task: Moya.Task { .requestParameters(parameters: [
+        "page": page,
+        "size": size
+    ], encoding: URLEncoding.queryString) }
 }
