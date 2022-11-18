@@ -8,12 +8,9 @@
 import Foundation
 
 struct DTOConverter {
-    enum Category {
-        func abc(_ DTO: DTO.Category.List) { }
-    }
     func convertCategoryListDTOToModel(_ DTO: DTO.Category.List) -> [Model.Category] {
-        return DTO.category.map { detail in
-                .init(id: detail.id, name: detail.name, count: detail.count)
+        return DTO.categories.map { category in
+                .init(id: category.id, name: category.name, count: category.count)
         }
     }
 

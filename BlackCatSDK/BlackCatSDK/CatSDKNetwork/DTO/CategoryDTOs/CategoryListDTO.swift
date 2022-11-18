@@ -9,7 +9,7 @@ import Foundation
 
 extension DTO.Category {
     struct List: Decodable {
-        let category: [Category]
+        let categories: [Category]
 
         struct Category: Decodable {
             let id: Int

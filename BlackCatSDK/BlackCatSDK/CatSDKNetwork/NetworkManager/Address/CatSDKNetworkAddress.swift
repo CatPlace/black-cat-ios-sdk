@@ -14,7 +14,7 @@ public class CatSDKNetworkAddress: CatSDKNetworkable {
 
     public static func searchAddress(
         page: Int,
-        size: Int,
+        size: Int = 20,
         completion: @escaping (Result<[Model.Address], Error>) -> Void
     ) {
         networkService.request(AddressSearchAPI(page: page, size: size)) { result in
@@ -31,7 +31,7 @@ public class CatSDKNetworkAddress: CatSDKNetworkable {
 extension Reactive where Base: CatSDKNetworkAddress {
     public static func searchAddress(
         page: Int,
-        size: Int
+        size: Int = 20
     ) -> Observable<[Model.Address]> {
         Base.networkService.rx.request(AddressSearchAPI(page: page, size: size))
             .compactMap { Base.converter.convertAddressDTOToModel($0) }
