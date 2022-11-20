@@ -11,6 +11,15 @@
 		781C5F7E28F5F2810022C8F3 /* CHIBasePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C5F7A28F5F2810022C8F3 /* CHIBasePageControl.swift */; };
 		781C5F7F28F5F2810022C8F3 /* CHILayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C5F7B28F5F2810022C8F3 /* CHILayer.swift */; };
 		781C5F8028F5F2810022C8F3 /* CHIPageControlJaloro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C5F7C28F5F2810022C8F3 /* CHIPageControlJaloro.swift */; };
+		7867504629276E81005139ED /* LoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867504529276E81005139ED /* LoginDTO.swift */; };
+		786750482927781E005139ED /* UpdateNicknameDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786750472927781E005139ED /* UpdateNicknameDTO.swift */; };
+		7867504A29277833005139ED /* UpdateRoleDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867504929277833005139ED /* UpdateRoleDTO.swift */; };
+		7867504C2927784B005139ED /* UpdateAddressDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867504B2927784B005139ED /* UpdateAddressDTO.swift */; };
+		7867504F29277899005139ED /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867504E29277899005139ED /* LoginAPI.swift */; };
+		7867505129277910005139ED /* UpdateRoleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867505029277910005139ED /* UpdateRoleAPI.swift */; };
+		7867505329277923005139ED /* UpdateNicknameAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867505229277923005139ED /* UpdateNicknameAPI.swift */; };
+		786750552927792F005139ED /* UpdateAddressAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786750542927792F005139ED /* UpdateAddressAPI.swift */; };
+		786750582929FE48005139ED /* CatSDKNetworkUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786750572929FE48005139ED /* CatSDKNetworkUser.swift */; };
 		78858BE928F6F05300EC7BF7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 78858BE828F6F05300EC7BF7 /* RealmSwift */; };
 		8E361A3D291A186600785F62 /* CategoryListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A3C291A186600785F62 /* CategoryListDTO.swift */; };
 		8E361A3F291A198E00785F62 /* CatSDKNetworkCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A3E291A198E00785F62 /* CatSDKNetworkCategory.swift */; };
@@ -79,6 +88,15 @@
 		781C5F7A28F5F2810022C8F3 /* CHIBasePageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIBasePageControl.swift; sourceTree = "<group>"; };
 		781C5F7B28F5F2810022C8F3 /* CHILayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHILayer.swift; sourceTree = "<group>"; };
 		781C5F7C28F5F2810022C8F3 /* CHIPageControlJaloro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlJaloro.swift; sourceTree = "<group>"; };
+		7867504529276E81005139ED /* LoginDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDTO.swift; sourceTree = "<group>"; };
+		786750472927781E005139ED /* UpdateNicknameDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNicknameDTO.swift; sourceTree = "<group>"; };
+		7867504929277833005139ED /* UpdateRoleDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRoleDTO.swift; sourceTree = "<group>"; };
+		7867504B2927784B005139ED /* UpdateAddressDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAddressDTO.swift; sourceTree = "<group>"; };
+		7867504E29277899005139ED /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
+		7867505029277910005139ED /* UpdateRoleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRoleAPI.swift; sourceTree = "<group>"; };
+		7867505229277923005139ED /* UpdateNicknameAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNicknameAPI.swift; sourceTree = "<group>"; };
+		786750542927792F005139ED /* UpdateAddressAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAddressAPI.swift; sourceTree = "<group>"; };
+		786750572929FE48005139ED /* CatSDKNetworkUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKNetworkUser.swift; sourceTree = "<group>"; };
 		8E361A3C291A186600785F62 /* CategoryListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListDTO.swift; sourceTree = "<group>"; };
 		8E361A3E291A198E00785F62 /* CatSDKNetworkCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKNetworkCategory.swift; sourceTree = "<group>"; };
 		8E361A40291A1B6F00785F62 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
@@ -171,6 +189,36 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		7867504429276E39005139ED /* UserDTOs */ = {
+			isa = PBXGroup;
+			children = (
+				7867504529276E81005139ED /* LoginDTO.swift */,
+				7867504929277833005139ED /* UpdateRoleDTO.swift */,
+				786750472927781E005139ED /* UpdateNicknameDTO.swift */,
+				7867504B2927784B005139ED /* UpdateAddressDTO.swift */,
+			);
+			path = UserDTOs;
+			sourceTree = "<group>";
+		};
+		7867504D2927787A005139ED /* UserAPIs */ = {
+			isa = PBXGroup;
+			children = (
+				7867504E29277899005139ED /* LoginAPI.swift */,
+				7867505029277910005139ED /* UpdateRoleAPI.swift */,
+				7867505229277923005139ED /* UpdateNicknameAPI.swift */,
+				786750542927792F005139ED /* UpdateAddressAPI.swift */,
+			);
+			path = UserAPIs;
+			sourceTree = "<group>";
+		};
+		786750562929FB59005139ED /* User */ = {
+			isa = PBXGroup;
+			children = (
+				786750572929FE48005139ED /* CatSDKNetworkUser.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		8E361A4C291A3DEA00785F62 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +292,7 @@
 		8E361A68291A5B5800785F62 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
+				786750562929FB59005139ED /* User */,
 				8E361A4C291A3DEA00785F62 /* Category */,
 				8E7E9CB0291B5FF900D09157 /* Tattoo */,
 				8E361A4D291A3DF500785F62 /* Magazine */,
@@ -422,6 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				8EE9A0DF28F3FEBF003D7761 /* DTO.swift */,
+				7867504429276E39005139ED /* UserDTOs */,
 				8E361A50291A3EE800785F62 /* CategoryDTOs */,
 				8E361A51291A3EFA00785F62 /* MagazineDTOs */,
 				8E7E9CB3291B60B400D09157 /* TattooDTOs */,
@@ -434,6 +484,7 @@
 		8EE9A0E528F40329003D7761 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				7867504D2927787A005139ED /* UserAPIs */,
 				8E361A54291A435A00785F62 /* CategoryAPIs */,
 				8E361A5B291A46F000785F62 /* MagazineAPIs */,
 				8E7E9CB6291B60D400D09157 /* TattooAPIs */,
@@ -591,6 +642,7 @@
 				8E7E9CC7291B9D6B00D09157 /* TattooModel.swift in Sources */,
 				8E7E9CCF291BBD0F00D09157 /* CatSDKNetworkAddress.swift in Sources */,
 				8E361A59291A441500785F62 /* MagazineModel.swift in Sources */,
+				7867505329277923005139ED /* UpdateNicknameAPI.swift in Sources */,
 				B1D3363328F1C98C00826636 /* UICollectionView+RxReusableKit.swift in Sources */,
 				8E7E9CC4291B866800D09157 /* AddressSearchDTO.swift in Sources */,
 				781C5F7F28F5F2810022C8F3 /* CHILayer.swift in Sources */,
@@ -600,21 +652,27 @@
 				781C5F7E28F5F2810022C8F3 /* CHIBasePageControl.swift in Sources */,
 				8E361A56291A436C00785F62 /* MagazineListAPI.swift in Sources */,
 				8E361A49291A306700785F62 /* NetworkError.swift in Sources */,
+				7867504A29277833005139ED /* UpdateRoleDTO.swift in Sources */,
 				8E7E9CB5291B60C400D09157 /* TattooListDTO.swift in Sources */,
 				8E7E9CCD291BBCDB00D09157 /* AddressModel.swift in Sources */,
 				B1D3362D28F1C92F00826636 /* ReusableCell.swift in Sources */,
+				7867504629276E81005139ED /* LoginDTO.swift in Sources */,
 				8E361A65291A4F7400785F62 /* PostMagazineDTO.swift in Sources */,
 				8E361A61291A491900785F62 /* MagazineDetail.swift in Sources */,
 				8E361A3F291A198E00785F62 /* CatSDKNetworkCategory.swift in Sources */,
 				8E7E9CBC291B792600D09157 /* PostTattooDTO.swift in Sources */,
 				781C5F7D28F5F2810022C8F3 /* CHIPageControllable.swift in Sources */,
+				786750482927781E005139ED /* UpdateNicknameDTO.swift in Sources */,
 				8E361A5D291A470400785F62 /* MagazineDetailAPI.swift in Sources */,
 				8E361A53291A3F1100785F62 /* MagazineListDTO.swift in Sources */,
 				8E7E9CB8291B60E300D09157 /* TattooListAPI.swift in Sources */,
+				7867504F29277899005139ED /* LoginAPI.swift in Sources */,
 				8EE9A0E028F3FEBF003D7761 /* DTO.swift in Sources */,
 				8E7E9CBE291B79F500D09157 /* PostTattooAPI.swift in Sources */,
+				7867504C2927784B005139ED /* UpdateAddressDTO.swift in Sources */,
 				8EE81FA128F424BB001DB7E1 /* Model.swift in Sources */,
 				B1D3363528F1C9AC00826636 /* UITableView+RxReusableKit.swift in Sources */,
+				786750552927792F005139ED /* UpdateAddressAPI.swift in Sources */,
 				8E361A43291A1C2F00785F62 /* CategoryListAPI.swift in Sources */,
 				8E361A5F291A478100785F62 /* MagazineDetailDTO.swift in Sources */,
 				8E7E9CC1291B861000D09157 /* AddressSearchAPI.swift in Sources */,
@@ -624,9 +682,11 @@
 				8E361A41291A1B6F00785F62 /* CategoryModel.swift in Sources */,
 				8EE9A0E728F40388003D7761 /* ServiceAPI.swift in Sources */,
 				8EC953CB28EB25E500E239CC /* BlackCatSDK.swift in Sources */,
+				786750582929FE48005139ED /* CatSDKNetworkUser.swift in Sources */,
 				8E361A47291A2FEC00785F62 /* NetworkService+Rx.swift in Sources */,
 				8E361A67291A530600785F62 /* CreateMagazine.swift in Sources */,
 				8E361A3D291A186600785F62 /* CategoryListDTO.swift in Sources */,
+				7867505129277910005139ED /* UpdateRoleAPI.swift in Sources */,
 				B1D3363128F1C97700826636 /* UITableView+ReusableKit.swift in Sources */,
 				8EE9A0DE28F3FCF2003D7761 /* NetworkService.swift in Sources */,
 			);

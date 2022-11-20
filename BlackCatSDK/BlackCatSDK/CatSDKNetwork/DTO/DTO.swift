@@ -12,4 +12,5 @@ enum DTO {
     enum Tattoo {}
     enum Magazine {}
     enum Address {}
+    enum User {}
 }
