@@ -66,6 +66,9 @@
 		8EE9A0DE28F3FCF2003D7761 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9A0DD28F3FCF2003D7761 /* NetworkService.swift */; };
 		8EE9A0E028F3FEBF003D7761 /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9A0DF28F3FEBF003D7761 /* DTO.swift */; };
 		8EE9A0E728F40388003D7761 /* ServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9A0E628F40388003D7761 /* ServiceAPI.swift */; };
+		B1BCF5E828FC3A16005B6297 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B1BCF5E728FC3A16005B6297 /* RxCocoa */; };
+		B1BCF5EA28FC3A16005B6297 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = B1BCF5E928FC3A16005B6297 /* RxRelay */; };
+		B1BCF5EC28FC3A16005B6297 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B1BCF5EB28FC3A16005B6297 /* RxSwift */; };
 		B1D3362D28F1C92F00826636 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3362C28F1C92F00826636 /* ReusableCell.swift */; };
 		B1D3362F28F1C95500826636 /* UICollectionView+ReusableKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3362E28F1C95500826636 /* UICollectionView+ReusableKit.swift */; };
 		B1D3363128F1C97700826636 /* UITableView+ReusableKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3363028F1C97700826636 /* UITableView+ReusableKit.swift */; };
@@ -149,12 +152,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E366B1A28F5282D00D13BB2 /* RxSwift in Frameworks */,
-				8E366B1828F5282D00D13BB2 /* RxRelay in Frameworks */,
-				78858BE928F6F05300EC7BF7 /* RealmSwift in Frameworks */,
+				B1BCF5EC28FC3A16005B6297 /* RxSwift in Frameworks */,
+				B1BCF5EA28FC3A16005B6297 /* RxRelay in Frameworks */,
 				8E49917528F5206F00742533 /* RxMoya in Frameworks */,
 				8E49917128F5206F00742533 /* Moya in Frameworks */,
-				8E366B1628F5282D00D13BB2 /* RxCocoa in Frameworks */,
+				B1BCF5E828FC3A16005B6297 /* RxCocoa in Frameworks */,
 				8E49917328F5206F00742533 /* ReactiveMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,10 +548,9 @@
 				8E49917028F5206F00742533 /* Moya */,
 				8E49917228F5206F00742533 /* ReactiveMoya */,
 				8E49917428F5206F00742533 /* RxMoya */,
-				8E366B1528F5282D00D13BB2 /* RxCocoa */,
-				8E366B1728F5282D00D13BB2 /* RxRelay */,
-				8E366B1928F5282D00D13BB2 /* RxSwift */,
-				78858BE828F6F05300EC7BF7 /* RealmSwift */,
+				B1BCF5E728FC3A16005B6297 /* RxCocoa */,
+				B1BCF5E928FC3A16005B6297 /* RxRelay */,
+				B1BCF5EB28FC3A16005B6297 /* RxSwift */,
 			);
 			productName = BlackCatSDK;
 			productReference = 8EC953B028EB25DA00E239CC /* BlackCatSDK.framework */;
@@ -602,8 +603,7 @@
 			mainGroup = 8EC953A628EB25DA00E239CC;
 			packageReferences = (
 				8E49916F28F5206F00742533 /* XCRemoteSwiftPackageReference "Moya" */,
-				8E366B1428F5282D00D13BB2 /* XCRemoteSwiftPackageReference "RxSwift" */,
-				78858BE728F6F05300EC7BF7 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				B1BCF5E628FC3A16005B6297 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 8EC953B128EB25DA00E239CC /* Products */;
 			projectDirPath = "";
@@ -958,22 +958,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		78858BE728F6F05300EC7BF7 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		8E366B1428F5282D00D13BB2 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 6.5.0;
-			};
-		};
 		8E49916F28F5206F00742533 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -982,29 +966,17 @@
 				version = 15.0.0;
 			};
 		};
+		B1BCF5E628FC3A16005B6297 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		78858BE828F6F05300EC7BF7 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 78858BE728F6F05300EC7BF7 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
-		};
-		8E366B1528F5282D00D13BB2 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8E366B1428F5282D00D13BB2 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		8E366B1728F5282D00D13BB2 /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8E366B1428F5282D00D13BB2 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		8E366B1928F5282D00D13BB2 /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8E366B1428F5282D00D13BB2 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
 		8E49917028F5206F00742533 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8E49916F28F5206F00742533 /* XCRemoteSwiftPackageReference "Moya" */;
@@ -1019,6 +991,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8E49916F28F5206F00742533 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = RxMoya;
+		};
+		B1BCF5E728FC3A16005B6297 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1BCF5E628FC3A16005B6297 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		B1BCF5E928FC3A16005B6297 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1BCF5E628FC3A16005B6297 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		B1BCF5EB28FC3A16005B6297 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1BCF5E628FC3A16005B6297 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
