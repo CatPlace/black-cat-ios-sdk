@@ -6,8 +6,8 @@
 //
 
 import Foundation
-
 import Moya
+import BlackCatKEY
 
 public protocol ServiceAPI: TargetType {
     associatedtype Response: Decodable
@@ -19,7 +19,7 @@ public protocol ServiceAPI: TargetType {
 
 extension ServiceAPI {
     var baseURL: URL {
-        return URL(string: "https://blackcat.pe.kr/api/v1/")!
+        return URL(string: BlackCatKEY.urlString)!
     }
     var headers: [String : String]? { nil }
 }
