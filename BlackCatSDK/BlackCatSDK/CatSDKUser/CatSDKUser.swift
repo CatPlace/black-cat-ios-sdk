@@ -10,8 +10,9 @@ import RxSwift
 import BlackCatKEY
 
 public class CatSDKUser {
-    public enum LoginType {
-        case kakao, apple
+    public enum LoginType: String {
+        case kakao = "KAKAO"
+        case apple = "APPLE"
         
         public func buttonImageName() -> String {
             switch self {
@@ -21,24 +22,26 @@ public class CatSDKUser {
                 return "login_apple"
             }
         }
+        
+        func blackCatSocialLoginType() -> BlackCatSocialLoginSDK.SocialLoginType {
+            switch self {
+            case .kakao:
+                return .kakao
+            case .apple:
+                return .apple
+            }
+        }
     }
     
     public static func initSDK(with URLContexts: Set<UIOpenURLContext>? = nil) {
-        BlackCatSocialLoginSDK.initSDK(with: URLContexts, kakaoAppKey: BlackCatKEY.KakaoSDK.key)
+        BlackCatSocialLoginSDK.initSDK(with: URLContexts, kakaoAppKey: BlackCatKEY.kakaoAppKey)
     }
     
-    public static func login(type: LoginType) -> Observable<Result<Model.User, Error>>{
-        var token: Observable<String>
-        switch type {
-        case .kakao:
-            token = BlackCatSocialLoginSDK.accessToken(type: .kakao)
-        case .apple:
-            token = BlackCatSocialLoginSDK.accessToken(type: .apple)
-        }
-        
-        // TODO: - API 연동
-        return token
-            .map { _ in .success(Model.User(jwt: "a", name: "b", imageUrl: "c")) }
+    public static func login(type: LoginType) -> Observable<Model.User>{
+        let providerType = type.rawValue
+        let providerToken = BlackCatSocialLoginSDK.accessToken(type: type.blackCatSocialLoginType())
+        return providerToken
+            .flatMap { CatSDKNetworkUser.rx.login(providerType: providerType, providerToken: $0) }
     }
     
     public static func logout() {

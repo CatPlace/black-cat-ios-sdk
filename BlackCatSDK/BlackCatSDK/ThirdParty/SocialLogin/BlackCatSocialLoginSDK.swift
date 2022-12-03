@@ -19,7 +19,7 @@ import RxKakaoSDKAuth
 import RxKakaoSDKUser
 
 class BlackCatSocialLoginSDK: NSObject {
-    enum SocialLoginType {
+    public enum SocialLoginType {
         case kakao, apple
     }
     
@@ -41,7 +41,6 @@ class BlackCatSocialLoginSDK: NSObject {
         if let kakaoAppKey {
             KakaoSDK.initSDK(appKey: kakaoAppKey)
         }
-        
     }
     
     static func accessToken(type: SocialLoginType) -> Observable<String> {

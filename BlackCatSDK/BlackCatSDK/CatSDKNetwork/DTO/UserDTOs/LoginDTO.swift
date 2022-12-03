@@ -8,8 +8,8 @@
 import Foundation
 
 extension DTO.User {
-    struct Login {
-        struct Request: Encodable {
+    public struct Login {
+        public struct Request: Encodable {
             let providerType: String
             let providerToken: String
         }

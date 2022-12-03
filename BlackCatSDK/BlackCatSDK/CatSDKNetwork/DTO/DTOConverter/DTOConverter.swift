@@ -8,6 +8,11 @@
 import Foundation
 
 struct DTOConverter {
+    
+    func convertUserDTOToModel(_ DTO: DTO.User.Login.Response) -> Model.User {
+        return .init(jwt: DTO.accessToken)
+    }
+    
     func convertCategoryListDTOToModel(_ DTO: DTO.Category.List) -> [Model.Category] {
         return DTO.categories.map { category in
                 .init(id: category.id, name: category.name, count: category.count)
