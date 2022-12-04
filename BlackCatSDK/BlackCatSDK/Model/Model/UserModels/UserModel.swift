@@ -17,6 +17,7 @@ extension Model {
     }
     
     public struct User {
+        public var id: Int
         public var jwt: String?
         public var name: String?
         public var imageUrl: String?
@@ -25,13 +26,15 @@ extension Model {
         public var gender: Gender?
         public var area: Area?
         
-        public init(jwt: String? = nil,
+        public init(id: Int,
+                    jwt: String? = nil,
                     name: String? = nil,
                     imageUrl: String? = nil,
                     email: String? = nil,
                     phoneNumber: String? = nil,
                     gender: Gender? = nil,
                     area: Area? = nil) {
+            self.id = id
             self.jwt = jwt
             self.name = name
             self.imageUrl = imageUrl

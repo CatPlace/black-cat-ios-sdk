@@ -33,14 +33,20 @@ public class CatSDKUser {
         }
     }
     
-    public static func initSDK(with URLContexts: Set<UIOpenURLContext>? = nil) {
-        BlackCatSocialLoginSDK.initSDK(with: URLContexts, kakaoAppKey: BlackCatKEY.kakaoAppKey)
+    public static func linkURLs(with URLContexts: Set<UIOpenURLContext>) {
+        BlackCatSocialLoginSDK.linkURLs(with: URLContexts)
+    }
+    
+    public static func registerAppKeys() {
+        BlackCatSocialLoginSDK.registerAppKeys(kakaoAppKey: BlackCatKEY.kakaoAppKey)
     }
     
     public static func login(type: LoginType) -> Observable<Model.User>{
         let providerType = type.rawValue
         let providerToken = BlackCatSocialLoginSDK.accessToken(type: type.blackCatSocialLoginType())
         return providerToken
+            .catch { _ in .just("") }
+            .filter { $0 != "" }
             .flatMap { CatSDKNetworkUser.rx.login(providerType: providerType, providerToken: $0) }
     }
     

@@ -15,8 +15,8 @@ extension DTO.User {
         }
         
         struct Response: Decodable {
-            let id: Int
-            let accessToken: String
+            let id: Int?
+            let accessToken: String?
         }
     }
 }

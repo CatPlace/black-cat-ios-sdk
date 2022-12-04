@@ -10,7 +10,7 @@ import Foundation
 struct DTOConverter {
     
     func convertUserDTOToModel(_ DTO: DTO.User.Login.Response) -> Model.User {
-        return .init(jwt: DTO.accessToken)
+        return .init(id: DTO.id ?? -1, jwt: DTO.accessToken)
     }
     
     func convertCategoryListDTOToModel(_ DTO: DTO.Category.List) -> [Model.Category] {

@@ -28,18 +28,18 @@ class BlackCatSocialLoginSDK: NSObject {
     private static let shared = BlackCatSocialLoginSDK()
    
     // MARK: - Functions(interface)
-    static func initSDK(with URLContexts: Set<UIOpenURLContext>?, kakaoAppKey: String?) {
-        if let URLContexts {
-            URLContexts.forEach { context in
-                let url = context.url
-                if AuthApi.isKakaoTalkLoginUrl(url) {
-                    _ = AuthController.handleOpenUrl(url: url)
-                }
-            }
-        }
-
+    static func registerAppKeys(kakaoAppKey: String?) {
         if let kakaoAppKey {
             KakaoSDK.initSDK(appKey: kakaoAppKey)
+        }
+    }
+    
+    static func linkURLs(with URLContexts: Set<UIOpenURLContext>) {
+        URLContexts.forEach { context in
+            let url = context.url
+            if AuthApi.isKakaoTalkLoginUrl(url) {
+                _ = AuthController.handleOpenUrl(url: url)
+            }
         }
     }
     
@@ -60,10 +60,9 @@ class BlackCatSocialLoginSDK: NSObject {
         
         // TODO: - 에러처리
         return oAuthToken
-            .take(1)
             .debug("카카오 로그인 SDK")
             .map { $0.accessToken }
-            .catch { _ in .just("토큰을 가져오는데 실패했습니다.") }
+            .catch { _ in .just("") }
     }
     
     func appleIdentityToken() -> Observable<String> {
@@ -90,7 +89,6 @@ extension BlackCatSocialLoginSDK: ASAuthorizationControllerDelegate,   ASAuthori
             guard let identityToken = appleIDCredential.identityToken else { return }
             let identityTokenString = String(data: identityToken, encoding: .ascii)!
             appleIdentityTokenSubject.onNext(identityTokenString)
-            appleIdentityTokenSubject.onCompleted()
             appleIdentityTokenSubject = PublishSubject<String>()
         default:
             break
@@ -99,7 +97,6 @@ extension BlackCatSocialLoginSDK: ASAuthorizationControllerDelegate,   ASAuthori
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         appleIdentityTokenSubject.onError(error)
-        appleIdentityTokenSubject.onCompleted()
         appleIdentityTokenSubject = PublishSubject<String>()
     }
 }
