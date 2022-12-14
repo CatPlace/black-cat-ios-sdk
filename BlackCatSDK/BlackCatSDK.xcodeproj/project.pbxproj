@@ -66,6 +66,7 @@
 		8E7E9CC9291BB89000D09157 /* TattooInSpecificCategoryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E9CC8291BB89000D09157 /* TattooInSpecificCategoryAPI.swift */; };
 		8E7E9CCD291BBCDB00D09157 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E9CCC291BBCDB00D09157 /* AddressModel.swift */; };
 		8E7E9CCF291BBD0F00D09157 /* CatSDKNetworkAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E9CCE291BBD0F00D09157 /* CatSDKNetworkAddress.swift */; };
+		8E88488F2949D5110039F99A /* PostTattooModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E88488E2949D5110039F99A /* PostTattooModel.swift */; };
 		8EC953BB28EB25DA00E239CC /* BlackCatSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC953B028EB25DA00E239CC /* BlackCatSDK.framework */; };
 		8EC953C028EB25DA00E239CC /* BlackCatSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC953BF28EB25DA00E239CC /* BlackCatSDKTests.swift */; };
 		8EC953C128EB25DA00E239CC /* BlackCatSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EC953B328EB25DA00E239CC /* BlackCatSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -158,6 +159,7 @@
 		8E7E9CC8291BB89000D09157 /* TattooInSpecificCategoryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooInSpecificCategoryAPI.swift; sourceTree = "<group>"; };
 		8E7E9CCC291BBCDB00D09157 /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
 		8E7E9CCE291BBD0F00D09157 /* CatSDKNetworkAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKNetworkAddress.swift; sourceTree = "<group>"; };
+		8E88488E2949D5110039F99A /* PostTattooModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTattooModel.swift; sourceTree = "<group>"; };
 		8EC953B028EB25DA00E239CC /* BlackCatSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlackCatSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC953B328EB25DA00E239CC /* BlackCatSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlackCatSDK.h; sourceTree = "<group>"; };
 		8EC953BA28EB25DA00E239CC /* BlackCatSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackCatSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -437,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				8E7E9CC6291B9D6B00D09157 /* TattooModel.swift */,
+				8E88488E2949D5110039F99A /* PostTattooModel.swift */,
 			);
 			path = TattooModels;
 			sourceTree = "<group>";
@@ -724,6 +727,7 @@
 			files = (
 				8E361A4F291A3E3900785F62 /* CatSDKNetworkMagazine.swift in Sources */,
 				8EE81FAA28F43250001DB7E1 /* DTOConverter.swift in Sources */,
+				8E88488F2949D5110039F99A /* PostTattooModel.swift in Sources */,
 				8E7E9CC7291B9D6B00D09157 /* TattooModel.swift in Sources */,
 				8E7E9CCF291BBD0F00D09157 /* CatSDKNetworkAddress.swift in Sources */,
 				8E361A59291A441500785F62 /* MagazineModel.swift in Sources */,

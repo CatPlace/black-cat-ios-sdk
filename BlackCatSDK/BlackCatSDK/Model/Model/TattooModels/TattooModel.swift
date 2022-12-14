@@ -9,12 +9,12 @@ import Foundation
 
 extension Model {
     public struct Tattoo {
-        let id: Int
-        let price: Int
-        let tattooistName: String
-        let description: String
-        let liked: Bool
-        let imageURLStrings: [String?]
-        let address: String
+        public let id: Int
+        public let price: Int
+        public let tattooistName: String
+        public let description: String
+        public let liked: Bool
+        public let imageURLStrings: [String?]
+        public let address: String
     }
 }
