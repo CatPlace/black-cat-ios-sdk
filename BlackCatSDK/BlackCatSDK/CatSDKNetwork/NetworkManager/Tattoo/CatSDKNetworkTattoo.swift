@@ -44,6 +44,24 @@ public class CatSDKNetworkTattoo: CatSDKNetworkable {
             }
         }
     }
+
+    public static func postTattoo(
+        tattooImageDatas: [Data],
+        postTattooModel: Model.PostTattoo.Request,
+        completion: @escaping (Result<Model.PostTattoo.Response, Error>) -> Void
+    ) {
+        networkService.request(PostTattooAPI(
+            tattooImageDatas: tattooImageDatas,
+            tattooInfo: converter.createPostTattooRequest(postTattooModel))
+        ) { result in
+            switch result {
+            case .success(let DTO):
+                completion(.success(converter.convertPostTattooResponseDTOToModel(DTO)))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }
 
 extension Reactive where Base: CatSDKNetworkTattoo {
@@ -64,5 +82,17 @@ extension Reactive where Base: CatSDKNetworkTattoo {
         Base.networkService.rx.request(TattooInSpecificCategoryAPI(categoryID: id, page: page, size: size))
             .compactMap { Base.converter.convertTattooListDTOToModel($0) }
             .asObservable()
+    }
+
+    public static func postTattoo(
+        tattooImageDatas: [Data],
+        postTattooModel: Model.PostTattoo.Request
+    ) -> Observable<Model.PostTattoo.Response> {
+        Base.networkService.rx.request(PostTattooAPI(
+            tattooImageDatas: tattooImageDatas,
+            tattooInfo: Base.converter.createPostTattooRequest(postTattooModel))
+        )
+        .compactMap { Base.converter.convertPostTattooResponseDTOToModel($0) }
+        .asObservable()
     }
 }
