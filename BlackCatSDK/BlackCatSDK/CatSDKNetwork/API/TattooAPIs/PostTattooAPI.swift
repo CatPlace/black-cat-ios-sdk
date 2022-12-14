@@ -10,14 +10,20 @@ import Foundation
 import Moya
 
 struct PostTattooAPI: ServiceAPI {
-    typealias Response = DTO.Tattoo.Post
+    typealias Response = DTO.Tattoo.Post.Response
 
     var tattooImageDatas: [Data]
-    var tattooInfo: TattooInfo
+    var tattooInfo: DTO.Tattoo.Post.Request
+    init(
+        tattooImageDatas: [Data],
+        tattooInfo: DTO.Tattoo.Post.Request
+    ) {
+        self.tattooImageDatas = tattooImageDatas
+        self.tattooInfo = tattooInfo
+    }
     var path: String = "tattoos"
     var method: Moya.Method { .post }
     var multiPartFormDatas: [MultipartFormData] {
-        // TODO: - 멀티파트 폼 해결
         let tattooInfoData = try! JSONEncoder().encode(tattooInfo)
         var formDatas: [MultipartFormData] = [.init(provider: .data(tattooInfoData), name: "tattooInfo")]
         tattooImageDatas.forEach { imageData in
@@ -28,15 +34,5 @@ struct PostTattooAPI: ServiceAPI {
     }
     var task: Moya.Task {
         .uploadMultipart(multiPartFormDatas)
-    }
-}
-
-extension PostTattooAPI {
-    struct TattooInfo: Encodable {
-        let tattooType: String
-        let categoryId: Int
-        let title: String
-        let price: Int
-        let description: String
     }
 }
