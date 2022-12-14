@@ -10,17 +10,17 @@ import Foundation
 struct DTOConverter {
     
     func convertUserDTOToModel(_ DTO: DTO.User.Login.Response) -> Model.User {
-        return .init(id: DTO.id ?? -1, jwt: DTO.accessToken)
+        .init(id: DTO.id ?? -1, jwt: DTO.accessToken)
     }
     
     func convertCategoryListDTOToModel(_ DTO: DTO.Category.List) -> [Model.Category] {
-        return DTO.categories.map { category in
+        DTO.categories.map { category in
                 .init(id: category.id, name: category.name, count: category.count)
         }
     }
 
     func convertTattooListDTOToModel(_ DTO: DTO.Tattoo.List) -> [Model.Tattoo] {
-        return DTO.tattoos.map { tattoo in
+        DTO.tattoos.map { tattoo in
                 .init(id: tattoo.id,
                       price: tattoo.price,
                       tattooistName: tattoo.tattooistName,
@@ -31,8 +31,21 @@ struct DTOConverter {
         }
     }
 
+    func convertPostTattooResponseDTOToModel(_ DTO: DTO.Tattoo.Post.Response) -> Model.PostTattoo.Response {
+        .init(tattooId: DTO.tattooId, imageUrls: DTO.imageUrls)
+    }
+
+    func createPostTattooRequest(_ model: Model.PostTattoo.Request) -> DTO.Tattoo.Post.Request {
+        .init(tattooType: model.tattooType,
+              categoryId: model.categoryId,
+              title: model.title,
+              price: model.price,
+              description: model.description
+        )
+    }
+
     func convertMagazineListDTOToModel(_ DTO: DTO.Magazine.List) -> [Model.Magazine] {
-        return DTO.data.magazines.map { magazine in
+        DTO.data.magazines.map { magazine in
                 .init(id: magazine.id,
                       title: magazine.title,
                       imageURLString: magazine.imageURL,
@@ -42,7 +55,7 @@ struct DTOConverter {
     }
 
     func convertMagazineDetailDTOToModel(_ DTO: DTO.Magazine.Detail) -> Model.MagazineDetail {
-        return .init(status: DTO.status,
+        .init(status: DTO.status,
                      cellInfos: DTO.cellInfos.map { .init(type: $0.cellType,
                                                           text: $0.text,
                                                           fontSize: $0.fontSize,
