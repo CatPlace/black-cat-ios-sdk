@@ -9,6 +9,8 @@ import Foundation
 import Moya
 import BlackCatKEY
 
+
+
 public protocol ServiceAPI: TargetType {
     associatedtype Response: Decodable
 

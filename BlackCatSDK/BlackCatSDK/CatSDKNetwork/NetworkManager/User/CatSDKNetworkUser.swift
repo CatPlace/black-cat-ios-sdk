@@ -36,7 +36,6 @@ extension Reactive where Base: CatSDKNetworkUser {
                              providerToken: String) -> Observable<Model.User> {
         Base.networkService.rx.request(LoginAPI(request: .init(providerType: providerType,
                                                                providerToken: providerToken)))
-        // TODO: id, jwt nil로 내려옴 (서버 개발자에게 전달)
         .debug("login API🥸")
         .compactMap(Base.converter.convertUserDTOToModel)
         .asObservable()

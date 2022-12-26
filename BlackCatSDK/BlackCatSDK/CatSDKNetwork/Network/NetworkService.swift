@@ -12,6 +12,12 @@ import RxSwift
 import RxMoya
 import Moya
 
+struct APIResponse<T: Decodable>: Decodable {
+    let success: Bool
+    let data: T?
+    let message: String
+}
+
 protocol NetworkServable {
     func request<API>(_ api: API, completion: @escaping (Result<API.Response, Error>) -> Void) where API: ServiceAPI
 }
@@ -31,9 +37,10 @@ class NetworkService: NetworkServable {
             case .success(let response):
                 do {
                     _ = try response.filterSuccessfulStatusCodes()
-                    let decodedData = try response.map(API.Response.self)
-
-                    completion(.success(decodedData))
+                    let decodedData = try response.map(APIResponse<API.Response>.self)
+                    if let data = decodedData.data {
+                        completion(.success(data))
+                    }
                 } catch let error {
                     completion(.failure(error))
                 }
