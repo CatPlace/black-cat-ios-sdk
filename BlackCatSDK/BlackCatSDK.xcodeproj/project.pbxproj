@@ -11,6 +11,7 @@
 		781C5F7E28F5F2810022C8F3 /* CHIBasePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C5F7A28F5F2810022C8F3 /* CHIBasePageControl.swift */; };
 		781C5F7F28F5F2810022C8F3 /* CHILayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C5F7B28F5F2810022C8F3 /* CHILayer.swift */; };
 		781C5F8028F5F2810022C8F3 /* CHIPageControlJaloro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C5F7C28F5F2810022C8F3 /* CHIPageControlJaloro.swift */; };
+		782728AF29597C1700049436 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782728AE29597C1700049436 /* UserDefaultManager.swift */; };
 		7867504629276E81005139ED /* LoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867504529276E81005139ED /* LoginDTO.swift */; };
 		786750482927781E005139ED /* UpdateNicknameDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786750472927781E005139ED /* UpdateNicknameDTO.swift */; };
 		7867504A29277833005139ED /* UpdateRoleDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867504929277833005139ED /* UpdateRoleDTO.swift */; };
@@ -115,6 +116,7 @@
 		781C5F7A28F5F2810022C8F3 /* CHIBasePageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIBasePageControl.swift; sourceTree = "<group>"; };
 		781C5F7B28F5F2810022C8F3 /* CHILayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHILayer.swift; sourceTree = "<group>"; };
 		781C5F7C28F5F2810022C8F3 /* CHIPageControlJaloro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlJaloro.swift; sourceTree = "<group>"; };
+		782728AE29597C1700049436 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		7867504529276E81005139ED /* LoginDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDTO.swift; sourceTree = "<group>"; };
 		786750472927781E005139ED /* UpdateNicknameDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNicknameDTO.swift; sourceTree = "<group>"; };
 		7867504929277833005139ED /* UpdateRoleDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRoleDTO.swift; sourceTree = "<group>"; };
@@ -228,6 +230,22 @@
 				781C5F7B28F5F2810022C8F3 /* CHILayer.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		782728AC29597C0200049436 /* CatSDKLocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				782728AD29597C0200049436 /* UserDefault */,
+			);
+			path = CatSDKLocalStorage;
+			sourceTree = "<group>";
+		};
+		782728AD29597C0200049436 /* UserDefault */ = {
+			isa = PBXGroup;
+			children = (
+				782728AE29597C1700049436 /* UserDefaultManager.swift */,
+			);
+			path = UserDefault;
 			sourceTree = "<group>";
 		};
 		7867504429276E39005139ED /* UserDTOs */ = {
@@ -483,6 +501,7 @@
 			isa = PBXGroup;
 			children = (
 				8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */,
+				782728AC29597C0200049436 /* CatSDKLocalStorage */,
 				8EE9A0DB28F3FBCE003D7761 /* CatSDKNetwork */,
 				78C8D40A2937B142006A4DF5 /* CatSDKUser */,
 				8EE81F9F28F4249B001DB7E1 /* Model */,
@@ -758,6 +777,7 @@
 				8E7E9CB8291B60E300D09157 /* TattooListAPI.swift in Sources */,
 				7867504F29277899005139ED /* LoginAPI.swift in Sources */,
 				8EE9A0E028F3FEBF003D7761 /* DTO.swift in Sources */,
+				782728AF29597C1700049436 /* UserDefaultManager.swift in Sources */,
 				78C8D40C2937B188006A4DF5 /* CatSDKUser.swift in Sources */,
 				8E7E9CBE291B79F500D09157 /* PostTattooAPI.swift in Sources */,
 				7867504C2927784B005139ED /* UpdateAddressDTO.swift in Sources */,
