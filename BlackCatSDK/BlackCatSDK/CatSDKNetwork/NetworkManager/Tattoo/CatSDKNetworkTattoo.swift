@@ -31,11 +31,9 @@ public class CatSDKNetworkTattoo: CatSDKNetworkable {
     /// 특정 카테고리에 속한 타투 조회
     public static func fetchTattosInSpecificCategory(
         categoryID id: Int,
-        page: Int,
-        size: Int = 3,
         completion: @escaping (Result<[Model.Tattoo], Error>) -> Void
     ) {
-        networkService.request(TattooInSpecificCategoryAPI(categoryID: id, page: page, size: size)) { result in
+        networkService.request(TattooInSpecificCategoryAPI(categoryID: id)) { result in
             switch result {
             case .success(let DTO):
                 completion(.success(converter.convertTattooListDTOToModel(DTO)))
@@ -49,7 +47,7 @@ public class CatSDKNetworkTattoo: CatSDKNetworkable {
         tattooImageDatas: [Data],
         postTattooModel: Model.PostTattoo.Request,
         completion: @escaping (Result<Model.PostTattoo.Response, Error>) -> Void
-    ) {
+    ) { 
         networkService.request(PostTattooAPI(
             tattooImageDatas: tattooImageDatas,
             tattooInfo: converter.createPostTattooRequest(postTattooModel))
@@ -74,12 +72,8 @@ extension Reactive where Base: CatSDKNetworkTattoo {
             .asObservable()
     }
 
-    public static func fetchTattosInSpecificCategory(
-        categoryID id : Int,
-        page: Int,
-        size: Int = 3
-    ) -> Observable<[Model.Tattoo]> {
-        Base.networkService.rx.request(TattooInSpecificCategoryAPI(categoryID: id, page: page, size: size))
+    public static func fetchTattosInSpecificCategory(categoryID id : Int) -> Observable<[Model.Tattoo]> {
+        Base.networkService.rx.request(TattooInSpecificCategoryAPI(categoryID: id))
             .compactMap { Base.converter.convertTattooListDTOToModel($0) }
             .asObservable()
     }

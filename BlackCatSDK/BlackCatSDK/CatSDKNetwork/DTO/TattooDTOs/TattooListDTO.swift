@@ -24,7 +24,6 @@ extension DTO.Tattoo {
         struct Tattoo: Decodable {
             let id: Int
             let price: Int
-            let tattooistName: String
             let description: String
             let liked: Bool
             let imageUrls: [String]
@@ -47,7 +46,7 @@ extension DTO.Tattoo {
         }
 
         enum CodingKeys: String, CodingKey {
-            case tattoos = "contents"
+            case tattoos = "content"
             case pageable, last, totalPages, totalElements
             case size, number, sort, first, numberOfElements, empty
         }
