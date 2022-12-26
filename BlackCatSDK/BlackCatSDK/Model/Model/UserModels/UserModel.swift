@@ -8,15 +8,15 @@
 import Foundation
 
 extension Model {
-    public enum Gender {
+    public enum Gender: Codable {
         case 남자, 여자
     }
     
-    public enum Area {
+    public enum Area: Codable {
         case 서울, 경기, 인천, 충청_대전, 전라_광주, 경북_대구, 경남_부산_울산, 강원, 제주
     }
     
-    public struct User {
+    public struct User: Codable {
         public var id: Int
         public var jwt: String?
         public var name: String?
