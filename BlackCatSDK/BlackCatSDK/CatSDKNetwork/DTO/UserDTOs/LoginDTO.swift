@@ -1,0 +1,27 @@
+//
+//  LoginDTO.swift
+//  BlackCatSDK
+//
+//  Created by 김지훈 on 2022/11/18.
+//
+
+import Foundation
+
+extension DTO.User {
+    public struct Login {
+        public struct Request: Encodable {
+            let providerType: String
+            let providerToken: String
+        }
+        
+        struct Response: Decodable {
+            
+            let success: Bool
+            let data: Data
+            struct Data: Decodable {
+                let userId: Int?
+                let accessToken: String?
+            }
+        }
+    }
+}

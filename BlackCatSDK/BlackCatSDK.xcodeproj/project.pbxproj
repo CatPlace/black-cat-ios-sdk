@@ -11,22 +11,70 @@
 		781C5F7E28F5F2810022C8F3 /* CHIBasePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C5F7A28F5F2810022C8F3 /* CHIBasePageControl.swift */; };
 		781C5F7F28F5F2810022C8F3 /* CHILayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C5F7B28F5F2810022C8F3 /* CHILayer.swift */; };
 		781C5F8028F5F2810022C8F3 /* CHIPageControlJaloro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C5F7C28F5F2810022C8F3 /* CHIPageControlJaloro.swift */; };
+		7867504629276E81005139ED /* LoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867504529276E81005139ED /* LoginDTO.swift */; };
+		786750482927781E005139ED /* UpdateNicknameDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786750472927781E005139ED /* UpdateNicknameDTO.swift */; };
+		7867504A29277833005139ED /* UpdateRoleDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867504929277833005139ED /* UpdateRoleDTO.swift */; };
+		7867504C2927784B005139ED /* UpdateAddressDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867504B2927784B005139ED /* UpdateAddressDTO.swift */; };
+		7867504F29277899005139ED /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867504E29277899005139ED /* LoginAPI.swift */; };
+		7867505129277910005139ED /* UpdateRoleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867505029277910005139ED /* UpdateRoleAPI.swift */; };
+		7867505329277923005139ED /* UpdateNicknameAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867505229277923005139ED /* UpdateNicknameAPI.swift */; };
+		786750552927792F005139ED /* UpdateAddressAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786750542927792F005139ED /* UpdateAddressAPI.swift */; };
+		786750582929FE48005139ED /* CatSDKNetworkUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786750572929FE48005139ED /* CatSDKNetworkUser.swift */; };
+		787D580B293CC26000A3E610 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 787D580A293CC26000A3E610 /* KakaoSDK */; };
+		787D580D293CC26000A3E610 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 787D580C293CC26000A3E610 /* KakaoSDKAuth */; };
+		787D580F293CC26000A3E610 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 787D580E293CC26000A3E610 /* KakaoSDKCommon */; };
+		787D5811293CC26000A3E610 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 787D5810293CC26000A3E610 /* KakaoSDKUser */; };
+		787D5814293CC27600A3E610 /* RxKakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 787D5813293CC27600A3E610 /* RxKakaoSDK */; };
+		787D5816293CC27600A3E610 /* RxKakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 787D5815293CC27600A3E610 /* RxKakaoSDKAuth */; };
+		787D5818293CC27600A3E610 /* RxKakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 787D5817293CC27600A3E610 /* RxKakaoSDKCommon */; };
+		787D581A293CC27600A3E610 /* RxKakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 787D5819293CC27600A3E610 /* RxKakaoSDKUser */; };
+		78C8D3FD2937A2AD006A4DF5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8D3FC2937A2AD006A4DF5 /* UserModel.swift */; };
+		78C8D4092937B0C8006A4DF5 /* BlackCatSocialLoginSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8D4082937B0C8006A4DF5 /* BlackCatSocialLoginSDK.swift */; };
+		78C8D40C2937B188006A4DF5 /* CatSDKUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8D40B2937B188006A4DF5 /* CatSDKUser.swift */; };
+		78C8D440293BA098006A4DF5 /* BlackCatKEY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C8D43F293BA098006A4DF5 /* BlackCatKEY.framework */; };
+		78C8D441293BA098006A4DF5 /* BlackCatKEY.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78C8D43F293BA098006A4DF5 /* BlackCatKEY.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8E361A3D291A186600785F62 /* CategoryListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A3C291A186600785F62 /* CategoryListDTO.swift */; };
+		8E361A3F291A198E00785F62 /* CatSDKNetworkCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A3E291A198E00785F62 /* CatSDKNetworkCategory.swift */; };
+		8E361A41291A1B6F00785F62 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A40291A1B6F00785F62 /* CategoryModel.swift */; };
+		8E361A43291A1C2F00785F62 /* CategoryListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A42291A1C2F00785F62 /* CategoryListAPI.swift */; };
+		8E361A47291A2FEC00785F62 /* NetworkService+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A46291A2FEC00785F62 /* NetworkService+Rx.swift */; };
+		8E361A49291A306700785F62 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A48291A306700785F62 /* NetworkError.swift */; };
+		8E361A4B291A363D00785F62 /* CatSDKNetworkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A4A291A363D00785F62 /* CatSDKNetworkable.swift */; };
+		8E361A4F291A3E3900785F62 /* CatSDKNetworkMagazine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A4E291A3E3900785F62 /* CatSDKNetworkMagazine.swift */; };
+		8E361A53291A3F1100785F62 /* MagazineListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A52291A3F1100785F62 /* MagazineListDTO.swift */; };
+		8E361A56291A436C00785F62 /* MagazineListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A55291A436C00785F62 /* MagazineListAPI.swift */; };
+		8E361A59291A441500785F62 /* MagazineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A58291A441500785F62 /* MagazineModel.swift */; };
+		8E361A5D291A470400785F62 /* MagazineDetailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A5C291A470400785F62 /* MagazineDetailAPI.swift */; };
+		8E361A5F291A478100785F62 /* MagazineDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A5E291A478100785F62 /* MagazineDetailDTO.swift */; };
+		8E361A61291A491900785F62 /* MagazineDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A60291A491900785F62 /* MagazineDetail.swift */; };
+		8E361A63291A4DBB00785F62 /* PostMagazineAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A62291A4DBB00785F62 /* PostMagazineAPI.swift */; };
+		8E361A65291A4F7400785F62 /* PostMagazineDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A64291A4F7400785F62 /* PostMagazineDTO.swift */; };
+		8E361A67291A530600785F62 /* CreateMagazine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A66291A530600785F62 /* CreateMagazine.swift */; };
 		8E49917128F5206F00742533 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 8E49917028F5206F00742533 /* Moya */; };
 		8E49917328F5206F00742533 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 8E49917228F5206F00742533 /* ReactiveMoya */; };
 		8E49917528F5206F00742533 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 8E49917428F5206F00742533 /* RxMoya */; };
+		8E6D08FC28FBACB600600774 /* MockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D08FB28FBACB600600774 /* MockModel.swift */; };
+		8E6D090028FBADE500600774 /* RealmServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D08FF28FBADE500600774 /* RealmServiceTests.swift */; };
+		8E7E9CB2291B600D00D09157 /* CatSDKNetworkTattoo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E9CB1291B600D00D09157 /* CatSDKNetworkTattoo.swift */; };
+		8E7E9CB5291B60C400D09157 /* TattooListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E9CB4291B60C400D09157 /* TattooListDTO.swift */; };
+		8E7E9CB8291B60E300D09157 /* TattooListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E9CB7291B60E300D09157 /* TattooListAPI.swift */; };
+		8E7E9CBC291B792600D09157 /* PostTattooDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E9CBB291B792600D09157 /* PostTattooDTO.swift */; };
+		8E7E9CBE291B79F500D09157 /* PostTattooAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E9CBD291B79F500D09157 /* PostTattooAPI.swift */; };
+		8E7E9CC1291B861000D09157 /* AddressSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E9CC0291B861000D09157 /* AddressSearchAPI.swift */; };
+		8E7E9CC4291B866800D09157 /* AddressSearchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E9CC3291B866800D09157 /* AddressSearchDTO.swift */; };
+		8E7E9CC7291B9D6B00D09157 /* TattooModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E9CC6291B9D6B00D09157 /* TattooModel.swift */; };
+		8E7E9CC9291BB89000D09157 /* TattooInSpecificCategoryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E9CC8291BB89000D09157 /* TattooInSpecificCategoryAPI.swift */; };
+		8E7E9CCD291BBCDB00D09157 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E9CCC291BBCDB00D09157 /* AddressModel.swift */; };
+		8E7E9CCF291BBD0F00D09157 /* CatSDKNetworkAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E9CCE291BBD0F00D09157 /* CatSDKNetworkAddress.swift */; };
+		8E88488F2949D5110039F99A /* PostTattooModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E88488E2949D5110039F99A /* PostTattooModel.swift */; };
 		8EC953BB28EB25DA00E239CC /* BlackCatSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC953B028EB25DA00E239CC /* BlackCatSDK.framework */; };
 		8EC953C028EB25DA00E239CC /* BlackCatSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC953BF28EB25DA00E239CC /* BlackCatSDKTests.swift */; };
 		8EC953C128EB25DA00E239CC /* BlackCatSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EC953B328EB25DA00E239CC /* BlackCatSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8EC953CB28EB25E500E239CC /* BlackCatSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */; };
-		8EE81F9B28F41F0F001DB7E1 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81F9A28F41F0F001DB7E1 /* MockAPI.swift */; };
-		8EE81F9E28F423F5001DB7E1 /* CatSDKMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81F9D28F423F5001DB7E1 /* CatSDKMock.swift */; };
 		8EE81FA128F424BB001DB7E1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81FA028F424BB001DB7E1 /* Model.swift */; };
-		8EE81FA328F424C6001DB7E1 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81FA228F424C6001DB7E1 /* Mock.swift */; };
-		8EE81FA728F43144001DB7E1 /* RxCatSDKMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81FA628F43144001DB7E1 /* RxCatSDKMock.swift */; };
-		8EE81FAA28F43250001DB7E1 /* DTOtoModelConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81FA928F43250001DB7E1 /* DTOtoModelConverter.swift */; };
+		8EE81FAA28F43250001DB7E1 /* DTOConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81FA928F43250001DB7E1 /* DTOConverter.swift */; };
 		8EE9A0DE28F3FCF2003D7761 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9A0DD28F3FCF2003D7761 /* NetworkService.swift */; };
 		8EE9A0E028F3FEBF003D7761 /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9A0DF28F3FEBF003D7761 /* DTO.swift */; };
-		8EE9A0E228F3FECB003D7761 /* MockDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9A0E128F3FECB003D7761 /* MockDTO.swift */; };
 		8EE9A0E728F40388003D7761 /* ServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9A0E628F40388003D7761 /* ServiceAPI.swift */; };
 		B1BCF5E828FC3A16005B6297 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B1BCF5E728FC3A16005B6297 /* RxCocoa */; };
 		B1BCF5EA28FC3A16005B6297 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = B1BCF5E928FC3A16005B6297 /* RxRelay */; };
@@ -48,25 +96,79 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		78C8D442293BA098006A4DF5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				78C8D441293BA098006A4DF5 /* BlackCatKEY.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		781C5F7928F5F2810022C8F3 /* CHIPageControllable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControllable.swift; sourceTree = "<group>"; };
 		781C5F7A28F5F2810022C8F3 /* CHIBasePageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIBasePageControl.swift; sourceTree = "<group>"; };
 		781C5F7B28F5F2810022C8F3 /* CHILayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHILayer.swift; sourceTree = "<group>"; };
 		781C5F7C28F5F2810022C8F3 /* CHIPageControlJaloro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlJaloro.swift; sourceTree = "<group>"; };
+		7867504529276E81005139ED /* LoginDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDTO.swift; sourceTree = "<group>"; };
+		786750472927781E005139ED /* UpdateNicknameDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNicknameDTO.swift; sourceTree = "<group>"; };
+		7867504929277833005139ED /* UpdateRoleDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRoleDTO.swift; sourceTree = "<group>"; };
+		7867504B2927784B005139ED /* UpdateAddressDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAddressDTO.swift; sourceTree = "<group>"; };
+		7867504E29277899005139ED /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
+		7867505029277910005139ED /* UpdateRoleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRoleAPI.swift; sourceTree = "<group>"; };
+		7867505229277923005139ED /* UpdateNicknameAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNicknameAPI.swift; sourceTree = "<group>"; };
+		786750542927792F005139ED /* UpdateAddressAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAddressAPI.swift; sourceTree = "<group>"; };
+		786750572929FE48005139ED /* CatSDKNetworkUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKNetworkUser.swift; sourceTree = "<group>"; };
+		78C8D3FC2937A2AD006A4DF5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		78C8D4082937B0C8006A4DF5 /* BlackCatSocialLoginSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCatSocialLoginSDK.swift; sourceTree = "<group>"; };
+		78C8D40B2937B188006A4DF5 /* CatSDKUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKUser.swift; sourceTree = "<group>"; };
+		78C8D43D293B9FD8006A4DF5 /* BlackCatKEY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BlackCatKEY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78C8D43F293BA098006A4DF5 /* BlackCatKEY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BlackCatKEY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E361A3C291A186600785F62 /* CategoryListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListDTO.swift; sourceTree = "<group>"; };
+		8E361A3E291A198E00785F62 /* CatSDKNetworkCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKNetworkCategory.swift; sourceTree = "<group>"; };
+		8E361A40291A1B6F00785F62 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		8E361A42291A1C2F00785F62 /* CategoryListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListAPI.swift; sourceTree = "<group>"; };
+		8E361A46291A2FEC00785F62 /* NetworkService+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+Rx.swift"; sourceTree = "<group>"; };
+		8E361A48291A306700785F62 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		8E361A4A291A363D00785F62 /* CatSDKNetworkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKNetworkable.swift; sourceTree = "<group>"; };
+		8E361A4E291A3E3900785F62 /* CatSDKNetworkMagazine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKNetworkMagazine.swift; sourceTree = "<group>"; };
+		8E361A52291A3F1100785F62 /* MagazineListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineListDTO.swift; sourceTree = "<group>"; };
+		8E361A55291A436C00785F62 /* MagazineListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineListAPI.swift; sourceTree = "<group>"; };
+		8E361A58291A441500785F62 /* MagazineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineModel.swift; sourceTree = "<group>"; };
+		8E361A5C291A470400785F62 /* MagazineDetailAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineDetailAPI.swift; sourceTree = "<group>"; };
+		8E361A5E291A478100785F62 /* MagazineDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineDetailDTO.swift; sourceTree = "<group>"; };
+		8E361A60291A491900785F62 /* MagazineDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineDetail.swift; sourceTree = "<group>"; };
+		8E361A62291A4DBB00785F62 /* PostMagazineAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMagazineAPI.swift; sourceTree = "<group>"; };
+		8E361A64291A4F7400785F62 /* PostMagazineDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMagazineDTO.swift; sourceTree = "<group>"; };
+		8E361A66291A530600785F62 /* CreateMagazine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMagazine.swift; sourceTree = "<group>"; };
+		8E6D08FB28FBACB600600774 /* MockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockModel.swift; sourceTree = "<group>"; };
+		8E6D08FF28FBADE500600774 /* RealmServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServiceTests.swift; sourceTree = "<group>"; };
+		8E7E9CB1291B600D00D09157 /* CatSDKNetworkTattoo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKNetworkTattoo.swift; sourceTree = "<group>"; };
+		8E7E9CB4291B60C400D09157 /* TattooListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooListDTO.swift; sourceTree = "<group>"; };
+		8E7E9CB7291B60E300D09157 /* TattooListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooListAPI.swift; sourceTree = "<group>"; };
+		8E7E9CBB291B792600D09157 /* PostTattooDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTattooDTO.swift; sourceTree = "<group>"; };
+		8E7E9CBD291B79F500D09157 /* PostTattooAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTattooAPI.swift; sourceTree = "<group>"; };
+		8E7E9CC0291B861000D09157 /* AddressSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSearchAPI.swift; sourceTree = "<group>"; };
+		8E7E9CC3291B866800D09157 /* AddressSearchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSearchDTO.swift; sourceTree = "<group>"; };
+		8E7E9CC6291B9D6B00D09157 /* TattooModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooModel.swift; sourceTree = "<group>"; };
+		8E7E9CC8291BB89000D09157 /* TattooInSpecificCategoryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooInSpecificCategoryAPI.swift; sourceTree = "<group>"; };
+		8E7E9CCC291BBCDB00D09157 /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
+		8E7E9CCE291BBD0F00D09157 /* CatSDKNetworkAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKNetworkAddress.swift; sourceTree = "<group>"; };
+		8E88488E2949D5110039F99A /* PostTattooModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTattooModel.swift; sourceTree = "<group>"; };
 		8EC953B028EB25DA00E239CC /* BlackCatSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlackCatSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC953B328EB25DA00E239CC /* BlackCatSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlackCatSDK.h; sourceTree = "<group>"; };
 		8EC953BA28EB25DA00E239CC /* BlackCatSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackCatSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC953BF28EB25DA00E239CC /* BlackCatSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCatSDKTests.swift; sourceTree = "<group>"; };
 		8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCatSDK.swift; sourceTree = "<group>"; };
-		8EE81F9A28F41F0F001DB7E1 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
-		8EE81F9D28F423F5001DB7E1 /* CatSDKMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKMock.swift; sourceTree = "<group>"; };
 		8EE81FA028F424BB001DB7E1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		8EE81FA228F424C6001DB7E1 /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
-		8EE81FA628F43144001DB7E1 /* RxCatSDKMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCatSDKMock.swift; sourceTree = "<group>"; };
-		8EE81FA928F43250001DB7E1 /* DTOtoModelConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTOtoModelConverter.swift; sourceTree = "<group>"; };
+		8EE81FA928F43250001DB7E1 /* DTOConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTOConverter.swift; sourceTree = "<group>"; };
 		8EE9A0DD28F3FCF2003D7761 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		8EE9A0DF28F3FEBF003D7761 /* DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTO.swift; sourceTree = "<group>"; };
-		8EE9A0E128F3FECB003D7761 /* MockDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDTO.swift; sourceTree = "<group>"; };
 		8EE9A0E628F40388003D7761 /* ServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAPI.swift; sourceTree = "<group>"; };
 		B1D3362C28F1C92F00826636 /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
 		B1D3362E28F1C95500826636 /* UICollectionView+ReusableKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReusableKit.swift"; sourceTree = "<group>"; };
@@ -80,12 +182,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78C8D440293BA098006A4DF5 /* BlackCatKEY.framework in Frameworks */,
+				787D5811293CC26000A3E610 /* KakaoSDKUser in Frameworks */,
+				787D580B293CC26000A3E610 /* KakaoSDK in Frameworks */,
+				787D581A293CC27600A3E610 /* RxKakaoSDKUser in Frameworks */,
 				B1BCF5EC28FC3A16005B6297 /* RxSwift in Frameworks */,
 				B1BCF5EA28FC3A16005B6297 /* RxRelay in Frameworks */,
+				787D5814293CC27600A3E610 /* RxKakaoSDK in Frameworks */,
+				787D5816293CC27600A3E610 /* RxKakaoSDKAuth in Frameworks */,
 				8E49917528F5206F00742533 /* RxMoya in Frameworks */,
 				8E49917128F5206F00742533 /* Moya in Frameworks */,
 				B1BCF5E828FC3A16005B6297 /* RxCocoa in Frameworks */,
+				787D5818293CC27600A3E610 /* RxKakaoSDKCommon in Frameworks */,
 				8E49917328F5206F00742533 /* ReactiveMoya in Frameworks */,
+				787D580F293CC26000A3E610 /* KakaoSDKCommon in Frameworks */,
+				787D580D293CC26000A3E610 /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,12 +230,234 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		8E366B2128F5550D00D13BB2 /* DTOtoModelConverter */ = {
+		7867504429276E39005139ED /* UserDTOs */ = {
 			isa = PBXGroup;
 			children = (
-				8EE81FA928F43250001DB7E1 /* DTOtoModelConverter.swift */,
+				7867504529276E81005139ED /* LoginDTO.swift */,
+				7867504929277833005139ED /* UpdateRoleDTO.swift */,
+				786750472927781E005139ED /* UpdateNicknameDTO.swift */,
+				7867504B2927784B005139ED /* UpdateAddressDTO.swift */,
 			);
-			path = DTOtoModelConverter;
+			path = UserDTOs;
+			sourceTree = "<group>";
+		};
+		7867504D2927787A005139ED /* UserAPIs */ = {
+			isa = PBXGroup;
+			children = (
+				7867504E29277899005139ED /* LoginAPI.swift */,
+				7867505029277910005139ED /* UpdateRoleAPI.swift */,
+				7867505229277923005139ED /* UpdateNicknameAPI.swift */,
+				786750542927792F005139ED /* UpdateAddressAPI.swift */,
+			);
+			path = UserAPIs;
+			sourceTree = "<group>";
+		};
+		786750562929FB59005139ED /* User */ = {
+			isa = PBXGroup;
+			children = (
+				786750572929FE48005139ED /* CatSDKNetworkUser.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		78C8D3FB2937A29E006A4DF5 /* UserModels */ = {
+			isa = PBXGroup;
+			children = (
+				78C8D3FC2937A2AD006A4DF5 /* UserModel.swift */,
+			);
+			path = UserModels;
+			sourceTree = "<group>";
+		};
+		78C8D4072937B07E006A4DF5 /* SocialLogin */ = {
+			isa = PBXGroup;
+			children = (
+				78C8D4082937B0C8006A4DF5 /* BlackCatSocialLoginSDK.swift */,
+			);
+			path = SocialLogin;
+			sourceTree = "<group>";
+		};
+		78C8D40A2937B142006A4DF5 /* CatSDKUser */ = {
+			isa = PBXGroup;
+			children = (
+				78C8D40B2937B188006A4DF5 /* CatSDKUser.swift */,
+			);
+			path = CatSDKUser;
+			sourceTree = "<group>";
+		};
+		78C8D439293B9F31006A4DF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78C8D43F293BA098006A4DF5 /* BlackCatKEY.framework */,
+				78C8D43D293B9FD8006A4DF5 /* BlackCatKEY.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E361A4C291A3DEA00785F62 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				8E361A3E291A198E00785F62 /* CatSDKNetworkCategory.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		8E361A4D291A3DF500785F62 /* Magazine */ = {
+			isa = PBXGroup;
+			children = (
+				8E361A4E291A3E3900785F62 /* CatSDKNetworkMagazine.swift */,
+			);
+			path = Magazine;
+			sourceTree = "<group>";
+		};
+		8E361A50291A3EE800785F62 /* CategoryDTOs */ = {
+			isa = PBXGroup;
+			children = (
+				8E361A3C291A186600785F62 /* CategoryListDTO.swift */,
+			);
+			path = CategoryDTOs;
+			sourceTree = "<group>";
+		};
+		8E361A51291A3EFA00785F62 /* MagazineDTOs */ = {
+			isa = PBXGroup;
+			children = (
+				8E361A52291A3F1100785F62 /* MagazineListDTO.swift */,
+				8E361A5E291A478100785F62 /* MagazineDetailDTO.swift */,
+				8E361A64291A4F7400785F62 /* PostMagazineDTO.swift */,
+			);
+			path = MagazineDTOs;
+			sourceTree = "<group>";
+		};
+		8E361A54291A435A00785F62 /* CategoryAPIs */ = {
+			isa = PBXGroup;
+			children = (
+				8E361A42291A1C2F00785F62 /* CategoryListAPI.swift */,
+			);
+			path = CategoryAPIs;
+			sourceTree = "<group>";
+		};
+		8E361A57291A440100785F62 /* CategoryModels */ = {
+			isa = PBXGroup;
+			children = (
+				8E361A40291A1B6F00785F62 /* CategoryModel.swift */,
+			);
+			path = CategoryModels;
+			sourceTree = "<group>";
+		};
+		8E361A5A291A441E00785F62 /* MagazineModels */ = {
+			isa = PBXGroup;
+			children = (
+				8E361A58291A441500785F62 /* MagazineModel.swift */,
+				8E361A60291A491900785F62 /* MagazineDetail.swift */,
+				8E361A66291A530600785F62 /* CreateMagazine.swift */,
+			);
+			path = MagazineModels;
+			sourceTree = "<group>";
+		};
+		8E361A5B291A46F000785F62 /* MagazineAPIs */ = {
+			isa = PBXGroup;
+			children = (
+				8E361A55291A436C00785F62 /* MagazineListAPI.swift */,
+				8E361A5C291A470400785F62 /* MagazineDetailAPI.swift */,
+				8E361A62291A4DBB00785F62 /* PostMagazineAPI.swift */,
+			);
+			path = MagazineAPIs;
+			sourceTree = "<group>";
+		};
+		8E361A68291A5B5800785F62 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				786750562929FB59005139ED /* User */,
+				8E361A4C291A3DEA00785F62 /* Category */,
+				8E7E9CB0291B5FF900D09157 /* Tattoo */,
+				8E361A4D291A3DF500785F62 /* Magazine */,
+				8E7E9CCA291BBCA100D09157 /* Address */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		8E366B2128F5550D00D13BB2 /* DTOConverter */ = {
+			isa = PBXGroup;
+			children = (
+				8EE81FA928F43250001DB7E1 /* DTOConverter.swift */,
+			);
+			path = DTOConverter;
+			sourceTree = "<group>";
+		};
+		8E6D08FA28FBAB9800600774 /* CatSDKRealmTests */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D08FB28FBACB600600774 /* MockModel.swift */,
+				8E6D08FF28FBADE500600774 /* RealmServiceTests.swift */,
+			);
+			path = CatSDKRealmTests;
+			sourceTree = "<group>";
+		};
+		8E7E9CB0291B5FF900D09157 /* Tattoo */ = {
+			isa = PBXGroup;
+			children = (
+				8E7E9CB1291B600D00D09157 /* CatSDKNetworkTattoo.swift */,
+			);
+			path = Tattoo;
+			sourceTree = "<group>";
+		};
+		8E7E9CB3291B60B400D09157 /* TattooDTOs */ = {
+			isa = PBXGroup;
+			children = (
+				8E7E9CB4291B60C400D09157 /* TattooListDTO.swift */,
+				8E7E9CBB291B792600D09157 /* PostTattooDTO.swift */,
+			);
+			path = TattooDTOs;
+			sourceTree = "<group>";
+		};
+		8E7E9CB6291B60D400D09157 /* TattooAPIs */ = {
+			isa = PBXGroup;
+			children = (
+				8E7E9CB7291B60E300D09157 /* TattooListAPI.swift */,
+				8E7E9CC8291BB89000D09157 /* TattooInSpecificCategoryAPI.swift */,
+				8E7E9CBD291B79F500D09157 /* PostTattooAPI.swift */,
+			);
+			path = TattooAPIs;
+			sourceTree = "<group>";
+		};
+		8E7E9CBF291B85ED00D09157 /* AddressAPIs */ = {
+			isa = PBXGroup;
+			children = (
+				8E7E9CC0291B861000D09157 /* AddressSearchAPI.swift */,
+			);
+			path = AddressAPIs;
+			sourceTree = "<group>";
+		};
+		8E7E9CC2291B865400D09157 /* AddressDTOs */ = {
+			isa = PBXGroup;
+			children = (
+				8E7E9CC3291B866800D09157 /* AddressSearchDTO.swift */,
+			);
+			path = AddressDTOs;
+			sourceTree = "<group>";
+		};
+		8E7E9CC5291B9C6600D09157 /* TattooModels */ = {
+			isa = PBXGroup;
+			children = (
+				8E7E9CC6291B9D6B00D09157 /* TattooModel.swift */,
+				8E88488E2949D5110039F99A /* PostTattooModel.swift */,
+			);
+			path = TattooModels;
+			sourceTree = "<group>";
+		};
+		8E7E9CCA291BBCA100D09157 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				8E7E9CCE291BBD0F00D09157 /* CatSDKNetworkAddress.swift */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		8E7E9CCB291BBCC600D09157 /* AddressModels */ = {
+			isa = PBXGroup;
+			children = (
+				8E7E9CCC291BBCDB00D09157 /* AddressModel.swift */,
+			);
+			path = AddressModels;
 			sourceTree = "<group>";
 		};
 		8EC953A628EB25DA00E239CC = {
@@ -133,6 +466,7 @@
 				8EC953B228EB25DA00E239CC /* BlackCatSDK */,
 				8EC953BE28EB25DA00E239CC /* BlackCatSDKTests */,
 				8EC953B128EB25DA00E239CC /* Products */,
+				78C8D439293B9F31006A4DF5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,9 +483,8 @@
 			isa = PBXGroup;
 			children = (
 				8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */,
-				8EE81F9D28F423F5001DB7E1 /* CatSDKMock.swift */,
-				8EE81FA628F43144001DB7E1 /* RxCatSDKMock.swift */,
 				8EE9A0DB28F3FBCE003D7761 /* CatSDKNetwork */,
+				78C8D40A2937B142006A4DF5 /* CatSDKUser */,
 				8EE81F9F28F4249B001DB7E1 /* Model */,
 				B1D3362A28F1C8DA00826636 /* ThirdParty */,
 				8EC953B328EB25DA00E239CC /* BlackCatSDK.h */,
@@ -162,15 +495,33 @@
 		8EC953BE28EB25DA00E239CC /* BlackCatSDKTests */ = {
 			isa = PBXGroup;
 			children = (
+				8E6D08FA28FBAB9800600774 /* CatSDKRealmTests */,
 				8EC953BF28EB25DA00E239CC /* BlackCatSDKTests.swift */,
 			);
 			path = BlackCatSDKTests;
 			sourceTree = "<group>";
 		};
+		8ECFE59E28F821AE007A9F72 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8EE81FA028F424BB001DB7E1 /* Model.swift */,
+				78C8D3FB2937A29E006A4DF5 /* UserModels */,
+				8E361A57291A440100785F62 /* CategoryModels */,
+				8E361A5A291A441E00785F62 /* MagazineModels */,
+				8E7E9CC5291B9C6600D09157 /* TattooModels */,
+				8E7E9CCB291BBCC600D09157 /* AddressModels */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8EE81F9C28F4207B001DB7E1 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				8EE9A0E628F40388003D7761 /* ServiceAPI.swift */,
 				8EE9A0DD28F3FCF2003D7761 /* NetworkService.swift */,
+				8E361A46291A2FEC00785F62 /* NetworkService+Rx.swift */,
+				8E361A48291A306700785F62 /* NetworkError.swift */,
+				8E361A4A291A363D00785F62 /* CatSDKNetworkable.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -178,8 +529,7 @@
 		8EE81F9F28F4249B001DB7E1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8EE81FA028F424BB001DB7E1 /* Model.swift */,
-				8EE81FA228F424C6001DB7E1 /* Mock.swift */,
+				8ECFE59E28F821AE007A9F72 /* Model */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,10 +537,10 @@
 		8EE9A0DB28F3FBCE003D7761 /* CatSDKNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				8E361A68291A5B5800785F62 /* NetworkManager */,
 				8EE81F9C28F4207B001DB7E1 /* Network */,
 				8EE9A0DC28F3FC88003D7761 /* DTO */,
 				8EE9A0E528F40329003D7761 /* API */,
-				8E366B2128F5550D00D13BB2 /* DTOtoModelConverter */,
 			);
 			path = CatSDKNetwork;
 			sourceTree = "<group>";
@@ -199,7 +549,12 @@
 			isa = PBXGroup;
 			children = (
 				8EE9A0DF28F3FEBF003D7761 /* DTO.swift */,
-				8EE9A0E128F3FECB003D7761 /* MockDTO.swift */,
+				7867504429276E39005139ED /* UserDTOs */,
+				8E361A50291A3EE800785F62 /* CategoryDTOs */,
+				8E361A51291A3EFA00785F62 /* MagazineDTOs */,
+				8E7E9CB3291B60B400D09157 /* TattooDTOs */,
+				8E7E9CC2291B865400D09157 /* AddressDTOs */,
+				8E366B2128F5550D00D13BB2 /* DTOConverter */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -207,8 +562,11 @@
 		8EE9A0E528F40329003D7761 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				8EE9A0E628F40388003D7761 /* ServiceAPI.swift */,
-				8EE81F9A28F41F0F001DB7E1 /* MockAPI.swift */,
+				7867504D2927787A005139ED /* UserAPIs */,
+				8E361A54291A435A00785F62 /* CategoryAPIs */,
+				8E361A5B291A46F000785F62 /* MagazineAPIs */,
+				8E7E9CB6291B60D400D09157 /* TattooAPIs */,
+				8E7E9CBF291B85ED00D09157 /* AddressAPIs */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -216,6 +574,7 @@
 		B1D3362A28F1C8DA00826636 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				78C8D4072937B07E006A4DF5 /* SocialLogin */,
 				781C5F7728F5F2810022C8F3 /* CHIPageControl */,
 				B1D3362B28F1C8EA00826636 /* ReusableKit */,
 			);
@@ -256,6 +615,7 @@
 				8EC953AC28EB25DA00E239CC /* Sources */,
 				8EC953AD28EB25DA00E239CC /* Frameworks */,
 				8EC953AE28EB25DA00E239CC /* Resources */,
+				78C8D442293BA098006A4DF5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -269,6 +629,14 @@
 				B1BCF5E728FC3A16005B6297 /* RxCocoa */,
 				B1BCF5E928FC3A16005B6297 /* RxRelay */,
 				B1BCF5EB28FC3A16005B6297 /* RxSwift */,
+				787D580A293CC26000A3E610 /* KakaoSDK */,
+				787D580C293CC26000A3E610 /* KakaoSDKAuth */,
+				787D580E293CC26000A3E610 /* KakaoSDKCommon */,
+				787D5810293CC26000A3E610 /* KakaoSDKUser */,
+				787D5813293CC27600A3E610 /* RxKakaoSDK */,
+				787D5815293CC27600A3E610 /* RxKakaoSDKAuth */,
+				787D5817293CC27600A3E610 /* RxKakaoSDKCommon */,
+				787D5819293CC27600A3E610 /* RxKakaoSDKUser */,
 			);
 			productName = BlackCatSDK;
 			productReference = 8EC953B028EB25DA00E239CC /* BlackCatSDK.framework */;
@@ -322,6 +690,8 @@
 			packageReferences = (
 				8E49916F28F5206F00742533 /* XCRemoteSwiftPackageReference "Moya" */,
 				B1BCF5E628FC3A16005B6297 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				787D5809293CC26000A3E610 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				787D5812293CC27600A3E610 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */,
 			);
 			productRefGroup = 8EC953B128EB25DA00E239CC /* Products */;
 			projectDirPath = "";
@@ -355,26 +725,62 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EE81F9E28F423F5001DB7E1 /* CatSDKMock.swift in Sources */,
-				8EE81FAA28F43250001DB7E1 /* DTOtoModelConverter.swift in Sources */,
+				8E361A4F291A3E3900785F62 /* CatSDKNetworkMagazine.swift in Sources */,
+				8EE81FAA28F43250001DB7E1 /* DTOConverter.swift in Sources */,
+				8E88488F2949D5110039F99A /* PostTattooModel.swift in Sources */,
+				8E7E9CC7291B9D6B00D09157 /* TattooModel.swift in Sources */,
+				8E7E9CCF291BBD0F00D09157 /* CatSDKNetworkAddress.swift in Sources */,
+				8E361A59291A441500785F62 /* MagazineModel.swift in Sources */,
+				7867505329277923005139ED /* UpdateNicknameAPI.swift in Sources */,
+				78C8D4092937B0C8006A4DF5 /* BlackCatSocialLoginSDK.swift in Sources */,
 				B1D3363328F1C98C00826636 /* UICollectionView+RxReusableKit.swift in Sources */,
+				8E7E9CC4291B866800D09157 /* AddressSearchDTO.swift in Sources */,
 				781C5F7F28F5F2810022C8F3 /* CHILayer.swift in Sources */,
 				B1D3362F28F1C95500826636 /* UICollectionView+ReusableKit.swift in Sources */,
 				781C5F8028F5F2810022C8F3 /* CHIPageControlJaloro.swift in Sources */,
-				8EE9A0E228F3FECB003D7761 /* MockDTO.swift in Sources */,
+				8E361A63291A4DBB00785F62 /* PostMagazineAPI.swift in Sources */,
 				781C5F7E28F5F2810022C8F3 /* CHIBasePageControl.swift in Sources */,
+				8E361A56291A436C00785F62 /* MagazineListAPI.swift in Sources */,
+				8E361A49291A306700785F62 /* NetworkError.swift in Sources */,
+				7867504A29277833005139ED /* UpdateRoleDTO.swift in Sources */,
+				8E7E9CB5291B60C400D09157 /* TattooListDTO.swift in Sources */,
+				8E7E9CCD291BBCDB00D09157 /* AddressModel.swift in Sources */,
 				B1D3362D28F1C92F00826636 /* ReusableCell.swift in Sources */,
-				8EE81F9B28F41F0F001DB7E1 /* MockAPI.swift in Sources */,
+				7867504629276E81005139ED /* LoginDTO.swift in Sources */,
+				8E361A65291A4F7400785F62 /* PostMagazineDTO.swift in Sources */,
+				8E361A61291A491900785F62 /* MagazineDetail.swift in Sources */,
+				8E361A3F291A198E00785F62 /* CatSDKNetworkCategory.swift in Sources */,
+				8E7E9CBC291B792600D09157 /* PostTattooDTO.swift in Sources */,
 				781C5F7D28F5F2810022C8F3 /* CHIPageControllable.swift in Sources */,
+				786750482927781E005139ED /* UpdateNicknameDTO.swift in Sources */,
+				8E361A5D291A470400785F62 /* MagazineDetailAPI.swift in Sources */,
+				8E361A53291A3F1100785F62 /* MagazineListDTO.swift in Sources */,
+				8E7E9CB8291B60E300D09157 /* TattooListAPI.swift in Sources */,
+				7867504F29277899005139ED /* LoginAPI.swift in Sources */,
 				8EE9A0E028F3FEBF003D7761 /* DTO.swift in Sources */,
+				78C8D40C2937B188006A4DF5 /* CatSDKUser.swift in Sources */,
+				8E7E9CBE291B79F500D09157 /* PostTattooAPI.swift in Sources */,
+				7867504C2927784B005139ED /* UpdateAddressDTO.swift in Sources */,
 				8EE81FA128F424BB001DB7E1 /* Model.swift in Sources */,
 				B1D3363528F1C9AC00826636 /* UITableView+RxReusableKit.swift in Sources */,
+				786750552927792F005139ED /* UpdateAddressAPI.swift in Sources */,
+				8E361A43291A1C2F00785F62 /* CategoryListAPI.swift in Sources */,
+				8E361A5F291A478100785F62 /* MagazineDetailDTO.swift in Sources */,
+				8E7E9CC1291B861000D09157 /* AddressSearchAPI.swift in Sources */,
+				8E7E9CB2291B600D00D09157 /* CatSDKNetworkTattoo.swift in Sources */,
+				8E361A4B291A363D00785F62 /* CatSDKNetworkable.swift in Sources */,
+				8E7E9CC9291BB89000D09157 /* TattooInSpecificCategoryAPI.swift in Sources */,
+				8E361A41291A1B6F00785F62 /* CategoryModel.swift in Sources */,
 				8EE9A0E728F40388003D7761 /* ServiceAPI.swift in Sources */,
 				8EC953CB28EB25E500E239CC /* BlackCatSDK.swift in Sources */,
-				8EE81FA328F424C6001DB7E1 /* Mock.swift in Sources */,
+				786750582929FE48005139ED /* CatSDKNetworkUser.swift in Sources */,
+				8E361A47291A2FEC00785F62 /* NetworkService+Rx.swift in Sources */,
+				8E361A67291A530600785F62 /* CreateMagazine.swift in Sources */,
+				8E361A3D291A186600785F62 /* CategoryListDTO.swift in Sources */,
+				7867505129277910005139ED /* UpdateRoleAPI.swift in Sources */,
 				B1D3363128F1C97700826636 /* UITableView+ReusableKit.swift in Sources */,
-				8EE81FA728F43144001DB7E1 /* RxCatSDKMock.swift in Sources */,
 				8EE9A0DE28F3FCF2003D7761 /* NetworkService.swift in Sources */,
+				78C8D3FD2937A2AD006A4DF5 /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +788,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6D090028FBADE500600774 /* RealmServiceTests.swift in Sources */,
 				8EC953C028EB25DA00E239CC /* BlackCatSDKTests.swift in Sources */,
+				8E6D08FC28FBACB600600774 /* MockModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,9 +928,11 @@
 		8EC953C528EB25DA00E239CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Z54MHCPF6U;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -548,9 +958,11 @@
 		8EC953C628EB25DA00E239CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Z54MHCPF6U;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -638,6 +1050,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		787D5809293CC26000A3E610 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		787D5812293CC27600A3E610 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk-rx";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		8E49916F28F5206F00742533 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -657,6 +1085,46 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		787D580A293CC26000A3E610 /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 787D5809293CC26000A3E610 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+		787D580C293CC26000A3E610 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 787D5809293CC26000A3E610 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		787D580E293CC26000A3E610 /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 787D5809293CC26000A3E610 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		787D5810293CC26000A3E610 /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 787D5809293CC26000A3E610 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
+		};
+		787D5813293CC27600A3E610 /* RxKakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 787D5812293CC27600A3E610 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */;
+			productName = RxKakaoSDK;
+		};
+		787D5815293CC27600A3E610 /* RxKakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 787D5812293CC27600A3E610 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */;
+			productName = RxKakaoSDKAuth;
+		};
+		787D5817293CC27600A3E610 /* RxKakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 787D5812293CC27600A3E610 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */;
+			productName = RxKakaoSDKCommon;
+		};
+		787D5819293CC27600A3E610 /* RxKakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 787D5812293CC27600A3E610 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */;
+			productName = RxKakaoSDKUser;
+		};
 		8E49917028F5206F00742533 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8E49916F28F5206F00742533 /* XCRemoteSwiftPackageReference "Moya" */;

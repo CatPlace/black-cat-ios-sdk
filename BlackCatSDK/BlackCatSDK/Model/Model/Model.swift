@@ -7,4 +7,4 @@
 
 import Foundation
 
-public enum Model { }
+public struct Model {}
