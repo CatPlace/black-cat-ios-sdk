@@ -11,7 +11,6 @@ extension Model {
     public struct Tattoo {
         public let id: Int
         public let price: Int
-        public let tattooistName: String
         public let description: String
         public let liked: Bool
         public let imageURLStrings: [String?]

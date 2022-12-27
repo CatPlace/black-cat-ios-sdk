@@ -23,7 +23,6 @@ struct DTOConverter {
         DTO.tattoos.map { tattoo in
                 .init(id: tattoo.id,
                       price: tattoo.price,
-                      tattooistName: tattoo.tattooistName,
                       description: tattoo.description,
                       liked: tattoo.liked,
                       imageURLStrings: tattoo.imageUrls,

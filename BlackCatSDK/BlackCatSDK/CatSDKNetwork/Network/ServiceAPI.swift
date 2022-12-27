@@ -23,5 +23,7 @@ extension ServiceAPI {
     var baseURL: URL {
         return URL(string: BlackCatKEY.urlString)!
     }
-    var headers: [String : String]? { nil }
+    var headers: [String : String]? { [
+        "Authorization": BlackCatKEY.testJWT
+    ] }
 }
