@@ -12,11 +12,10 @@ import RxCocoa
 import RxRelay
 
 struct UserDefaultManager {
-    @UserDefault(key: "user", defaultValue: Model.User(id: -1))
+    /// -1: 둘러보기, -2: 로그인 하지 않은 상태
+    @UserDefault(key: "user", defaultValue: Model.User(id: -2))
     public static var user: Model.User
 }
-    
-
 
 @propertyWrapper
 struct UserDefault<T: Codable> {
