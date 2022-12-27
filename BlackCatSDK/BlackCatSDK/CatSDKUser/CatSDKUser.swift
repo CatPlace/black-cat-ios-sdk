@@ -53,8 +53,20 @@ public class CatSDKUser {
             .flatMap { CatSDKNetworkUser.rx.login(providerType: providerType, providerToken: $0) }
     }
     
+    public static func updateLocalUser(user: Model.User) {
+        UserDefaultManager.user = user
+    }
+    
+    public static func fetchLocalUser() -> Model.User {
+        UserDefaultManager.user
+    }
+    
+    public static func userType() -> Model.UserType {
+        UserDefaultManager.user.userType
+    }
+    
     public static func logout() {
-        // TODO: 로컬 스토리지 유저 jwt 삭제 후 로그인 화면으로 이동
+        UserDefaultManager.user = .init(id: -2)
     }
     
     public static func withdrawal() {

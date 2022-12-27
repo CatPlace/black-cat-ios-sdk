@@ -26,7 +26,7 @@ public class CatSDKNetworkUser: CatSDKNetworkable {
         }
     }
     
-    public static func editUser() {
+    public static func updateUser() {
         
     }
 }
