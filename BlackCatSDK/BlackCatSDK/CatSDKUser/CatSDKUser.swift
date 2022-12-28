@@ -69,8 +69,32 @@ public class CatSDKUser {
         UserDefaultManager.user = .init(id: -2)
     }
     
+    // 수정하러 들어오면 cache를 가각 업데이트 해준다.
+    // 완료를 누르면 서버에 요청하고 로컬 프로필 업데이트
+    public static func updateUser(user: Model.User) {
+        //서버 요청 -> 성공 -> 유저디폴트 수정
+        // TODO: - 서버 통신
+        UserDefaultManager.user = user
+    }
+    
+    public static func initUserCache() {
+        UserDefaultManager.userCache = UserDefaultManager.user
+    }
+    
+    public static func updateUserCache(user: Model.User) {
+        UserDefaultManager.userCache = user
+    }
+    
+    public static func user() -> Model.User {
+        UserDefaultManager.user
+    }
+    
+    public static func userCache() -> Model.User {
+        UserDefaultManager.userCache
+    }
+    
     public static func withdrawal() {
-        // TODO: 서버 개발자에게 탈퇴API 구현 요청
+        // TODO: - 서버 통신
     }
 }
 
