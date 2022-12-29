@@ -11,14 +11,17 @@ import RxSwift
 import RxCocoa
 import RxRelay
 
-struct UserDefaultManager {
+public struct UserDefaultManager {
     /// -1: 둘러보기, -2: 로그인 하지 않은 상태
     @UserDefault(key: "user", defaultValue: Model.User(id: -2))
     public static var user: Model.User
+
+    @UserDefault(key: "bookmarkedTattoo", defaultValue: [])
+    public static var bookmarkedTattoo: [Model.Tattoo]
 }
 
 @propertyWrapper
-struct UserDefault<T: Codable> {
+public struct UserDefault<T: Codable> {
     private let key: String
     private let defaultValue: T
     public let storage: UserDefaults
@@ -29,7 +32,7 @@ struct UserDefault<T: Codable> {
         self.storage = storage
     }
 
-    var wrappedValue: T {
+    public var wrappedValue: T {
         get {
             guard let data = self.storage.object(forKey: key) as? Data else {
                 return defaultValue
