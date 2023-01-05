@@ -18,6 +18,9 @@ public struct UserDefaultManager {
 
     @UserDefault(key: "bookmarkedTattoo", defaultValue: [])
     public static var bookmarkedTattoo: [Model.Tattoo]
+    
+    @UserDefault(key: "userCache", defaultValue: Model.User(id: -2))
+    public static var userCache: Model.User
 }
 
 @propertyWrapper
@@ -48,6 +51,3 @@ public struct UserDefault<T: Codable> {
         }
     }
 }
-
-
-

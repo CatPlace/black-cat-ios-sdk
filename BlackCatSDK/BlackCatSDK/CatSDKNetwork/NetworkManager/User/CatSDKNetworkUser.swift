@@ -8,9 +8,9 @@
 import Foundation
 import RxSwift
 
-public class CatSDKNetworkUser: CatSDKNetworkable {
+class CatSDKNetworkUser: CatSDKNetworkable {
     private init() {}
-    public static func login(
+    static func login(
         providerType: String,
         providerToken: String,
         completion: @escaping (Result<Model.User, Error>) -> Void
@@ -32,7 +32,7 @@ public class CatSDKNetworkUser: CatSDKNetworkable {
 }
 
 extension Reactive where Base: CatSDKNetworkUser {
-    public static func login(providerType: String,
+    static func login(providerType: String,
                              providerToken: String) -> Observable<Model.User> {
         Base.networkService.rx.request(LoginAPI(request: .init(providerType: providerType,
                                                                providerToken: providerToken)))
