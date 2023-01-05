@@ -49,7 +49,6 @@ extension Model {
     }
     
     public enum UserType: Codable {
-        case none
         case guest
         case normal
         case business
@@ -73,7 +72,7 @@ extension Model {
                     phoneNumber: String? = nil,
                     gender: Gender? = nil,
                     areas: Set<Area> = Set(),
-                    userType: UserType = .none
+                    userType: UserType = .guest
         ) {
             self.id = id
             self.jwt = jwt

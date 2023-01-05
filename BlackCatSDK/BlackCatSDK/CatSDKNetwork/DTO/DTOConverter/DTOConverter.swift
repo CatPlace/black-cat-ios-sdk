@@ -21,7 +21,9 @@ struct DTOConverter {
 
     func convertTattooListDTOToModel(_ DTO: DTO.Tattoo.List) -> [Model.Tattoo] {
         DTO.tattoos.map { tattoo in
+            // TODO: DTO 수정 !! 타투이스트 이름
                 .init(id: tattoo.id,
+                      ownerName: "",
                       price: tattoo.price,
                       description: tattoo.description,
                       liked: tattoo.liked,
