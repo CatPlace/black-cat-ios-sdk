@@ -9,8 +9,8 @@ import Foundation
 
 extension Model {
     public struct Category {
-        let id: Int
-        let name: String
-        let count: Int
+        public let id: Int
+        public let name: String
+        public let count: Int
     }
 }

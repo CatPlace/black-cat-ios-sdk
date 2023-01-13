@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 struct CategoryListAPI: ServiceAPI {
-    typealias Response = DTO.Category.List
+    typealias Response = [DTO.Category.List.Category]
 
     var path: String = "categories"
     var method: Moya.Method { .get }
