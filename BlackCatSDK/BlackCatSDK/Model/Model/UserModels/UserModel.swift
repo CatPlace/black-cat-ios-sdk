@@ -52,6 +52,17 @@ extension Model {
         case guest
         case normal
         case business
+        
+        public func profileString() -> String {
+            switch self {
+            case .guest:
+                return "GUEST"
+            case .normal:
+                return "일반 회원"
+            case .business:
+                return "타투이스트"
+            }
+        }
     }
     
     public struct User: Codable {
