@@ -19,9 +19,9 @@ public class CatSDKUser {
         public func buttonImageName() -> String {
             switch self {
             case .kakao:
-                return "login_kakao"
+                return "kakaoLogin"
             case .apple:
-                return "login_apple"
+                return "appleLogin"
             }
         }
         
@@ -53,20 +53,12 @@ public class CatSDKUser {
             .flatMap { CatSDKNetworkUser.rx.login(providerType: providerType, providerToken: $0) }
     }
     
-    public static func updateLocalUser(user: Model.User) {
-        UserDefaultManager.user = user
-    }
-    
-    public static func fetchLocalUser() -> Model.User {
-        UserDefaultManager.user
-    }
-    
     public static func userType() -> Model.UserType {
-        UserDefaultManager.user.userType
+        UserDefaultManager.getUser().userType
     }
     
     public static func logout() {
-        UserDefaultManager.user = .init(id: -2)
+        UserDefaultManager.updateUser(user: .init(id: -2))
     }
     
     // 수정하러 들어오면 cache를 가각 업데이트 해준다.
@@ -74,23 +66,23 @@ public class CatSDKUser {
     public static func updateUser(user: Model.User) {
         //서버 요청 -> 성공 -> 유저디폴트 수정
         // TODO: - 서버 통신
-        UserDefaultManager.user = user
+        UserDefaultManager.updateUser(user: user)
     }
     
     public static func initUserCache() {
-        UserDefaultManager.userCache = UserDefaultManager.user
+        UserDefaultManager.updateUserCache(user: UserDefaultManager.getUser())
     }
     
     public static func updateUserCache(user: Model.User) {
-        UserDefaultManager.userCache = user
+        UserDefaultManager.updateUserCache(user: user)
     }
     
     public static func user() -> Model.User {
-        UserDefaultManager.user
+        UserDefaultManager.getUser()
     }
     
     public static func userCache() -> Model.User {
-        UserDefaultManager.userCache
+        UserDefaultManager.getUserCache()
     }
     
     public static func withdrawal() {

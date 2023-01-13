@@ -14,13 +14,16 @@ import RxRelay
 public struct UserDefaultManager {
     /// -1: 둘러보기, -2: 로그인 하지 않은 상태
     @UserDefault(key: "user", defaultValue: Model.User(id: -2))
-    public static var user: Model.User
+    private static var user: Model.User
 
     @UserDefault(key: "bookmarkedTattoo", defaultValue: [])
     public static var bookmarkedTattoo: [Model.Tattoo]
     
     @UserDefault(key: "userCache", defaultValue: Model.User(id: -2))
-    public static var userCache: Model.User
+    private static var userCache: Model.User
+    
+    @UserDefault(key: "recentViewTattoos", defaultValue: [])
+    private static var recentViewTattoos: [Model.Tattoo]
 }
 
 @propertyWrapper
@@ -49,5 +52,36 @@ public struct UserDefault<T: Codable> {
 
             UserDefaults.standard.set(data, forKey: key)
         }
+    }
+}
+
+// User
+extension UserDefaultManager {
+    public static func getUser() -> Model.User {
+        UserDefaultManager.user
+    }
+    public static func updateUser(user: Model.User) {
+        UserDefaultManager.user = user
+    }
+}
+
+// UserCache
+extension UserDefaultManager {
+    public static func getUserCache() -> Model.User {
+        UserDefaultManager.userCache
+    }
+    public static func updateUserCache(user: Model.User) {
+        UserDefaultManager.userCache = user
+    }
+}
+
+
+// recentTattoo
+extension UserDefaultManager {
+    public static func getRecentTattoos() -> [Model.Tattoo] {
+        UserDefaultManager.recentViewTattoos
+    }
+    public static func updateRecentTattoos(tattoos: [Model.Tattoo]) {
+        UserDefaultManager.recentViewTattoos = tattoos
     }
 }

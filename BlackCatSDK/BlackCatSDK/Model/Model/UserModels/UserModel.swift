@@ -49,10 +49,20 @@ extension Model {
     }
     
     public enum UserType: Codable {
-        case none
         case guest
         case normal
         case business
+        
+        public func profileString() -> String {
+            switch self {
+            case .guest:
+                return "GUEST"
+            case .normal:
+                return "일반 회원"
+            case .business:
+                return "타투이스트"
+            }
+        }
     }
     
     public struct User: Codable {
@@ -73,7 +83,7 @@ extension Model {
                     phoneNumber: String? = nil,
                     gender: Gender? = nil,
                     areas: Set<Area> = Set(),
-                    userType: UserType = .none
+                    userType: UserType = .guest
         ) {
             self.id = id
             self.jwt = jwt
