@@ -13,10 +13,19 @@ struct DTOConverter {
         return .init(id: DTO.userId, jwt: DTO.accessToken)
     }
     
-    func convertCategoryListDTOToModel(_ DTO: DTO.Category.List) -> [Model.Category] {
-        DTO.categories.map { category in
-                .init(id: category.id, name: category.name, count: category.count)
+    func convertCategoryListDTOToModel(_ DTO: [DTO.Category.List.Category]) -> [Model.Category] {
+        var categoryList: [Model.Category] = []
+
+        let 전체보기Category = Model.Category(id: 0, name: "전체보기", count: 0)
+
+        categoryList.append(전체보기Category)
+
+        DTO.forEach { category in
+            let category = Model.Category(id: category.id, name: category.name, count: category.count)
+            categoryList.append(category)
         }
+
+        return categoryList
     }
 
     func convertTattooListDTOToModel(_ DTO: DTO.Tattoo.List) -> [Model.Tattoo] {
