@@ -8,7 +8,7 @@
 import Foundation
 
 extension Model {
-    public struct UserBookmarkPostModel {
+    public struct UserBookmarkPost {
         public let likesId: Int
         public let userId: Int
         public let nickname: String
