@@ -116,7 +116,20 @@ struct DTOConverter {
         )
     }
 
-    func convertBookmarkListUserLikedDTOToModel(_ DTO: DTO.Bookmark.BookmarkListUserLiked) -> [Model.TattooBookmarkModel] {
+    func convertStatusOfBookmarkDTOToModel(_ DTO: DTO.Bookmark.StatusOfBookmark) -> Model.StatusOfBookmark {
+        .init(liked: DTO.liked)
+    }
+
+    func convertUserListSpecificInBookmarkDTOToModel(_ DTO: DTO.Bookmark.UserListInSpecificBookmark) -> [Model.UserBookmarkPost] {
+        DTO.content.map { user in
+                .init(likesId: user.likesId,
+                      userId: user.userId,
+                      nickname: user.nickname,
+                      createdDate: user.createdDate)
+        }
+    }
+
+    func convertBookmarkListUserLikedDTOToModel(_ DTO: DTO.Bookmark.BookmarkListUserLiked) -> [Model.TattooBookmark] {
         DTO.content.map { post in
                 .init(likesId: post.likesId,
                       postId: post.postId,
@@ -124,19 +137,6 @@ struct DTOConverter {
                       title: post.title,
                       imageUrl: "https://blackcat.pe.kr/api/v1" + post.imageUrl,
                       createdDate: post.createdDate)
-        }
-    }
-
-    func convertDeleteBookmarkedPostDTOToModel(_ DTO: DTO.Bookmark.DeleteBookmarkedPostDTO) -> Model.DeleteBookmarkedPostModel {
-        .init(liked: DTO.liked)
-    }
-
-    func convertUserListSpecificInBookmarkDTOToModel(_ DTO: DTO.Bookmark.UserListInSpecificBookmark) -> [Model.UserBookmarkPostModel] {
-        DTO.content.map { user in
-                .init(likesId: user.likesId,
-                      userId: user.userId,
-                      nickname: user.nickname,
-                      createdDate: user.createdDate)
         }
     }
 

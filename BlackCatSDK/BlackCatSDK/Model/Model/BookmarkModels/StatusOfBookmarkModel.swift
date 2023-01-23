@@ -8,7 +8,7 @@
 import Foundation
 
 extension Model {
-    public struct DeleteBookmarkedPostModel {
+    public struct StatusOfBookmark {
         public let liked: Bool
     }
 }
