@@ -11,6 +11,7 @@ enum DTO {
     enum Category {}
     enum Tattoo {}
     enum Magazine {}
+    enum Bookmark {}
     enum Address {}
     enum User {}
 }
