@@ -73,6 +73,18 @@
 		8EC953C028EB25DA00E239CC /* BlackCatSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC953BF28EB25DA00E239CC /* BlackCatSDKTests.swift */; };
 		8EC953C128EB25DA00E239CC /* BlackCatSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EC953B328EB25DA00E239CC /* BlackCatSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8EC953CB28EB25E500E239CC /* BlackCatSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */; };
+		8ECB3A5E297E380200C140D3 /* BookmarkListUserLikedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A5D297E380200C140D3 /* BookmarkListUserLikedAPI.swift */; };
+		8ECB3A61297E384700C140D3 /* BookmarkListUserLikedDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A60297E384700C140D3 /* BookmarkListUserLikedDTO.swift */; };
+		8ECB3A65297E3C9A00C140D3 /* CatSDKNetworkBookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A64297E3C9A00C140D3 /* CatSDKNetworkBookmark.swift */; };
+		8ECB3A67297E3D7C00C140D3 /* TattooBookmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A66297E3D7C00C140D3 /* TattooBookmarkModel.swift */; };
+		8ECB3A69297E4E3D00C140D3 /* UserListInSpecificBookmarkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A68297E4E3D00C140D3 /* UserListInSpecificBookmarkAPI.swift */; };
+		8ECB3A6B297E4E8B00C140D3 /* UserListInSpecificBookmarkDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A6A297E4E8B00C140D3 /* UserListInSpecificBookmarkDTO.swift */; };
+		8ECB3A6D297E4FEA00C140D3 /* UserBookmarkPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A6C297E4FEA00C140D3 /* UserBookmarkPostModel.swift */; };
+		8ECB3A6F297E931100C140D3 /* DeleteBookmarkedPostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A6E297E931100C140D3 /* DeleteBookmarkedPostAPI.swift */; };
+		8ECB3A71297E939A00C140D3 /* StatusOfBookmarkDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A70297E939A00C140D3 /* StatusOfBookmarkDTO.swift */; };
+		8ECB3A73297E947700C140D3 /* StatusOfBookmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A72297E947700C140D3 /* StatusOfBookmarkModel.swift */; };
+		8ECB3A75297E962100C140D3 /* BookmarkPostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A74297E962100C140D3 /* BookmarkPostAPI.swift */; };
+		8ECB3A79297E97DB00C140D3 /* StatusOfBookmarkPostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A78297E97DB00C140D3 /* StatusOfBookmarkPostAPI.swift */; };
 		8EE81FA128F424BB001DB7E1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81FA028F424BB001DB7E1 /* Model.swift */; };
 		8EE81FAA28F43250001DB7E1 /* DTOConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81FA928F43250001DB7E1 /* DTOConverter.swift */; };
 		8EE9A0DE28F3FCF2003D7761 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9A0DD28F3FCF2003D7761 /* NetworkService.swift */; };
@@ -169,6 +181,18 @@
 		8EC953BA28EB25DA00E239CC /* BlackCatSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackCatSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC953BF28EB25DA00E239CC /* BlackCatSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCatSDKTests.swift; sourceTree = "<group>"; };
 		8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCatSDK.swift; sourceTree = "<group>"; };
+		8ECB3A5D297E380200C140D3 /* BookmarkListUserLikedAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListUserLikedAPI.swift; sourceTree = "<group>"; };
+		8ECB3A60297E384700C140D3 /* BookmarkListUserLikedDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListUserLikedDTO.swift; sourceTree = "<group>"; };
+		8ECB3A64297E3C9A00C140D3 /* CatSDKNetworkBookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKNetworkBookmark.swift; sourceTree = "<group>"; };
+		8ECB3A66297E3D7C00C140D3 /* TattooBookmarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooBookmarkModel.swift; sourceTree = "<group>"; };
+		8ECB3A68297E4E3D00C140D3 /* UserListInSpecificBookmarkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListInSpecificBookmarkAPI.swift; sourceTree = "<group>"; };
+		8ECB3A6A297E4E8B00C140D3 /* UserListInSpecificBookmarkDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListInSpecificBookmarkDTO.swift; sourceTree = "<group>"; };
+		8ECB3A6C297E4FEA00C140D3 /* UserBookmarkPostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBookmarkPostModel.swift; sourceTree = "<group>"; };
+		8ECB3A6E297E931100C140D3 /* DeleteBookmarkedPostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteBookmarkedPostAPI.swift; sourceTree = "<group>"; };
+		8ECB3A70297E939A00C140D3 /* StatusOfBookmarkDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusOfBookmarkDTO.swift; sourceTree = "<group>"; };
+		8ECB3A72297E947700C140D3 /* StatusOfBookmarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusOfBookmarkModel.swift; sourceTree = "<group>"; };
+		8ECB3A74297E962100C140D3 /* BookmarkPostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkPostAPI.swift; sourceTree = "<group>"; };
+		8ECB3A78297E97DB00C140D3 /* StatusOfBookmarkPostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusOfBookmarkPostAPI.swift; sourceTree = "<group>"; };
 		8EE81FA028F424BB001DB7E1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8EE81FA928F43250001DB7E1 /* DTOConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTOConverter.swift; sourceTree = "<group>"; };
 		8EE9A0DD28F3FCF2003D7761 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -398,6 +422,7 @@
 				8E361A4C291A3DEA00785F62 /* Category */,
 				8E7E9CB0291B5FF900D09157 /* Tattoo */,
 				8E361A4D291A3DF500785F62 /* Magazine */,
+				8ECB3A63297E3C8800C140D3 /* Bookmark */,
 				8E7E9CCA291BBCA100D09157 /* Address */,
 			);
 			path = NetworkManager;
@@ -531,6 +556,46 @@
 			path = BlackCatSDKTests;
 			sourceTree = "<group>";
 		};
+		8ECB3A5C297E37A700C140D3 /* BookmarkAPIs */ = {
+			isa = PBXGroup;
+			children = (
+				8ECB3A5D297E380200C140D3 /* BookmarkListUserLikedAPI.swift */,
+				8ECB3A68297E4E3D00C140D3 /* UserListInSpecificBookmarkAPI.swift */,
+				8ECB3A6E297E931100C140D3 /* DeleteBookmarkedPostAPI.swift */,
+				8ECB3A74297E962100C140D3 /* BookmarkPostAPI.swift */,
+				8ECB3A78297E97DB00C140D3 /* StatusOfBookmarkPostAPI.swift */,
+			);
+			path = BookmarkAPIs;
+			sourceTree = "<group>";
+		};
+		8ECB3A5F297E382500C140D3 /* BookmarkDTOs */ = {
+			isa = PBXGroup;
+			children = (
+				8ECB3A60297E384700C140D3 /* BookmarkListUserLikedDTO.swift */,
+				8ECB3A6A297E4E8B00C140D3 /* UserListInSpecificBookmarkDTO.swift */,
+				8ECB3A70297E939A00C140D3 /* StatusOfBookmarkDTO.swift */,
+			);
+			path = BookmarkDTOs;
+			sourceTree = "<group>";
+		};
+		8ECB3A62297E3C5F00C140D3 /* BookmarkModels */ = {
+			isa = PBXGroup;
+			children = (
+				8ECB3A66297E3D7C00C140D3 /* TattooBookmarkModel.swift */,
+				8ECB3A6C297E4FEA00C140D3 /* UserBookmarkPostModel.swift */,
+				8ECB3A72297E947700C140D3 /* StatusOfBookmarkModel.swift */,
+			);
+			path = BookmarkModels;
+			sourceTree = "<group>";
+		};
+		8ECB3A63297E3C8800C140D3 /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				8ECB3A64297E3C9A00C140D3 /* CatSDKNetworkBookmark.swift */,
+			);
+			path = Bookmark;
+			sourceTree = "<group>";
+		};
 		8ECFE59E28F821AE007A9F72 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -539,6 +604,7 @@
 				8E361A57291A440100785F62 /* CategoryModels */,
 				8E361A5A291A441E00785F62 /* MagazineModels */,
 				8E7E9CC5291B9C6600D09157 /* TattooModels */,
+				8ECB3A62297E3C5F00C140D3 /* BookmarkModels */,
 				8E7E9CCB291BBCC600D09157 /* AddressModels */,
 			);
 			path = Model;
@@ -583,6 +649,7 @@
 				8E361A50291A3EE800785F62 /* CategoryDTOs */,
 				8E361A51291A3EFA00785F62 /* MagazineDTOs */,
 				8E7E9CB3291B60B400D09157 /* TattooDTOs */,
+				8ECB3A5F297E382500C140D3 /* BookmarkDTOs */,
 				8E7E9CC2291B865400D09157 /* AddressDTOs */,
 				8E366B2128F5550D00D13BB2 /* DTOConverter */,
 			);
@@ -596,6 +663,7 @@
 				8E361A54291A435A00785F62 /* CategoryAPIs */,
 				8E361A5B291A46F000785F62 /* MagazineAPIs */,
 				8E7E9CB6291B60D400D09157 /* TattooAPIs */,
+				8ECB3A5C297E37A700C140D3 /* BookmarkAPIs */,
 				8E7E9CBF291B85ED00D09157 /* AddressAPIs */,
 			);
 			path = API;
@@ -766,6 +834,10 @@
 				B1D3363328F1C98C00826636 /* UICollectionView+RxReusableKit.swift in Sources */,
 				8E7E9CC4291B866800D09157 /* AddressSearchDTO.swift in Sources */,
 				781C5F7F28F5F2810022C8F3 /* CHILayer.swift in Sources */,
+				8ECB3A73297E947700C140D3 /* StatusOfBookmarkModel.swift in Sources */,
+				8ECB3A6B297E4E8B00C140D3 /* UserListInSpecificBookmarkDTO.swift in Sources */,
+				8ECB3A69297E4E3D00C140D3 /* UserListInSpecificBookmarkAPI.swift in Sources */,
+				8ECB3A6D297E4FEA00C140D3 /* UserBookmarkPostModel.swift in Sources */,
 				B1D3362F28F1C95500826636 /* UICollectionView+ReusableKit.swift in Sources */,
 				781C5F8028F5F2810022C8F3 /* CHIPageControlJaloro.swift in Sources */,
 				8E361A63291A4DBB00785F62 /* PostMagazineAPI.swift in Sources */,
@@ -776,12 +848,14 @@
 				8E7E9CB5291B60C400D09157 /* TattooListDTO.swift in Sources */,
 				8E7E9CCD291BBCDB00D09157 /* AddressModel.swift in Sources */,
 				B1D3362D28F1C92F00826636 /* ReusableCell.swift in Sources */,
+				8ECB3A65297E3C9A00C140D3 /* CatSDKNetworkBookmark.swift in Sources */,
 				7867504629276E81005139ED /* LoginDTO.swift in Sources */,
 				8E361A65291A4F7400785F62 /* PostMagazineDTO.swift in Sources */,
 				8E361A61291A491900785F62 /* MagazineDetail.swift in Sources */,
 				8E361A3F291A198E00785F62 /* CatSDKNetworkCategory.swift in Sources */,
 				8E7E9CBC291B792600D09157 /* PostTattooDTO.swift in Sources */,
 				781C5F7D28F5F2810022C8F3 /* CHIPageControllable.swift in Sources */,
+				8ECB3A5E297E380200C140D3 /* BookmarkListUserLikedAPI.swift in Sources */,
 				786750482927781E005139ED /* UpdateNicknameDTO.swift in Sources */,
 				8E361A5D291A470400785F62 /* MagazineDetailAPI.swift in Sources */,
 				8E361A53291A3F1100785F62 /* MagazineListDTO.swift in Sources */,
@@ -792,9 +866,13 @@
 				78C8D40C2937B188006A4DF5 /* CatSDKUser.swift in Sources */,
 				8E7E9CBE291B79F500D09157 /* PostTattooAPI.swift in Sources */,
 				7867504C2927784B005139ED /* UpdateAddressDTO.swift in Sources */,
+				8ECB3A71297E939A00C140D3 /* StatusOfBookmarkDTO.swift in Sources */,
 				8EE81FA128F424BB001DB7E1 /* Model.swift in Sources */,
+				8ECB3A79297E97DB00C140D3 /* StatusOfBookmarkPostAPI.swift in Sources */,
+				8ECB3A67297E3D7C00C140D3 /* TattooBookmarkModel.swift in Sources */,
 				B1D3363528F1C9AC00826636 /* UITableView+RxReusableKit.swift in Sources */,
 				786750552927792F005139ED /* UpdateAddressAPI.swift in Sources */,
+				8ECB3A61297E384700C140D3 /* BookmarkListUserLikedDTO.swift in Sources */,
 				78277E8129669768004CFDF4 /* CatSDKTattoo.swift in Sources */,
 				8E361A43291A1C2F00785F62 /* CategoryListAPI.swift in Sources */,
 				8E361A5F291A478100785F62 /* MagazineDetailDTO.swift in Sources */,
@@ -802,6 +880,7 @@
 				8E7E9CB2291B600D00D09157 /* CatSDKNetworkTattoo.swift in Sources */,
 				8E361A4B291A363D00785F62 /* CatSDKNetworkable.swift in Sources */,
 				8E7E9CC9291BB89000D09157 /* TattooInSpecificCategoryAPI.swift in Sources */,
+				8ECB3A6F297E931100C140D3 /* DeleteBookmarkedPostAPI.swift in Sources */,
 				8E361A41291A1B6F00785F62 /* CategoryModel.swift in Sources */,
 				8EE9A0E728F40388003D7761 /* ServiceAPI.swift in Sources */,
 				8EC953CB28EB25E500E239CC /* BlackCatSDK.swift in Sources */,
@@ -812,6 +891,7 @@
 				7867505129277910005139ED /* UpdateRoleAPI.swift in Sources */,
 				B1D3363128F1C97700826636 /* UITableView+ReusableKit.swift in Sources */,
 				8EE9A0DE28F3FCF2003D7761 /* NetworkService.swift in Sources */,
+				8ECB3A75297E962100C140D3 /* BookmarkPostAPI.swift in Sources */,
 				78C8D3FD2937A2AD006A4DF5 /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
