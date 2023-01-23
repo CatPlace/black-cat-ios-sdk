@@ -127,6 +127,10 @@ struct DTOConverter {
         }
     }
 
+    func convertDeleteBookmarkedPostDTOToModel(_ DTO: DTO.Bookmark.DeleteBookmarkedPostDTO) -> Model.DeleteBookmarkedPostModel {
+        .init(liked: DTO.liked)
+    }
+
     func convertUserListSpecificInBookmarkDTOToModel(_ DTO: DTO.Bookmark.UserListInSpecificBookmark) -> [Model.UserBookmarkPostModel] {
         DTO.content.map { user in
                 .init(likesId: user.likesId,
