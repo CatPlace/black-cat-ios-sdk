@@ -1,5 +1,5 @@
 //
-//  BookmarkListUserLikedDTO.swift
+//  UserListInSpecificBookmarkDTO.swift
 //  BlackCatSDK
 //
 //  Created by SeYeong on 2023/01/23.
@@ -8,7 +8,7 @@
 import Foundation
 
 extension DTO.Bookmark {
-    struct BookmarkListUserLiked: Decodable {
+    struct UserListInSpecificBookmark: Decodable {
         let content: [Content]
         let pageable: Pageable
         let totalPages, totalElements: Int
@@ -19,8 +19,8 @@ extension DTO.Bookmark {
         let first, empty: Bool
 
         struct Content: Decodable {
-            let likesId, postId: Int
-            let postType, title, imageUrl, createdDate: String
+            let likesId, userId: Int
+            let nickname, createdDate: String
         }
 
         struct Pageable: Decodable {

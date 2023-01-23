@@ -11,7 +11,7 @@ import Moya
 
 /// 유저가 좋아요한 게시물들 조회 API
 struct BookmarkListUserLikedAPI: ServiceAPI {
-    typealias Response = DTO.Bookmark.ListUserLiked
+    typealias Response = DTO.Bookmark.BookmarkListUserLiked
 
     let postType: PostType
     let token: String
