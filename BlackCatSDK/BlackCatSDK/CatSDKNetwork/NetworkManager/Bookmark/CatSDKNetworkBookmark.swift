@@ -55,6 +55,21 @@ public class CatSDKNetworkBookmark: CatSDKNetworkable {
             }
         }
     }
+
+    public static func bookmarkPost(
+        postId: Int,
+        userToken: String,
+        completion: @escaping (Result<Model.DeleteBookmarkedPostModel, Error>) -> Void
+    ) {
+        networkService.request(BookmarkPostAPI(postId: postId, token: userToken)) { result in
+            switch result {
+            case .success(let dto):
+                completion(.success(converter.convertDeleteBookmarkedPostDTOToModel(dto)))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }
 
 extension Reactive where Base: CatSDKNetworkBookmark {
@@ -78,6 +93,15 @@ extension Reactive where Base: CatSDKNetworkBookmark {
         userToken: String
     ) -> Observable<Model.DeleteBookmarkedPostModel> {
         Base.networkService.rx.request(DeleteBookmarkedPostAPI(postId: postId, token: userToken))
+            .compactMap { Base.converter.convertDeleteBookmarkedPostDTOToModel($0) }
+            .asObservable()
+    }
+
+    public static func bookmarkPost(
+        postId: Int,
+        userToken: String
+    ) -> Observable<Model.DeleteBookmarkedPostModel> {
+        Base.networkService.rx.request(BookmarkPostAPI(postId: postId, token: userToken))
             .compactMap { Base.converter.convertDeleteBookmarkedPostDTOToModel($0) }
             .asObservable()
     }

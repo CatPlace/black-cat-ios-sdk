@@ -1,5 +1,5 @@
 //
-//  DeleteBookmarkedPostAPI.swift
+//  BookmarkPostAPI.swift
 //  BlackCatSDK
 //
 //  Created by SeYeong on 2023/01/23.
@@ -9,7 +9,7 @@ import Foundation
 
 import Moya
 
-struct DeleteBookmarkedPostAPI: ServiceAPI {
+struct BookmarkPostAPI: ServiceAPI {
     typealias Response = DTO.Bookmark.DeleteBookmarkedPostDTO
 
     let postId: Int
@@ -22,7 +22,7 @@ struct DeleteBookmarkedPostAPI: ServiceAPI {
         self.token = token
     }
     var path: String { "likes/posts/1" }
-    var method: Moya.Method { .delete }
+    var method: Moya.Method { .post }
     var task: Moya.Task {
         .requestParameters(parameters: [
             "AUTHORIZATION": token,

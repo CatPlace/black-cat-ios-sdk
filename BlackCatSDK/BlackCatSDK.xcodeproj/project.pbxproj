@@ -83,6 +83,7 @@
 		8ECB3A6F297E931100C140D3 /* DeleteBookmarkedPostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A6E297E931100C140D3 /* DeleteBookmarkedPostAPI.swift */; };
 		8ECB3A71297E939A00C140D3 /* DeleteBookmarkedPostDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A70297E939A00C140D3 /* DeleteBookmarkedPostDTO.swift */; };
 		8ECB3A73297E947700C140D3 /* DeleteBookmarkedPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A72297E947700C140D3 /* DeleteBookmarkedPostModel.swift */; };
+		8ECB3A75297E962100C140D3 /* BookmarkPostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A74297E962100C140D3 /* BookmarkPostAPI.swift */; };
 		8EE81FA128F424BB001DB7E1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81FA028F424BB001DB7E1 /* Model.swift */; };
 		8EE81FAA28F43250001DB7E1 /* DTOConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81FA928F43250001DB7E1 /* DTOConverter.swift */; };
 		8EE9A0DE28F3FCF2003D7761 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9A0DD28F3FCF2003D7761 /* NetworkService.swift */; };
@@ -189,6 +190,7 @@
 		8ECB3A6E297E931100C140D3 /* DeleteBookmarkedPostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteBookmarkedPostAPI.swift; sourceTree = "<group>"; };
 		8ECB3A70297E939A00C140D3 /* DeleteBookmarkedPostDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteBookmarkedPostDTO.swift; sourceTree = "<group>"; };
 		8ECB3A72297E947700C140D3 /* DeleteBookmarkedPostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteBookmarkedPostModel.swift; sourceTree = "<group>"; };
+		8ECB3A74297E962100C140D3 /* BookmarkPostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkPostAPI.swift; sourceTree = "<group>"; };
 		8EE81FA028F424BB001DB7E1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8EE81FA928F43250001DB7E1 /* DTOConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTOConverter.swift; sourceTree = "<group>"; };
 		8EE9A0DD28F3FCF2003D7761 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -558,6 +560,7 @@
 				8ECB3A5D297E380200C140D3 /* BookmarkListUserLikedAPI.swift */,
 				8ECB3A68297E4E3D00C140D3 /* UserListInSpecificBookmarkAPI.swift */,
 				8ECB3A6E297E931100C140D3 /* DeleteBookmarkedPostAPI.swift */,
+				8ECB3A74297E962100C140D3 /* BookmarkPostAPI.swift */,
 			);
 			path = BookmarkAPIs;
 			sourceTree = "<group>";
@@ -884,6 +887,7 @@
 				7867505129277910005139ED /* UpdateRoleAPI.swift in Sources */,
 				B1D3363128F1C97700826636 /* UITableView+ReusableKit.swift in Sources */,
 				8EE9A0DE28F3FCF2003D7761 /* NetworkService.swift in Sources */,
+				8ECB3A75297E962100C140D3 /* BookmarkPostAPI.swift in Sources */,
 				78C8D3FD2937A2AD006A4DF5 /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
