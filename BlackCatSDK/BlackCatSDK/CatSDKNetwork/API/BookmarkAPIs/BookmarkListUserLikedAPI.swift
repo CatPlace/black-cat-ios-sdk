@@ -14,13 +14,19 @@ struct BookmarkListUserLikedAPI: ServiceAPI {
     typealias Response = DTO.Bookmark.ListUserLiked
 
     let postType: PostType
-    init(postType: PostType) {
+    let token: String
+    init(
+        postType: PostType,
+        token: String
+    ) {
         self.postType = postType
+        self.token = token
     }
     var path: String { "likes/posts" }
     var method: Moya.Method { .get }
     var task: Moya.Task {
         .requestParameters(parameters: [
+            "AUTHORIZATION": token,
             "postType": postType.rawValue
         ], encoding: URLEncoding.default)}
 }

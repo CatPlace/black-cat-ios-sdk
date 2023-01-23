@@ -20,7 +20,7 @@ extension DTO.Bookmark {
 
         struct Content: Decodable {
             let likesId, postId: Int
-            let postType, title, imageURL, createdDate: String
+            let postType, title, imageUrl, createdDate: String
         }
 
         struct Pageable: Decodable {

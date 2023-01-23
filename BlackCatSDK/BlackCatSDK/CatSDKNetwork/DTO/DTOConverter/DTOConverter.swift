@@ -8,7 +8,7 @@
 import Foundation
 
 struct DTOConverter {
-    
+
     func convertUserDTOToModel(_ DTO: DTO.User.Login.Response) -> Model.User {
         return .init(id: DTO.userId, jwt: DTO.accessToken)
     }
@@ -114,6 +114,17 @@ struct DTOConverter {
               error: DTO.error,
               code: DTO.code
         )
+    }
+
+    func convertBookmarkListUserLikedDTOToModel(_ DTO: DTO.Bookmark.ListUserLiked) -> [Model.TattooBookmarkModel] {
+        DTO.content.map { post in
+                .init(likesId: post.likesId,
+                      postId: post.postId,
+                      postType: post.postType,
+                      title: post.title,
+                      imageUrl: "https://blackcat.pe.kr/api/v1" + post.imageUrl,
+                      createdDate: post.createdDate)
+        }
     }
 
     func convertAddressDTOToModel(_ DTO: DTO.Address.Search) -> [Model.Address] {

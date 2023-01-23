@@ -75,6 +75,8 @@
 		8EC953CB28EB25E500E239CC /* BlackCatSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */; };
 		8ECB3A5E297E380200C140D3 /* BookmarkListUserLikedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A5D297E380200C140D3 /* BookmarkListUserLikedAPI.swift */; };
 		8ECB3A61297E384700C140D3 /* BookmarkListUserLikedDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A60297E384700C140D3 /* BookmarkListUserLikedDTO.swift */; };
+		8ECB3A65297E3C9A00C140D3 /* CatSDKNetworkBookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A64297E3C9A00C140D3 /* CatSDKNetworkBookmark.swift */; };
+		8ECB3A67297E3D7C00C140D3 /* TattooBookmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A66297E3D7C00C140D3 /* TattooBookmarkModel.swift */; };
 		8EE81FA128F424BB001DB7E1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81FA028F424BB001DB7E1 /* Model.swift */; };
 		8EE81FAA28F43250001DB7E1 /* DTOConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81FA928F43250001DB7E1 /* DTOConverter.swift */; };
 		8EE9A0DE28F3FCF2003D7761 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9A0DD28F3FCF2003D7761 /* NetworkService.swift */; };
@@ -173,6 +175,8 @@
 		8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCatSDK.swift; sourceTree = "<group>"; };
 		8ECB3A5D297E380200C140D3 /* BookmarkListUserLikedAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListUserLikedAPI.swift; sourceTree = "<group>"; };
 		8ECB3A60297E384700C140D3 /* BookmarkListUserLikedDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListUserLikedDTO.swift; sourceTree = "<group>"; };
+		8ECB3A64297E3C9A00C140D3 /* CatSDKNetworkBookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKNetworkBookmark.swift; sourceTree = "<group>"; };
+		8ECB3A66297E3D7C00C140D3 /* TattooBookmarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooBookmarkModel.swift; sourceTree = "<group>"; };
 		8EE81FA028F424BB001DB7E1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8EE81FA928F43250001DB7E1 /* DTOConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTOConverter.swift; sourceTree = "<group>"; };
 		8EE9A0DD28F3FCF2003D7761 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -402,6 +406,7 @@
 				8E361A4C291A3DEA00785F62 /* Category */,
 				8E7E9CB0291B5FF900D09157 /* Tattoo */,
 				8E361A4D291A3DF500785F62 /* Magazine */,
+				8ECB3A63297E3C8800C140D3 /* Bookmark */,
 				8E7E9CCA291BBCA100D09157 /* Address */,
 			);
 			path = NetworkManager;
@@ -551,6 +556,22 @@
 			path = BookmarkDTOs;
 			sourceTree = "<group>";
 		};
+		8ECB3A62297E3C5F00C140D3 /* BookmarkModels */ = {
+			isa = PBXGroup;
+			children = (
+				8ECB3A66297E3D7C00C140D3 /* TattooBookmarkModel.swift */,
+			);
+			path = BookmarkModels;
+			sourceTree = "<group>";
+		};
+		8ECB3A63297E3C8800C140D3 /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				8ECB3A64297E3C9A00C140D3 /* CatSDKNetworkBookmark.swift */,
+			);
+			path = Bookmark;
+			sourceTree = "<group>";
+		};
 		8ECFE59E28F821AE007A9F72 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -559,6 +580,7 @@
 				8E361A57291A440100785F62 /* CategoryModels */,
 				8E361A5A291A441E00785F62 /* MagazineModels */,
 				8E7E9CC5291B9C6600D09157 /* TattooModels */,
+				8ECB3A62297E3C5F00C140D3 /* BookmarkModels */,
 				8E7E9CCB291BBCC600D09157 /* AddressModels */,
 			);
 			path = Model;
@@ -798,6 +820,7 @@
 				8E7E9CB5291B60C400D09157 /* TattooListDTO.swift in Sources */,
 				8E7E9CCD291BBCDB00D09157 /* AddressModel.swift in Sources */,
 				B1D3362D28F1C92F00826636 /* ReusableCell.swift in Sources */,
+				8ECB3A65297E3C9A00C140D3 /* CatSDKNetworkBookmark.swift in Sources */,
 				7867504629276E81005139ED /* LoginDTO.swift in Sources */,
 				8E361A65291A4F7400785F62 /* PostMagazineDTO.swift in Sources */,
 				8E361A61291A491900785F62 /* MagazineDetail.swift in Sources */,
@@ -816,6 +839,7 @@
 				8E7E9CBE291B79F500D09157 /* PostTattooAPI.swift in Sources */,
 				7867504C2927784B005139ED /* UpdateAddressDTO.swift in Sources */,
 				8EE81FA128F424BB001DB7E1 /* Model.swift in Sources */,
+				8ECB3A67297E3D7C00C140D3 /* TattooBookmarkModel.swift in Sources */,
 				B1D3363528F1C9AC00826636 /* UITableView+RxReusableKit.swift in Sources */,
 				786750552927792F005139ED /* UpdateAddressAPI.swift in Sources */,
 				8ECB3A61297E384700C140D3 /* BookmarkListUserLikedDTO.swift in Sources */,
