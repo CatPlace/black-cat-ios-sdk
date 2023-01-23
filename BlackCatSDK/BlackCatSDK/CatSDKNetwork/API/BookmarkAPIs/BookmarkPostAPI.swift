@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 struct BookmarkPostAPI: ServiceAPI {
-    typealias Response = DTO.Bookmark.DeleteBookmarkedPostDTO
+    typealias Response = DTO.Bookmark.StatusOfBookmark
 
     let postId: Int
     let token: String
