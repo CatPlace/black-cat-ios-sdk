@@ -13,10 +13,27 @@ struct TattooInSpecificCategoryAPI: ServiceAPI {
     typealias Response = DTO.Tattoo.List
 
     var categoryID: Int
-    init(categoryID: Int) {
-        self.categoryID = categoryID
+    var tattooType: String?
+    var addressId: Int?
+    var parameter: [String: Any] {
+        var paremeter: [String: Any] = [:]
+        if tattooType != nil { paremeter["tattooType"] = tattooType }
+        if addressId != nil { paremeter["addressId"] = addressId }
+        return paremeter
     }
-    var path: String {"tattoos/categories/\(categoryID)" }
+
+    init(
+        categoryID: Int,
+        tattooType: String? = nil,
+        addressId: Int? = nil
+    ) {
+        self.categoryID = categoryID
+        self.tattooType = tattooType
+        self.addressId = addressId
+    }
+    var path: String { "tattoos/categories/\(categoryID)" }
     var method: Moya.Method { .get }
-    var task: Moya.Task { .requestPlain }
+    var task: Moya.Task {
+        .requestParameters(parameters: parameter, encoding: URLEncoding.queryString)
+    }
 }

@@ -12,18 +12,23 @@ import Moya
 struct TattooListAPI: ServiceAPI {
     typealias Response = DTO.Tattoo.List
 
-    var page: Int
-    var size: Int
-    init(page: Int, size: Int) {
-        self.page = page
-        self.size = size
+    var tattooType: String?
+    var addressId: Int?
+    var parameter: [String: Any] {
+        var paremeter: [String: Any] = [:]
+        if tattooType != nil { paremeter["tattooType"] = tattooType }
+        if addressId != nil { paremeter["addressId"] = addressId }
+        return paremeter
     }
+
+    init(tattooType: String? = nil, addressId: Int? = nil) {
+        self.tattooType = tattooType
+        self.addressId = addressId
+    }
+
     var path: String = "tattoos"
     var method: Moya.Method { .get }
     var task: Moya.Task {
-        .requestParameters(parameters: [
-            "page": page,
-            "size": size
-        ], encoding: URLEncoding.queryString)
+        .requestParameters(parameters: parameter, encoding: URLEncoding.queryString)
     }
 }
