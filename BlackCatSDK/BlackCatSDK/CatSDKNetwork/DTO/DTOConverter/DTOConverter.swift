@@ -13,12 +13,12 @@ struct DTOConverter {
         return .init(id: DTO.userId, jwt: DTO.accessToken)
     }
     
-    func convertCategoryListDTOToModel(_ DTO: [DTO.Category.List.Category]) -> [Model.Category] {
+    func convertCategoryListDTOToModel(_ DTO: [DTO.Category.List]) -> [Model.Category] {
         var categoryList: [Model.Category] = []
 
-        let 전체보기Category = Model.Category(id: 0, name: "전체보기", count: 0)
-
-        categoryList.append(전체보기Category)
+//        let 전체보기Category = Model.Category(id: 0, name: "전체보기", count: 0)
+//
+//        categoryList.append(전체보기Category)
 
         DTO.forEach { category in
             let category = Model.Category(id: category.id, name: category.name, count: category.count)

@@ -11,14 +11,14 @@ extension DTO.Tattoo {
     struct List: Decodable {
         let tattoos: [Tattoo]
         let pageable: Pageable
-        let last: Bool
         let totalPages: Int
         let totalElements: Int
-        let size: Int
+        let last: Bool
         let number: Int
         let sort: Sort
-        let first: Bool
+        let size: Int
         let numberOfElements: Int
+        let first: Bool
         let empty: Bool
 
         struct Tattoo: Decodable {

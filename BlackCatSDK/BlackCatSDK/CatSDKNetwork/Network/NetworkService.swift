@@ -19,7 +19,12 @@ struct APIResponse<T: Decodable>: Decodable {
 }
 
 protocol NetworkServable {
-    func request<API>(_ api: API, completion: @escaping (Result<API.Response, Error>) -> Void) where API: ServiceAPI
+    func request<API>(_ api: API, completion: @escaping (Result<API.Response, NetworkError>) -> Void) where API: ServiceAPI
+}
+
+struct NetworkErrorResponse: Decodable {
+    let errorCode: Int
+    let message: String
 }
 
 class NetworkService: NetworkServable {
@@ -27,12 +32,16 @@ class NetworkService: NetworkServable {
 
     func request<API>(
         _ api: API,
-        completion: @escaping (Result<API.Response, Error>) -> Void
+        completion: @escaping (Result<API.Response, NetworkError>) -> Void
     ) where API : ServiceAPI {
 
         let provider = MoyaProvider<API>()
-
+        let endpoint = MultiTarget.target(api)
+        print("endPoint: \(endpoint)")
+        print("endPoint baseURL", endpoint.baseURL)
+        print("endPoint path", endpoint.path)
         provider.request(api) { result in
+            print(api.task)
             switch result {
             case .success(let response):
                 do {
@@ -42,22 +51,48 @@ class NetworkService: NetworkServable {
                         completion(.success(data))
                     }
                 } catch let error {
-                    completion(.failure(error))
+                    print(error.localizedDescription)
+                    completion(.failure(handlingError(error)))
                 }
             case .failure(let error):
-                completion(.failure(error))
+                completion(.failure(handlingError(error)))
             }
         }
-    }
 
-//    extension NetworkError: LocalizedError {
-//        public var errorDescription: String? {
-//            switch self {
-//            case .objectMapping:
-//                return ""
-//            case .statusCode(let statusCode):
-//                return "적절하지 않은 StatusCode입니다. StatusCode: \(statusCode)"
-//            }
-//        }
-//    }
+        func handlingError(_ error: Error) -> NetworkError {
+            guard let moyaError = error as? MoyaError else {
+                print("설마 여기?")
+                return .unknown
+            }
+
+            let error: NetworkError
+
+            switch moyaError {
+            case .jsonMapping(_):
+                error = .mappingError
+            case .objectMapping(let decodingError, _):
+                print(decodingError, "@@@@")
+                error = .mappingError
+            case .statusCode(let response):
+                switch response.statusCode {
+                case 400..<500:
+                    do {
+                        let errorModel = try response.map(NetworkErrorResponse.self)
+                        error = .clientError(errorModel.errorCode, errorModel.message)
+                    } catch {
+                        let error = NetworkError.mappingError
+                        print(error.localizedDescription)
+                        return error
+                    }
+                default:
+                    error = .statusCode(response.statusCode)
+                }
+                
+            default: error = .unknown
+            }
+
+            print(error.localizedDescription)
+            return error
+        }
+    }
 }
