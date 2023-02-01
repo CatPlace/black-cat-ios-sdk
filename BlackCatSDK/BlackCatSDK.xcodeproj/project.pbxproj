@@ -14,13 +14,9 @@
 		782728AF29597C1700049436 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782728AE29597C1700049436 /* UserDefaultManager.swift */; };
 		78277E8129669768004CFDF4 /* CatSDKTattoo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78277E8029669768004CFDF4 /* CatSDKTattoo.swift */; };
 		7867504629276E81005139ED /* LoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867504529276E81005139ED /* LoginDTO.swift */; };
-		786750482927781E005139ED /* UpdateNicknameDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786750472927781E005139ED /* UpdateNicknameDTO.swift */; };
 		7867504A29277833005139ED /* UpdateRoleDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867504929277833005139ED /* UpdateRoleDTO.swift */; };
-		7867504C2927784B005139ED /* UpdateAddressDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867504B2927784B005139ED /* UpdateAddressDTO.swift */; };
 		7867504F29277899005139ED /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867504E29277899005139ED /* LoginAPI.swift */; };
 		7867505129277910005139ED /* UpdateRoleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867505029277910005139ED /* UpdateRoleAPI.swift */; };
-		7867505329277923005139ED /* UpdateNicknameAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867505229277923005139ED /* UpdateNicknameAPI.swift */; };
-		786750552927792F005139ED /* UpdateAddressAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786750542927792F005139ED /* UpdateAddressAPI.swift */; };
 		786750582929FE48005139ED /* CatSDKNetworkUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786750572929FE48005139ED /* CatSDKNetworkUser.swift */; };
 		787D580B293CC26000A3E610 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 787D580A293CC26000A3E610 /* KakaoSDK */; };
 		787D580D293CC26000A3E610 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 787D580C293CC26000A3E610 /* KakaoSDKAuth */; };
@@ -30,6 +26,12 @@
 		787D5816293CC27600A3E610 /* RxKakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 787D5815293CC27600A3E610 /* RxKakaoSDKAuth */; };
 		787D5818293CC27600A3E610 /* RxKakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 787D5817293CC27600A3E610 /* RxKakaoSDKCommon */; };
 		787D581A293CC27600A3E610 /* RxKakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 787D5819293CC27600A3E610 /* RxKakaoSDKUser */; };
+		788AA3E22989351400736BAE /* UpdateProfileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788AA3E12989351400736BAE /* UpdateProfileAPI.swift */; };
+		788AA3E42989353700736BAE /* UpdateProfileDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788AA3E32989353700736BAE /* UpdateProfileDTO.swift */; };
+		788AA3E629894C6C00736BAE /* WithdrawalDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788AA3E529894C6C00736BAE /* WithdrawalDTO.swift */; };
+		788AA3E8298952A800736BAE /* WithdrawalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788AA3E7298952A800736BAE /* WithdrawalAPI.swift */; };
+		788AA3EC298A4D5000736BAE /* CatSDKNetWorkProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788AA3EB298A4D5000736BAE /* CatSDKNetWorkProfile.swift */; };
+		788AA3EE298A4D6200736BAE /* CatSDKNetworkEstimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788AA3ED298A4D6200736BAE /* CatSDKNetworkEstimate.swift */; };
 		78C8D3FD2937A2AD006A4DF5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8D3FC2937A2AD006A4DF5 /* UserModel.swift */; };
 		78C8D4092937B0C8006A4DF5 /* BlackCatSocialLoginSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8D4082937B0C8006A4DF5 /* BlackCatSocialLoginSDK.swift */; };
 		78C8D40C2937B188006A4DF5 /* CatSDKUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8D40B2937B188006A4DF5 /* CatSDKUser.swift */; };
@@ -132,14 +134,16 @@
 		782728AE29597C1700049436 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		78277E8029669768004CFDF4 /* CatSDKTattoo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKTattoo.swift; sourceTree = "<group>"; };
 		7867504529276E81005139ED /* LoginDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDTO.swift; sourceTree = "<group>"; };
-		786750472927781E005139ED /* UpdateNicknameDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNicknameDTO.swift; sourceTree = "<group>"; };
 		7867504929277833005139ED /* UpdateRoleDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRoleDTO.swift; sourceTree = "<group>"; };
-		7867504B2927784B005139ED /* UpdateAddressDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAddressDTO.swift; sourceTree = "<group>"; };
 		7867504E29277899005139ED /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
 		7867505029277910005139ED /* UpdateRoleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRoleAPI.swift; sourceTree = "<group>"; };
-		7867505229277923005139ED /* UpdateNicknameAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNicknameAPI.swift; sourceTree = "<group>"; };
-		786750542927792F005139ED /* UpdateAddressAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAddressAPI.swift; sourceTree = "<group>"; };
 		786750572929FE48005139ED /* CatSDKNetworkUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKNetworkUser.swift; sourceTree = "<group>"; };
+		788AA3E12989351400736BAE /* UpdateProfileAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileAPI.swift; sourceTree = "<group>"; };
+		788AA3E32989353700736BAE /* UpdateProfileDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileDTO.swift; sourceTree = "<group>"; };
+		788AA3E529894C6C00736BAE /* WithdrawalDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawalDTO.swift; sourceTree = "<group>"; };
+		788AA3E7298952A800736BAE /* WithdrawalAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawalAPI.swift; sourceTree = "<group>"; };
+		788AA3EB298A4D5000736BAE /* CatSDKNetWorkProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKNetWorkProfile.swift; sourceTree = "<group>"; };
+		788AA3ED298A4D6200736BAE /* CatSDKNetworkEstimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKNetworkEstimate.swift; sourceTree = "<group>"; };
 		78C8D3FC2937A2AD006A4DF5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		78C8D4082937B0C8006A4DF5 /* BlackCatSocialLoginSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCatSocialLoginSDK.swift; sourceTree = "<group>"; };
 		78C8D40B2937B188006A4DF5 /* CatSDKUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKUser.swift; sourceTree = "<group>"; };
@@ -286,9 +290,9 @@
 			isa = PBXGroup;
 			children = (
 				7867504529276E81005139ED /* LoginDTO.swift */,
+				788AA3E32989353700736BAE /* UpdateProfileDTO.swift */,
+				788AA3E529894C6C00736BAE /* WithdrawalDTO.swift */,
 				7867504929277833005139ED /* UpdateRoleDTO.swift */,
-				786750472927781E005139ED /* UpdateNicknameDTO.swift */,
-				7867504B2927784B005139ED /* UpdateAddressDTO.swift */,
 			);
 			path = UserDTOs;
 			sourceTree = "<group>";
@@ -298,8 +302,8 @@
 			children = (
 				7867504E29277899005139ED /* LoginAPI.swift */,
 				7867505029277910005139ED /* UpdateRoleAPI.swift */,
-				7867505229277923005139ED /* UpdateNicknameAPI.swift */,
-				786750542927792F005139ED /* UpdateAddressAPI.swift */,
+				788AA3E12989351400736BAE /* UpdateProfileAPI.swift */,
+				788AA3E7298952A800736BAE /* WithdrawalAPI.swift */,
 			);
 			path = UserAPIs;
 			sourceTree = "<group>";
@@ -310,6 +314,22 @@
 				786750572929FE48005139ED /* CatSDKNetworkUser.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		788AA3E9298A4D1700736BAE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				788AA3EB298A4D5000736BAE /* CatSDKNetWorkProfile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		788AA3EA298A4D2600736BAE /* Estimate */ = {
+			isa = PBXGroup;
+			children = (
+				788AA3ED298A4D6200736BAE /* CatSDKNetworkEstimate.swift */,
+			);
+			path = Estimate;
 			sourceTree = "<group>";
 		};
 		78C8D3FB2937A29E006A4DF5 /* UserModels */ = {
@@ -418,12 +438,14 @@
 		8E361A68291A5B5800785F62 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
-				786750562929FB59005139ED /* User */,
 				8E361A4C291A3DEA00785F62 /* Category */,
+				786750562929FB59005139ED /* User */,
 				8E7E9CB0291B5FF900D09157 /* Tattoo */,
-				8E361A4D291A3DF500785F62 /* Magazine */,
-				8ECB3A63297E3C8800C140D3 /* Bookmark */,
 				8E7E9CCA291BBCA100D09157 /* Address */,
+				8ECB3A63297E3C8800C140D3 /* Bookmark */,
+				788AA3E9298A4D1700736BAE /* Profile */,
+				788AA3EA298A4D2600736BAE /* Estimate */,
+				8E361A4D291A3DF500785F62 /* Magazine */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -600,8 +622,8 @@
 			isa = PBXGroup;
 			children = (
 				8EE81FA028F424BB001DB7E1 /* Model.swift */,
-				78C8D3FB2937A29E006A4DF5 /* UserModels */,
 				8E361A57291A440100785F62 /* CategoryModels */,
+				78C8D3FB2937A29E006A4DF5 /* UserModels */,
 				8E361A5A291A441E00785F62 /* MagazineModels */,
 				8E7E9CC5291B9C6600D09157 /* TattooModels */,
 				8ECB3A62297E3C5F00C140D3 /* BookmarkModels */,
@@ -645,8 +667,8 @@
 			isa = PBXGroup;
 			children = (
 				8EE9A0DF28F3FEBF003D7761 /* DTO.swift */,
-				7867504429276E39005139ED /* UserDTOs */,
 				8E361A50291A3EE800785F62 /* CategoryDTOs */,
+				7867504429276E39005139ED /* UserDTOs */,
 				8E361A51291A3EFA00785F62 /* MagazineDTOs */,
 				8E7E9CB3291B60B400D09157 /* TattooDTOs */,
 				8ECB3A5F297E382500C140D3 /* BookmarkDTOs */,
@@ -659,8 +681,8 @@
 		8EE9A0E528F40329003D7761 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				7867504D2927787A005139ED /* UserAPIs */,
 				8E361A54291A435A00785F62 /* CategoryAPIs */,
+				7867504D2927787A005139ED /* UserAPIs */,
 				8E361A5B291A46F000785F62 /* MagazineAPIs */,
 				8E7E9CB6291B60D400D09157 /* TattooAPIs */,
 				8ECB3A5C297E37A700C140D3 /* BookmarkAPIs */,
@@ -829,8 +851,8 @@
 				8E7E9CC7291B9D6B00D09157 /* TattooModel.swift in Sources */,
 				8E7E9CCF291BBD0F00D09157 /* CatSDKNetworkAddress.swift in Sources */,
 				8E361A59291A441500785F62 /* MagazineModel.swift in Sources */,
-				7867505329277923005139ED /* UpdateNicknameAPI.swift in Sources */,
 				78C8D4092937B0C8006A4DF5 /* BlackCatSocialLoginSDK.swift in Sources */,
+				788AA3E22989351400736BAE /* UpdateProfileAPI.swift in Sources */,
 				B1D3363328F1C98C00826636 /* UICollectionView+RxReusableKit.swift in Sources */,
 				8E7E9CC4291B866800D09157 /* AddressSearchDTO.swift in Sources */,
 				781C5F7F28F5F2810022C8F3 /* CHILayer.swift in Sources */,
@@ -856,23 +878,23 @@
 				8E7E9CBC291B792600D09157 /* PostTattooDTO.swift in Sources */,
 				781C5F7D28F5F2810022C8F3 /* CHIPageControllable.swift in Sources */,
 				8ECB3A5E297E380200C140D3 /* BookmarkListUserLikedAPI.swift in Sources */,
-				786750482927781E005139ED /* UpdateNicknameDTO.swift in Sources */,
 				8E361A5D291A470400785F62 /* MagazineDetailAPI.swift in Sources */,
 				8E361A53291A3F1100785F62 /* MagazineListDTO.swift in Sources */,
 				8E7E9CB8291B60E300D09157 /* TattooListAPI.swift in Sources */,
 				7867504F29277899005139ED /* LoginAPI.swift in Sources */,
 				8EE9A0E028F3FEBF003D7761 /* DTO.swift in Sources */,
+				788AA3EE298A4D6200736BAE /* CatSDKNetworkEstimate.swift in Sources */,
 				782728AF29597C1700049436 /* UserDefaultManager.swift in Sources */,
 				78C8D40C2937B188006A4DF5 /* CatSDKUser.swift in Sources */,
 				8E7E9CBE291B79F500D09157 /* PostTattooAPI.swift in Sources */,
-				7867504C2927784B005139ED /* UpdateAddressDTO.swift in Sources */,
 				8ECB3A71297E939A00C140D3 /* StatusOfBookmarkDTO.swift in Sources */,
 				8EE81FA128F424BB001DB7E1 /* Model.swift in Sources */,
 				8ECB3A79297E97DB00C140D3 /* StatusOfBookmarkPostAPI.swift in Sources */,
 				8ECB3A67297E3D7C00C140D3 /* TattooBookmarkModel.swift in Sources */,
 				B1D3363528F1C9AC00826636 /* UITableView+RxReusableKit.swift in Sources */,
-				786750552927792F005139ED /* UpdateAddressAPI.swift in Sources */,
+				788AA3EC298A4D5000736BAE /* CatSDKNetWorkProfile.swift in Sources */,
 				8ECB3A61297E384700C140D3 /* BookmarkListUserLikedDTO.swift in Sources */,
+				788AA3E8298952A800736BAE /* WithdrawalAPI.swift in Sources */,
 				78277E8129669768004CFDF4 /* CatSDKTattoo.swift in Sources */,
 				8E361A43291A1C2F00785F62 /* CategoryListAPI.swift in Sources */,
 				8E361A5F291A478100785F62 /* MagazineDetailDTO.swift in Sources */,
@@ -893,6 +915,8 @@
 				8EE9A0DE28F3FCF2003D7761 /* NetworkService.swift in Sources */,
 				8ECB3A75297E962100C140D3 /* BookmarkPostAPI.swift in Sources */,
 				78C8D3FD2937A2AD006A4DF5 /* UserModel.swift in Sources */,
+				788AA3E42989353700736BAE /* UpdateProfileDTO.swift in Sources */,
+				788AA3E629894C6C00736BAE /* WithdrawalDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

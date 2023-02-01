@@ -8,9 +8,14 @@
 import Foundation
 
 struct DTOConverter {
-
-    func convertUserDTOToModel(_ DTO: DTO.User.Login.Response) -> Model.User {
+    // MARK: - USER
+    func convertUserLoginDTOToModel(_ DTO: DTO.User.Login.Response) -> Model.User {
         return .init(id: DTO.userId, jwt: DTO.accessToken)
+    }
+    
+    func convertUpdateUserProfileDTOToModel(_ DTO: DTO.User.UpdateProfile.Response) -> Model.User {
+        
+        return .init(id: -1, name: DTO.name, imageUrl: DTO.imageUrl.first, email: DTO.email, phoneNumber: DTO.phoneNumber, gender: Model.Gender.clientValue(DTO.gender), area: .init(rawValue: DTO.addressId), userType: .guest)
     }
     
     func convertCategoryListDTOToModel(_ DTO: [DTO.Category.List]) -> [Model.Category] {
@@ -147,4 +152,5 @@ struct DTOConverter {
                       address: address.address)
         }
     }
+    
 }
