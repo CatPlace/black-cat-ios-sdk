@@ -21,7 +21,12 @@ struct TattooInSpecificCategoryAPI: ServiceAPI {
         if addressId != nil { paremeter["addressId"] = addressId }
         return paremeter
     }
-
+    var path: String { "tattoos/categories/\(categoryID)" }
+    var method: Moya.Method { .get }
+    var task: Moya.Task {
+        .requestParameters(parameters: parameter, encoding: URLEncoding.queryString)
+    }
+    
     init(
         categoryID: Int,
         tattooType: String? = nil,
@@ -30,10 +35,5 @@ struct TattooInSpecificCategoryAPI: ServiceAPI {
         self.categoryID = categoryID
         self.tattooType = tattooType
         self.addressId = addressId
-    }
-    var path: String { "tattoos/categories/\(categoryID)" }
-    var method: Moya.Method { .get }
-    var task: Moya.Task {
-        .requestParameters(parameters: parameter, encoding: URLEncoding.queryString)
     }
 }

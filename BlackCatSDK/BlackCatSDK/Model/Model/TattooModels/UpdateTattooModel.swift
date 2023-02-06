@@ -1,5 +1,5 @@
 //
-//  PostTattooModel.swift
+//  UpdateTattooModel.swift
 //  BlackCatSDK
 //
 //  Created by SeYeong on 2022/12/14.
@@ -8,7 +8,7 @@
 import Foundation
 
 extension Model {
-    public struct PostTattoo {
+    public struct UpdateTattoo {
         public struct Response {
             public let tattooId: Int
             public let imageUrls: [String]

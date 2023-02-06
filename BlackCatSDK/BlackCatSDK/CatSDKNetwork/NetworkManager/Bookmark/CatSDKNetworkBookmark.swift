@@ -90,6 +90,8 @@ public class CatSDKNetworkBookmark: CatSDKNetworkable {
             }
         }
     }
+    
+    
 }
 
 extension Reactive where Base: CatSDKNetworkBookmark {

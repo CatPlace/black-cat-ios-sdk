@@ -9,9 +9,11 @@ import Foundation
 
 enum DTO {
     enum Category {}
-    enum Tattoo {}
-    enum Magazine {}
-    enum Bookmark {}
-    enum Address {}
     enum User {}
+    enum Tattoo {}
+    enum Address {}
+    enum Bookmark {}
+    enum TattooistProfile {}
+    enum Estimate {}
+    enum Magazine {}
 }
