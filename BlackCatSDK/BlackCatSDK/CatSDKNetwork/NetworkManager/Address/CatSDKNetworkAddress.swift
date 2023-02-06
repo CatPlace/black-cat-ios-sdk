@@ -12,12 +12,8 @@ import RxSwift
 public class CatSDKNetworkAddress: CatSDKNetworkable {
     private init() {}
 
-    public static func searchAddress(
-        page: Int,
-        size: Int = 20,
-        completion: @escaping (Result<[Model.Address], Error>) -> Void
-    ) {
-        networkService.request(AddressSearchAPI(page: page, size: size)) { result in
+    public static func searchAddress(completion: @escaping (Result<[Model.Address], Error>) -> Void) {
+        networkService.request(AddressListAPI()) { result in
             switch result {
             case .success(let DTO):
                 completion(.success(converter.convertAddressDTOToModel(DTO)))
@@ -29,12 +25,9 @@ public class CatSDKNetworkAddress: CatSDKNetworkable {
 }
 
 extension Reactive where Base: CatSDKNetworkAddress {
-    public static func searchAddress(
-        page: Int,
-        size: Int = 20
-    ) -> Observable<[Model.Address]> {
-        Base.networkService.rx.request(AddressSearchAPI(page: page, size: size))
-            .compactMap { Base.converter.convertAddressDTOToModel($0) }
+    public static func searchAddress() -> Observable<[Model.Address]> {
+        Base.networkService.rx.request(AddressListAPI())
+            .compactMap(Base.converter.convertAddressDTOToModel)
             .asObservable()
     }
 }

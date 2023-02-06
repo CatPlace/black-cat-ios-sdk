@@ -8,29 +8,27 @@
 import Foundation
 
 struct DTOConverter {
-
-    func convertUserDTOToModel(_ DTO: DTO.User.Login.Response) -> Model.User {
+    // MARK: - Category
+    func convertCategoryListDTOToModel(_ DTO: [DTO.Category.List]) -> [Model.Category] {
+        DTO.map { category in
+            .init(id: category.id, name: category.name, count: category.count)
+        }
+    }
+    
+    // MARK: - USER
+    func convertUserLoginDTOToModel(_ DTO: DTO.User.Login.Response) -> Model.User {
         return .init(id: DTO.userId, jwt: DTO.accessToken)
     }
     
-    func convertCategoryListDTOToModel(_ DTO: [DTO.Category.List]) -> [Model.Category] {
-        var categoryList: [Model.Category] = []
-
-//        let 전체보기Category = Model.Category(id: 0, name: "전체보기", count: 0)
-//
-//        categoryList.append(전체보기Category)
-
-        DTO.forEach { category in
-            let category = Model.Category(id: category.id, name: category.name, count: category.count)
-            categoryList.append(category)
-        }
-
-        return categoryList
+    func convertUpdateUserProfileDTOToModel(_ DTO: DTO.User.UpdateProfile.Response) -> Model.User {
+        
+        return .init(id: -1, name: DTO.name, imageUrl: DTO.imageUrl.first, email: DTO.email, phoneNumber: DTO.phoneNumber, gender: Model.Gender.clientValue(DTO.gender), area: .init(rawValue: DTO.addressId), userType: .guest)
     }
-
+    
+    
+    // MARK: - Tattoo
     func convertTattooListDTOToModel(_ DTO: DTO.Tattoo.List) -> [Model.Tattoo] {
         DTO.tattoos.map { tattoo in
-            // TODO: DTO 수정 !! 타투이스트 이름
                 .init(id: tattoo.id,
                       ownerName: "",
                       price: tattoo.price,
@@ -40,12 +38,24 @@ struct DTOConverter {
                       address: tattoo.address)
         }
     }
-
-    func convertPostTattooResponseDTOToModel(_ DTO: DTO.Tattoo.Post.Response) -> Model.PostTattoo.Response {
+    
+    func convertTattooDetailDTOToModel(_ DTO: DTO.Tattoo.Detail.Response) -> Model.TattooDetail {
+        .init(id: DTO.id, ownerName: DTO.tattooistName ?? "", price: DTO.price, description: DTO.description, liked: DTO.liked, imageURLStrings: DTO.imageUrls, address: DTO.address, ownerId: DTO.tattooistId, tattooType: DTO.tattooType, categoryId: DTO.categoryId, likeCount: DTO.likeCount)
+        
+    }
+    
+    func convertTattooThumbnailDTOToModel(_ DTO: DTO.Tattoo.ThumbnailList.Response) -> [Model.TattooThumbnail] {
+        DTO.tattoos.map { tattoo in
+                .init(tattooId: tattoo.id, imageUrlString: tattoo.imageUrl)
+        }
+        
+    }
+    
+    func convertPostTattooResponseDTOToModel(_ DTO: DTO.Tattoo.Update.Response) -> Model.UpdateTattoo.Response {
         .init(tattooId: DTO.tattooId, imageUrls: DTO.imageUrls)
     }
-
-    func createPostTattooRequest(_ model: Model.PostTattoo.Request) -> DTO.Tattoo.Post.Request {
+    
+    func createPostTattooRequest(_ model: Model.UpdateTattoo.Request) -> DTO.Tattoo.Update.Request {
         .init(tattooType: model.tattooType,
               categoryId: model.categoryId,
               title: model.title,
@@ -53,7 +63,50 @@ struct DTOConverter {
               description: model.description
         )
     }
-
+    
+    // MARK: - Address
+    func convertAddressDTOToModel(_ DTO: DTO.Address.List) -> [Model.Address] {
+        DTO.addresses.map { address in
+                .init(id: address.id,
+                      sido: address.sido)
+        }
+    }
+    
+    // MARK: - Bookmark
+    
+    func convertStatusOfBookmarkDTOToModel(_ DTO: DTO.Bookmark.StatusOfBookmark) -> Model.StatusOfBookmark {
+        .init(liked: DTO.liked)
+    }
+    
+    func convertUserListSpecificInBookmarkDTOToModel(_ DTO: DTO.Bookmark.UserListInSpecificBookmark) -> [Model.UserBookmarkPost] {
+        DTO.content.map { user in
+                .init(likesId: user.likesId,
+                      userId: user.userId,
+                      nickname: user.nickname,
+                      createdDate: user.createdDate)
+        }
+    }
+    
+    func convertBookmarkListUserLikedDTOToModel(_ DTO: DTO.Bookmark.BookmarkListUserLiked) -> [Model.TattooBookmark] {
+        DTO.content.map { post in
+                .init(likesId: post.likesId,
+                      postId: post.postId,
+                      postType: post.postType,
+                      title: post.title,
+                      imageUrl: "https://blackcat.pe.kr/api/v1" + post.imageUrl,
+                      createdDate: post.createdDate)
+        }
+    }
+    
+    // MARK: - TattooistProfile
+    func convertTattooistIntroduceToModel(_ DTO: DTO.TattooistProfile.Introduce.Response) -> Model.TattooistIntroduce {
+        .init(introduce: DTO.introduce, imageUrlString: DTO.imageUrls)
+    }
+    func convertTattooistEstimateToModel(_ DTO: DTO.TattooistProfile.Estimate) -> Model.TattooistEstimate {
+        .init(description: DTO.description)
+    }
+    
+    // MARK: - Magazine
     func convertMagazineListDTOToModel(_ DTO: DTO.Magazine.List) -> [Model.Magazine] {
         DTO.data.magazines.map { magazine in
                 .init(id: magazine.id,
@@ -63,28 +116,28 @@ struct DTOConverter {
                 )
         }
     }
-
+    
     func convertMagazineDetailDTOToModel(_ DTO: DTO.Magazine.Detail) -> Model.MagazineDetail {
         .init(status: DTO.status,
-                     cellInfos: DTO.cellInfos.map { .init(type: $0.cellType,
-                                                          text: $0.text,
-                                                          fontSize: $0.fontSize,
-                                                          textColor: $0.textColor,
-                                                          textAlignment: $0.textAlignment,
-                                                          fontWeight: $0.fontWeight,
-                                                          imageURLString: $0.imageUrlString,
-                                                          imageCornerRadius: $0.imageCornerRadius,
-                                                          layoutHeight: $0.layoutHeight,
-                                                          layoutWidth: $0.layoutWidth,
-                                                          layoutLeadingInset: $0.layoutLeadingInset,
-                                                          layoutTrailingInset: $0.layoutTrailingInset,
-                                                          layoutTopInset: $0.layoutTopInset,
-                                                          layoutBottomInset: $0.layoutBottomInset) },
-                     error: DTO.error,
-                     code: DTO.code
+              cellInfos: DTO.cellInfos.map { .init(type: $0.cellType,
+                                                   text: $0.text,
+                                                   fontSize: $0.fontSize,
+                                                   textColor: $0.textColor,
+                                                   textAlignment: $0.textAlignment,
+                                                   fontWeight: $0.fontWeight,
+                                                   imageURLString: $0.imageUrlString,
+                                                   imageCornerRadius: $0.imageCornerRadius,
+                                                   layoutHeight: $0.layoutHeight,
+                                                   layoutWidth: $0.layoutWidth,
+                                                   layoutLeadingInset: $0.layoutLeadingInset,
+                                                   layoutTrailingInset: $0.layoutTrailingInset,
+                                                   layoutTopInset: $0.layoutTopInset,
+                                                   layoutBottomInset: $0.layoutBottomInset) },
+              error: DTO.error,
+              code: DTO.code
         )
     }
-
+    
     func createPostMagazineRequest(_ model: Model.CreateMagazine.Request) -> PostMagazineAPI.Request {
         .init(title: model.title,
               imageUrl: model.imageURLString,
@@ -104,7 +157,7 @@ struct DTOConverter {
                                                 layoutBottomInset: $0.layoutBottomInset)
         })
     }
-
+    
     func convertPostMagazineDTOToModel(_ DTO: DTO.Magazine.Post) -> Model.CreateMagazine.Response {
         .init(status: DTO.status,
               magazine: .init(id: DTO.magazine.id,
@@ -114,37 +167,5 @@ struct DTOConverter {
               error: DTO.error,
               code: DTO.code
         )
-    }
-
-    func convertStatusOfBookmarkDTOToModel(_ DTO: DTO.Bookmark.StatusOfBookmark) -> Model.StatusOfBookmark {
-        .init(liked: DTO.liked)
-    }
-
-    func convertUserListSpecificInBookmarkDTOToModel(_ DTO: DTO.Bookmark.UserListInSpecificBookmark) -> [Model.UserBookmarkPost] {
-        DTO.content.map { user in
-                .init(likesId: user.likesId,
-                      userId: user.userId,
-                      nickname: user.nickname,
-                      createdDate: user.createdDate)
-        }
-    }
-
-    func convertBookmarkListUserLikedDTOToModel(_ DTO: DTO.Bookmark.BookmarkListUserLiked) -> [Model.TattooBookmark] {
-        DTO.content.map { post in
-                .init(likesId: post.likesId,
-                      postId: post.postId,
-                      postType: post.postType,
-                      title: post.title,
-                      imageUrl: "https://blackcat.pe.kr/api/v1" + post.imageUrl,
-                      createdDate: post.createdDate)
-        }
-    }
-
-    func convertAddressDTOToModel(_ DTO: DTO.Address.Search) -> [Model.Address] {
-        DTO.addresses.map { address in
-                .init(id: address.id,
-                      zipCode: address.zipCode,
-                      address: address.address)
-        }
     }
 }

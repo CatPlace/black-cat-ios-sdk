@@ -12,15 +12,18 @@ import RxCocoa
 import RxRelay
 
 public struct UserDefaultManager {
+    static let userImageUrlString = PublishRelay<String?>()
+    
     /// -1: 둘러보기, -2: 로그인 하지 않은 상태
     @UserDefault(key: "user", defaultValue: Model.User(id: -2))
-    private static var user: Model.User
+    private static var user: Model.User {
+        didSet {
+            userImageUrlString.accept(user.imageUrl)
+        }
+    }
 
     @UserDefault(key: "bookmarkedTattoo", defaultValue: [])
     public static var bookmarkedTattoo: [Model.Tattoo]
-    
-    @UserDefault(key: "userCache", defaultValue: Model.User(id: -2))
-    private static var userCache: Model.User
     
     @UserDefault(key: "recentViewTattoos", defaultValue: [])
     private static var recentViewTattoos: [Model.Tattoo]
@@ -63,18 +66,11 @@ extension UserDefaultManager {
     public static func updateUser(user: Model.User) {
         UserDefaultManager.user = user
     }
-}
-
-// UserCache
-extension UserDefaultManager {
-    public static func getUserCache() -> Model.User {
-        UserDefaultManager.userCache
-    }
-    public static func updateUserCache(user: Model.User) {
-        UserDefaultManager.userCache = user
+    
+    public static func imageUrlString() -> Observable<String?> {
+        return userImageUrlString.distinctUntilChanged()
     }
 }
-
 
 // recentTattoo
 extension UserDefaultManager {

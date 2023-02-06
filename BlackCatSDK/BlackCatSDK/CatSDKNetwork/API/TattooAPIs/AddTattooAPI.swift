@@ -1,5 +1,5 @@
 //
-//  PostTattoo.swift
+//  AddTattooAPI.swift
 //  BlackCatSDK
 //
 //  Created by SeYeong on 2022/11/09.
@@ -9,18 +9,11 @@ import Foundation
 
 import Moya
 
-struct PostTattooAPI: ServiceAPI {
-    typealias Response = DTO.Tattoo.Post.Response
+struct AddTattooAPI: ServiceAPI {
+    typealias Response = DTO.Tattoo.Update.Response
 
     var tattooImageDatas: [Data]
-    var tattooInfo: DTO.Tattoo.Post.Request
-    init(
-        tattooImageDatas: [Data],
-        tattooInfo: DTO.Tattoo.Post.Request
-    ) {
-        self.tattooImageDatas = tattooImageDatas
-        self.tattooInfo = tattooInfo
-    }
+    var tattooInfo: DTO.Tattoo.Update.Request
     var path: String = "tattoos"
     var method: Moya.Method { .post }
     var multiPartFormDatas: [MultipartFormData] {
@@ -34,5 +27,13 @@ struct PostTattooAPI: ServiceAPI {
     }
     var task: Moya.Task {
         .uploadMultipart(multiPartFormDatas)
+    }
+    
+    init(
+        tattooImageDatas: [Data],
+        tattooInfo: DTO.Tattoo.Update.Request
+    ) {
+        self.tattooImageDatas = tattooImageDatas
+        self.tattooInfo = tattooInfo
     }
 }

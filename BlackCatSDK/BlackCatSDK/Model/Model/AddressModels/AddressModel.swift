@@ -10,7 +10,6 @@ import Foundation
 extension Model {
     public struct Address {
         let id: Int
-        let zipCode: String
-        let address: String
+        let sido: String
     }
 }

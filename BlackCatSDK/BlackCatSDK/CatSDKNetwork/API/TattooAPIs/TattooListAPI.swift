@@ -20,15 +20,14 @@ struct TattooListAPI: ServiceAPI {
         if addressId != nil { paremeter["addressId"] = addressId }
         return paremeter
     }
-
-    init(tattooType: String? = nil, addressId: Int? = nil) {
-        self.tattooType = tattooType
-        self.addressId = addressId
-    }
-
     var path: String = "tattoos"
     var method: Moya.Method { .get }
     var task: Moya.Task {
         .requestParameters(parameters: parameter, encoding: URLEncoding.queryString)
+    }
+    
+    init(tattooType: String? = nil, addressId: Int? = nil) {
+        self.tattooType = tattooType
+        self.addressId = addressId
     }
 }
