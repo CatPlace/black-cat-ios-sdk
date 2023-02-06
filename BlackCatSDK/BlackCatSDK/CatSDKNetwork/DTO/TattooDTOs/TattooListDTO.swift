@@ -24,10 +24,15 @@ extension DTO.Tattoo {
         struct Tattoo: Decodable {
             let id: Int
             let price: Int
+            let tattooistId: Int
+            let tattooistName: String?
             let description: String
-            let liked: Bool
-            let imageUrls: [String]
             let address: String
+            let imageUrls: [String]
+            let tattooType: String
+            let categoryId: Int
+            let likeCount: Int?
+            let liked: Bool
         }
 
         struct Pageable: Decodable {

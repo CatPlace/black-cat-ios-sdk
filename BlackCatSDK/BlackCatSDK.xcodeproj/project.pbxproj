@@ -11,7 +11,6 @@
 		780BF4742990CDB40087C477 /* DeleteTattooAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF4732990CDB40087C477 /* DeleteTattooAPI.swift */; };
 		780BF4762990CFAB0087C477 /* TattooInSpecificTattooistAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF4752990CFAB0087C477 /* TattooInSpecificTattooistAPI.swift */; };
 		780BF4782990D0390087C477 /* ModifyTattooAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF4772990D0390087C477 /* ModifyTattooAPI.swift */; };
-		780BF47A2990D8CB0087C477 /* TattooDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF4792990D8CB0087C477 /* TattooDetailModel.swift */; };
 		780BF47C2990D90F0087C477 /* TattooThumbnailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF47B2990D90F0087C477 /* TattooThumbnailModel.swift */; };
 		780BF47E2990DB470087C477 /* TattooThumbnailListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF47D2990DB470087C477 /* TattooThumbnailListDTO.swift */; };
 		780BF4802990E79A0087C477 /* PostTattooistProfileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BF47F2990E79A0087C477 /* PostTattooistProfileAPI.swift */; };
@@ -146,7 +145,6 @@
 		780BF4732990CDB40087C477 /* DeleteTattooAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTattooAPI.swift; sourceTree = "<group>"; };
 		780BF4752990CFAB0087C477 /* TattooInSpecificTattooistAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooInSpecificTattooistAPI.swift; sourceTree = "<group>"; };
 		780BF4772990D0390087C477 /* ModifyTattooAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyTattooAPI.swift; sourceTree = "<group>"; };
-		780BF4792990D8CB0087C477 /* TattooDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooDetailModel.swift; sourceTree = "<group>"; };
 		780BF47B2990D90F0087C477 /* TattooThumbnailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooThumbnailModel.swift; sourceTree = "<group>"; };
 		780BF47D2990DB470087C477 /* TattooThumbnailListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooThumbnailListDTO.swift; sourceTree = "<group>"; };
 		780BF47F2990E79A0087C477 /* PostTattooistProfileAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTattooistProfileAPI.swift; sourceTree = "<group>"; };
@@ -586,7 +584,6 @@
 			children = (
 				8E7E9CC6291B9D6B00D09157 /* TattooModel.swift */,
 				8E88488E2949D5110039F99A /* UpdateTattooModel.swift */,
-				780BF4792990D8CB0087C477 /* TattooDetailModel.swift */,
 				780BF47B2990D90F0087C477 /* TattooThumbnailModel.swift */,
 			);
 			path = TattooModels;
@@ -1002,7 +999,6 @@
 				8E361A67291A530600785F62 /* CreateMagazine.swift in Sources */,
 				8E361A3D291A186600785F62 /* CategoryListDTO.swift in Sources */,
 				7867505129277910005139ED /* UpdateRoleAPI.swift in Sources */,
-				780BF47A2990D8CB0087C477 /* TattooDetailModel.swift in Sources */,
 				B1D3363128F1C97700826636 /* UITableView+ReusableKit.swift in Sources */,
 				8EE9A0DE28F3FCF2003D7761 /* NetworkService.swift in Sources */,
 				8ECB3A75297E962100C140D3 /* BookmarkPostAPI.swift in Sources */,
