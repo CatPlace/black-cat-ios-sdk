@@ -22,7 +22,7 @@ protocol NetworkServable {
     func request<API>(_ api: API, completion: @escaping (Result<API.Response, NetworkError>) -> Void) where API: ServiceAPI
 }
 
-struct NetworkErrorResponse: Decodable {
+struct NetworkErrorResponse: Error, Decodable {
     let errorCode: Int
     let message: String
 }
@@ -37,21 +37,20 @@ class NetworkService: NetworkServable {
 
         let provider = MoyaProvider<API>()
         let endpoint = MultiTarget.target(api)
-        print("endPoint: \(endpoint)")
-        print("endPoint baseURL", endpoint.baseURL)
-        print("endPoint path", endpoint.path)
         provider.request(api) { result in
-            print(api.task)
             switch result {
             case .success(let response):
                 do {
+                    if response.statusCode == 500 {
+                        let a = try response.map(NetworkErrorResponse.self)
+                        print(a)
+                    }
                     _ = try response.filterSuccessfulStatusCodes()
                     let decodedData = try response.map(APIResponse<API.Response>.self)
                     if let data = decodedData.data {
                         completion(.success(data))
                     }
                 } catch let error {
-                    print(error.localizedDescription)
                     completion(.failure(handlingError(error)))
                 }
             case .failure(let error):
@@ -61,7 +60,6 @@ class NetworkService: NetworkServable {
 
         func handlingError(_ error: Error) -> NetworkError {
             guard let moyaError = error as? MoyaError else {
-                print("설마 여기?")
                 return .unknown
             }
 
@@ -71,7 +69,6 @@ class NetworkService: NetworkServable {
             case .jsonMapping(_):
                 error = .mappingError
             case .objectMapping(let decodingError, _):
-                print(decodingError, "@@@@")
                 error = .mappingError
             case .statusCode(let response):
                 switch response.statusCode {

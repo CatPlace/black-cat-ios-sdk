@@ -15,6 +15,7 @@ extension DTO.TattooistProfile {
                 let images: [Data]
                 struct ProfileInfo: Encodable {
                     let introduce: String
+                    let deleteImageUrls: [String]
                 }
             }
         }

@@ -14,10 +14,11 @@ public class CatSDKNetworkProfile: CatSDKNetworkable {
     /// 타투이스트 프로필 등록/수정
     public static func postProfile(
         introduce: String,
+        deleteImageUrls: [String] = [],
         images: [Data],
         completion: @escaping (Result<Model.TattooistIntroduce, Error>) -> Void
     ) {
-        networkService.request(PostTattooistProfileAPI(request: .init(profileInfo: .init(introduce: introduce), images: images))) { result in
+        networkService.request(PostTattooistProfileAPI(request: .init(profileInfo: .init(introduce: introduce, deleteImageUrls: deleteImageUrls), images: images))) { result in
             switch result {
             case .success(let DTO):
                 completion(.success(converter.convertTattooistIntroduceToModel(DTO)))
@@ -44,9 +45,10 @@ extension Reactive where Base: CatSDKNetworkProfile {
     /// 타투이스트 프로필 등록/수정
     public static func postProfile(
         introduce: String,
+        deleteImageUrls: [String] = [],
         images: [Data]
     ) -> Observable<Model.TattooistIntroduce> {
-        Base.networkService.rx.request(PostTattooistProfileAPI(request: .init(profileInfo: .init(introduce: introduce), images: images)))
+        Base.networkService.rx.request(PostTattooistProfileAPI(request: .init(profileInfo: .init(introduce: introduce, deleteImageUrls: deleteImageUrls), images: images)))
             .compactMap(Base.converter.convertTattooistIntroduceToModel)
             .asObservable()
     }

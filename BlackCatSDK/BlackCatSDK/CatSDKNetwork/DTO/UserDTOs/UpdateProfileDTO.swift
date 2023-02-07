@@ -30,6 +30,7 @@ extension DTO.User {
             let phoneNumber: String
             let gender: String
             let addressId: Int
+            let deleteImageUrls: [String]
         }
     }
 }

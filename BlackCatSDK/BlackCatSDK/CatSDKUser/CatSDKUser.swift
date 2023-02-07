@@ -67,8 +67,8 @@ public class CatSDKUser {
     }
     
     public static func updateUser(user: Model.User) {
-        // TODO: - 서버 통신
         UserDefaultManager.updateUser(user: user)
+
     }
     
     public static func user() -> Model.User {
@@ -77,5 +77,23 @@ public class CatSDKUser {
     
     public static func withdrawal() {
         // TODO: - 서버 통신
+        
+    }
+    
+    public static func updateUserProfile(user: Model.User)  -> Observable<Model.User> {
+        // TODO: - 서버에 유저 전체 정보 내려달라 한 뒤 업데이트
+        var tempUser = CatSDKUser.user()
+        return CatSDKNetworkUser.rx.updateProfile(name: user.name ?? "", email: user.email ?? "", phoneNumber: user.phoneNumber ?? "", gender: user.gender?.serverValue() ?? "", addressId: user.area?.rawValue ?? -1)
+            .do { newUser in
+                tempUser.name = newUser.name
+                tempUser.email = newUser.email
+                tempUser.phoneNumber = newUser.phoneNumber
+                tempUser.gender = newUser.gender
+                tempUser.area = newUser.area
+                tempUser.imageUrl = newUser.imageUrl
+                CatSDKUser.updateUser(user: tempUser)
+                print("업데이트 된 유저", tempUser)
+            }.catch { _ in .just(.init(id: -99999))}
+            .debug("유저 업데이트 서버 통신")
     }
 }

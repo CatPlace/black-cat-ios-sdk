@@ -33,9 +33,10 @@ class CatSDKNetworkUser: CatSDKNetworkable {
         gender: String,
         addressId: Int,
         imageDataList: [Data]? = nil,
+        deleteImageUrls: [String] = [],
         completion: @escaping (Result<Model.User, Error>) -> Void
     ) {
-        networkService.request(UpdateProfileAPI(request: .init(userInfo: .init(name: name, email: email, phoneNumber: phoneNumber, gender: gender, addressId: addressId), imageDataList: imageDataList))) { result in
+        networkService.request(UpdateProfileAPI(request: .init(userInfo: .init(name: name, email: email, phoneNumber: phoneNumber, gender: gender, addressId: addressId, deleteImageUrls: deleteImageUrls), imageDataList: imageDataList))) { result in
             switch result {
             case .success(let dto):
                 completion(.success(converter.convertUpdateUserProfileDTOToModel(dto)))
@@ -74,9 +75,10 @@ extension Reactive where Base: CatSDKNetworkUser {
         phoneNumber: String,
         gender: String,
         addressId: Int,
-        imageDataList: [Data]? = nil
+        imageDataList: [Data]? = nil,
+        deleteImageUrls: [String] = []
     ) -> Observable<Model.User> {
-        Base.networkService.rx.request(UpdateProfileAPI(request: .init(userInfo: .init(name: name, email: email, phoneNumber: phoneNumber, gender: gender, addressId: addressId), imageDataList: imageDataList)))
+        Base.networkService.rx.request(UpdateProfileAPI(request: .init(userInfo: .init(name: name, email: email, phoneNumber: phoneNumber, gender: gender, addressId: addressId, deleteImageUrls: deleteImageUrls), imageDataList: imageDataList)))
             .compactMap(Base.converter.convertUpdateUserProfileDTOToModel)
             .asObservable()
     }
