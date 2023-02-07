@@ -16,7 +16,6 @@ struct UpdateProfileAPI: ServiceAPI {
     var method: Moya.Method { .patch }
     var task: Moya.Task
     var headers: [String : String]? { [
-        "Content-Type": "multipart/form-data",
         "Authorization": "Bearer \(CatSDKUser.user().jwt ?? "")"
     ] }
     init(request: DTO.User.UpdateProfile.Request) {
@@ -26,8 +25,8 @@ struct UpdateProfileAPI: ServiceAPI {
         func converToMultiPartFormData(_ dto: DTO.User.UpdateProfile.Request) -> [MultipartFormData] {
             
             let userInfoData = try! JSONEncoder().encode(dto.userInfo)
-            
-            var formDataList: [MultipartFormData] = [.init(provider: .data(userInfoData), name: "userInfo")]
+                
+            var formDataList: [MultipartFormData] = [.init(provider: .data(userInfoData), name: "userInfo", mimeType: "application/json")]
             
             if let imageDataList = dto.imageDataList {
                 imageDataList.forEach { imageData in
