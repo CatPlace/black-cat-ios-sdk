@@ -11,7 +11,7 @@ struct DTOConverter {
     // MARK: - Category
     func convertCategoryListDTOToModel(_ DTO: [DTO.Category.List]) -> [Model.Category] {
         DTO.map { category in
-            .init(id: category.id, name: category.name, count: category.count)
+                .init(id: category.id, name: category.name, count: category.count)
         }
     }
     
@@ -32,13 +32,20 @@ struct DTOConverter {
     
     // MARK: - Tattoo
     func convertTattooListDTOToModel(_ DTO: DTO.Tattoo.List) -> [Model.Tattoo] {
-        DTO.tattoos.map { tattoo in
-                .init(id: tattoo.id, ownerName: tattoo.tattooistName ?? "", price: tattoo.price, description: tattoo.description, liked: tattoo.liked, imageURLStrings: tattoo.imageUrls, address: tattoo.address, ownerId: tattoo.tattooistId, tattooType: tattoo.tattooType, categoryId: [tattoo.categoryId], likeCount: tattoo.likeCount)
+        DTO.tattoos.compactMap { tattoo in
+            guard let tattooType = TattooType(rawValue: tattoo.tattooType) else { return nil }
+            
+            return .init(id: tattoo.id, ownerName: tattoo.tattooistName ?? "", price: tattoo.price, description: tattoo.description, liked: tattoo.liked, imageURLStrings: tattoo.imageUrls, address: tattoo.address, ownerId: tattoo.tattooistId, tattooType: tattooType, categoryId: [tattoo.categoryId], likeCount: tattoo.likeCount)
         }
     }
     
     func convertTattooDetailDTOToModel(_ DTO: DTO.Tattoo.List.Tattoo) -> Model.Tattoo {
-        .init(id: DTO.id, ownerName: DTO.tattooistName ?? "", price: DTO.price, description: DTO.description, liked: DTO.liked, imageURLStrings: DTO.imageUrls, address: DTO.address, ownerId: DTO.tattooistId, tattooType: DTO.tattooType, categoryId: [DTO.categoryId], likeCount: DTO.likeCount)
+        guard let tattooType = TattooType(rawValue: DTO.tattooType) else {
+            // NOTE: 타투타입 에러 ! 서버개발자와 논의 !
+            return .init(id: 0)
+        }
+        
+        return .init(id: DTO.id, ownerName: DTO.tattooistName ?? "", price: DTO.price, description: DTO.description, liked: DTO.liked, imageURLStrings: DTO.imageUrls, address: DTO.address, ownerId: DTO.tattooistId, tattooType: tattooType, categoryId: [DTO.categoryId], likeCount: DTO.likeCount)
         
     }
     
@@ -54,11 +61,14 @@ struct DTOConverter {
     }
     
     func createPostTattooRequest(_ model: Model.UpdateTattoo.Request) -> DTO.Tattoo.Update.Request {
-        .init(tattooType: model.tattooType,
-              categoryId: model.categoryId,
+        
+        // TODO: - 옵셔널 처리 고민
+        .init(tattooType: model.tattooType!.rawValue,
+              categoryId: model.categoryId.first ?? 0,
               title: model.title,
-              price: model.price,
-              description: model.description
+              price: model.price ?? 0,
+              description: model.description,
+              deleteImageUrls: model.deleteImageUrls
         )
     }
     

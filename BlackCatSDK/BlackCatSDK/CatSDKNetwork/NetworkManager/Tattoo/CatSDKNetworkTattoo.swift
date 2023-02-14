@@ -208,6 +208,7 @@ extension Reactive where Base: CatSDKNetworkTattoo {
     
     /// 타투 수정
     public static func updateTattoo(
+        tattooId: Int,
         tattooImageDatas: [Data],
         tattooInfo: Model.UpdateTattoo.Request
     ) -> Observable<Model.UpdateTattoo.Response> {

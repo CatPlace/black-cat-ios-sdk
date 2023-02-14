@@ -29,7 +29,7 @@ struct UpdateProfileAPI: ServiceAPI {
             if let imageDataList = dto.imageDataList {
                 imageDataList.forEach { imageData in
                     print("🐷🐷🐷", imageData)
-                    formDataList.append(.init(provider: .data(imageData), name: "images", fileName: "\(Int.random(in: 0...1000000)).jpeg", mimeType: "image/jpeg"))
+                    formDataList.append(.init(provider: .data(imageData), name: "images", fileName: "test.jpeg", mimeType: "image/jpeg"))
                 }
             }
             print("멀티파트:", formDataList)

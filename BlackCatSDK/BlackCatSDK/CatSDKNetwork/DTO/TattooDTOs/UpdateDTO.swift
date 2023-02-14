@@ -15,7 +15,7 @@ extension DTO.Tattoo {
             let title: String
             let price: Int
             let description: String
-            let deleteImageUrls: [String]? = nil
+            let deleteImageUrls: [String]
         }
         
         struct Response: Decodable {

@@ -27,6 +27,9 @@ public struct UserDefaultManager {
     
     @UserDefault(key: "recentViewTattoos", defaultValue: [])
     private static var recentViewTattoos: [Model.Tattoo]
+    
+    @UserDefault(key: "tattooistProfileCache", defaultValue: .init())
+    private static var tattooistInfo: Model.TattooistInfo
 }
 
 @propertyWrapper
@@ -79,5 +82,15 @@ extension UserDefaultManager {
     }
     public static func updateRecentTattoos(tattoos: [Model.Tattoo]) {
         UserDefaultManager.recentViewTattoos = tattoos
+    }
+}
+
+//tattooistInfo
+extension UserDefaultManager {
+    public static func getTattooistInfo() -> Model.TattooistInfo {
+        UserDefaultManager.tattooistInfo
+    }
+    public static func updateTattooistInfo(tattooistInfo: Model.TattooistInfo) {
+        UserDefaultManager.tattooistInfo = tattooistInfo
     }
 }

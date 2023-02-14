@@ -8,7 +8,7 @@
 import Foundation
 
 extension Model {
-    public struct TattooThumbnail {
+    public struct TattooThumbnail: Equatable, Codable {
         public let tattooId: Int
         public let imageUrlString: String
         

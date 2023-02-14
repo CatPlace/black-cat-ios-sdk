@@ -28,6 +28,7 @@
 		782728AF29597C1700049436 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782728AE29597C1700049436 /* UserDefaultManager.swift */; };
 		78277E8129669768004CFDF4 /* CatSDKTattoo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78277E8029669768004CFDF4 /* CatSDKTattoo.swift */; };
 		78280141299B656B00DC1509 /* CatSDKTattooist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78280140299B656B00DC1509 /* CatSDKTattooist.swift */; };
+		78280143299BDA7300DC1509 /* TattooistInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78280142299BDA7300DC1509 /* TattooistInfoModel.swift */; };
 		7867504629276E81005139ED /* LoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867504529276E81005139ED /* LoginDTO.swift */; };
 		7867504A29277833005139ED /* UpdateRoleDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867504929277833005139ED /* UpdateRoleDTO.swift */; };
 		7867504F29277899005139ED /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867504E29277899005139ED /* LoginAPI.swift */; };
@@ -163,6 +164,7 @@
 		782728AE29597C1700049436 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		78277E8029669768004CFDF4 /* CatSDKTattoo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKTattoo.swift; sourceTree = "<group>"; };
 		78280140299B656B00DC1509 /* CatSDKTattooist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKTattooist.swift; sourceTree = "<group>"; };
+		78280142299BDA7300DC1509 /* TattooistInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooistInfoModel.swift; sourceTree = "<group>"; };
 		7867504529276E81005139ED /* LoginDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDTO.swift; sourceTree = "<group>"; };
 		7867504929277833005139ED /* UpdateRoleDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRoleDTO.swift; sourceTree = "<group>"; };
 		7867504E29277899005139ED /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 			children = (
 				780BF4822990ECE10087C477 /* TattooistIntroduceModel.swift */,
 				780BF4842990ED290087C477 /* TattooistEstimateModel.swift */,
+				78280142299BDA7300DC1509 /* TattooistInfoModel.swift */,
 			);
 			path = TattooistProfileModels;
 			sourceTree = "<group>";
@@ -957,6 +960,7 @@
 				8E361A56291A436C00785F62 /* MagazineListAPI.swift in Sources */,
 				8E361A49291A306700785F62 /* NetworkError.swift in Sources */,
 				780BF4832990ECE10087C477 /* TattooistIntroduceModel.swift in Sources */,
+				78280143299BDA7300DC1509 /* TattooistInfoModel.swift in Sources */,
 				7867504A29277833005139ED /* UpdateRoleDTO.swift in Sources */,
 				8E7E9CB5291B60C400D09157 /* TattooListDTO.swift in Sources */,
 				780BF47E2990DB470087C477 /* TattooThumbnailListDTO.swift in Sources */,

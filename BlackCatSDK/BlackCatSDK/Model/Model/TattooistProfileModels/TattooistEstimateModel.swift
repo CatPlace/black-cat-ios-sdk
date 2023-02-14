@@ -8,7 +8,7 @@
 import Foundation
 
 extension Model {
-    public struct TattooistEstimate {
+    public struct TattooistEstimate: Equatable, Codable {
         public let description: String
         
         public init(description: String) {
