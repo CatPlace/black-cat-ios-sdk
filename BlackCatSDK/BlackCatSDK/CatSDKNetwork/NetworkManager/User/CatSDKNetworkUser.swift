@@ -56,6 +56,17 @@ class CatSDKNetworkUser: CatSDKNetworkable {
             }
         }
     }
+    
+    static func updateRole(completion: @escaping (Result<Int, Error>) -> Void) {
+        networkService.request(UpdateRoleAPI()) { result in
+            switch result {
+            case .success(let dto):
+                completion(.success(dto.userId))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }
 
 extension Reactive where Base: CatSDKNetworkUser {
@@ -73,8 +84,8 @@ extension Reactive where Base: CatSDKNetworkUser {
         name: String,
         email: String,
         phoneNumber: String,
-        gender: String,
-        addressId: Int,
+        gender: String?,
+        addressId: Int?,
         imageDataList: [Data]? = nil,
         deleteImageUrls: [String] = []
     ) -> Observable<Model.User> {
@@ -83,10 +94,15 @@ extension Reactive where Base: CatSDKNetworkUser {
             .asObservable()
     }
     
-    static func withdrawal() -> Observable<Bool> {
+    static func withdrawal() -> Observable<Void> {
         Base.networkService.rx.request(WithdrawalAPI())
-            .map { _ in true }
-            .catch { _ in .just(false) }
+            .map { _ in () }
+            .asObservable()
+    }
+    
+    static func updateRole() -> Observable<Void> {
+        Base.networkService.rx.request(UpdateRoleAPI())
+            .map { _ in () }
             .asObservable()
     }
 }

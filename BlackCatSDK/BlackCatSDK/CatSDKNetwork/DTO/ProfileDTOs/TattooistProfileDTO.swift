@@ -20,7 +20,7 @@ extension DTO.TattooistProfile {
             }
         }
         struct Response: Decodable {
-            let introduce: String
+            let introduce: String?
             let imageUrls: [String]
         }
     }

@@ -9,13 +9,8 @@ import Foundation
 import Moya
 
 struct UpdateRoleAPI: ServiceAPI {
-    typealias Response = DTO.User.updateRole.Response
-    let request: DTO.User.updateRole.Request
-    var path: String = "users/role"
-    var method: Moya.Method { .post }
+    typealias Response = DTO.User.UpdateRole.Response
+    var path: String = "users/tattooist-role"
+    var method: Moya.Method { .patch }
     var task: Moya.Task { .requestPlain }
-    
-    init(request: DTO.User.updateRole.Request) {
-        self.request = request
-    }
 }

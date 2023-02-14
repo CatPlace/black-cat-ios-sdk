@@ -98,11 +98,12 @@ public class CatSDKNetworkTattoo: CatSDKNetworkable {
     
     /// 타투이스트의 작품 조회
     public static func fetchTattosInSpecificTattooist(
+        tattooistId: Int,
         page: Int? = nil,
         size: Int? = nil,
         completion: @escaping (Result<[Model.TattooThumbnail], Error>) -> Void
     ) {
-        networkService.request(TattooInSpecificTattooistAPI()) { result in
+        networkService.request(TattooInSpecificTattooistAPI(tattooistId: tattooistId)) { result in
             switch result {
             case .success(let DTO):
                 completion(.success(converter.convertTattooThumbnailDTOToModel(DTO)))
@@ -196,10 +197,11 @@ extension Reactive where Base: CatSDKNetworkTattoo {
     
     /// 타투이스트의 작품 조회
     public static func fetchTattosInSpecificTattooist(
+        tattooistId: Int,
         page: Int? = nil,
         size: Int? = nil
     ) -> Observable<[Model.TattooThumbnail]> {
-        Base.networkService.rx.request(TattooInSpecificTattooistAPI())
+        Base.networkService.rx.request(TattooInSpecificTattooistAPI(tattooistId: tattooistId))
             .compactMap(Base.converter.convertTattooThumbnailDTOToModel)
             .asObservable()
     }

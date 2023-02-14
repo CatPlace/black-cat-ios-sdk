@@ -16,20 +16,20 @@ extension DTO.User {
         }
         
         struct Response: Decodable {
-            let name: String
-            let email: String
-            let phoneNumber: String
-            let gender: String
-            let addressId: Int
-            let imageUrl: [String]
+            let name: String?
+            let email: String?
+            let phoneNumber: String?
+            let gender: String?
+            let addressId: Int?
+            let imageUrls: [String]
         }
         
         struct UserInfo: Codable {
             let name: String
             let email: String
             let phoneNumber: String
-            let gender: String
-            let addressId: Int
+            let gender: String?
+            let addressId: Int?
             let deleteImageUrls: [String]
         }
     }

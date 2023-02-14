@@ -21,7 +21,8 @@ extension ServiceAPI {
     var baseURL: URL {
         return URL(string: BlackCatKEY.urlString)!
     }
+    //CatSDKUser.user().jwt ??
     var headers: [String : String]? { [
-        "Authorization": BlackCatKEY.testJWT
+        "Authorization": "Bearer \(CatSDKUser.user().jwt ?? "")"
     ] }
 }

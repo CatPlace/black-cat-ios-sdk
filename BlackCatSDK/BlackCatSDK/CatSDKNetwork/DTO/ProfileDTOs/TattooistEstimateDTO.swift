@@ -9,6 +9,6 @@ import Foundation
 
 extension DTO.TattooistProfile {
     struct Estimate: Codable {
-        let description: String
+        let description: String?
     }
 }

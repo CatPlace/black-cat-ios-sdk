@@ -9,6 +9,10 @@ import Foundation
 
 extension Model {
     public struct TattooistEstimate {
-        let description: String
+        public let description: String
+        
+        public init(description: String) {
+            self.description = description
+        }
     }
 }

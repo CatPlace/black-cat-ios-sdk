@@ -17,12 +17,16 @@ struct DTOConverter {
     
     // MARK: - USER
     func convertUserLoginDTOToModel(_ DTO: DTO.User.Login.Response) -> Model.User {
-        return .init(id: DTO.userId, jwt: DTO.accessToken)
+        guard let userType = Model.UserType.clientValue(serverValue: DTO.role) else {
+            // NOTE: 유저타입 에러 ! 서버개발자와 논의 !
+            return .init(id: -1)
+        }
+        return .init(id: DTO.userId, jwt: DTO.accessToken, name: DTO.userName, imageUrl: DTO.imageUrls.first, email: DTO.email, phoneNumber: DTO.phoneNumber, gender: Model.Gender.clientValue(serverValue: DTO.gender), area: Model.Area.clientValue(serverValue: DTO.addressId), userType: userType)
     }
     
     func convertUpdateUserProfileDTOToModel(_ DTO: DTO.User.UpdateProfile.Response) -> Model.User {
         
-        return .init(id: -1, name: DTO.name, imageUrl: DTO.imageUrl.first, email: DTO.email, phoneNumber: DTO.phoneNumber, gender: Model.Gender.clientValue(DTO.gender), area: .init(rawValue: DTO.addressId), userType: .guest)
+        return .init(id: -1, name: DTO.name, imageUrl: DTO.imageUrls.first, email: DTO.email, phoneNumber: DTO.phoneNumber, gender: Model.Gender.clientValue(serverValue: DTO.gender), area: Model.Area.clientValue(serverValue: DTO.addressId), userType: .guest)
     }
     
     
@@ -40,7 +44,7 @@ struct DTOConverter {
     
     func convertTattooThumbnailDTOToModel(_ DTO: DTO.Tattoo.ThumbnailList.Response) -> [Model.TattooThumbnail] {
         DTO.tattoos.map { tattoo in
-                .init(tattooId: tattoo.id, imageUrlString: tattoo.imageUrl)
+                .init(tattooId: tattoo.tattooId, imageUrlString: tattoo.imageUrl)
         }
         
     }
@@ -94,10 +98,10 @@ struct DTOConverter {
     
     // MARK: - TattooistProfile
     func convertTattooistIntroduceToModel(_ DTO: DTO.TattooistProfile.Introduce.Response) -> Model.TattooistIntroduce {
-        .init(introduce: DTO.introduce, imageUrlString: DTO.imageUrls)
+        .init(introduce: DTO.introduce ?? "", imageUrlString: DTO.imageUrls.first)
     }
     func convertTattooistEstimateToModel(_ DTO: DTO.TattooistProfile.Estimate) -> Model.TattooistEstimate {
-        .init(description: DTO.description)
+        .init(description: DTO.description ?? "")
     }
     
     // MARK: - Magazine

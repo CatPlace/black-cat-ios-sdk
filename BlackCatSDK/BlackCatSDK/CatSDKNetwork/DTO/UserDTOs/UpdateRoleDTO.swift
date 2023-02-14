@@ -8,12 +8,9 @@
 import Foundation
 
 extension DTO.User {
-    struct updateRole {
-        struct Request: Encodable {
-            let role: String
-        }
-        
+    struct UpdateRole {
         struct Response: Decodable {
+            let userId: Int
             let role: String
         }
     }

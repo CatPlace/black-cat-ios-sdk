@@ -52,6 +52,7 @@ public class CatSDKUser {
             .catch { _ in .just("") }
             .filter { $0 != "" }
             .flatMap { CatSDKNetworkUser.rx.login(providerType: providerType, providerToken: $0) }
+            .catch { error in .just(.init(id: -2))}
     }
     
     public static func imageUrlString() -> Observable<String?> {
@@ -75,15 +76,28 @@ public class CatSDKUser {
         UserDefaultManager.getUser()
     }
     
-    public static func withdrawal() {
-        // TODO: - 서버 통신
-        
+    public static func withdrawal() -> Observable<Bool> {
+        return Observable.create { observer in
+            _ = BlackCatSocialLoginSDK.temp()
+                .subscribe {
+                    observer.onNext(true)
+                } onError: { _ in
+                    observer.onNext(false)
+                }
+            return Disposables.create()
+        }.debug("뭘까")
+        .flatMap { _ in CatSDKNetworkUser.rx.withdrawal() }
+            .map { _ in true }
+            .catch { _ in .just(false) }
+            .debug("탈퇴 결ㄹ과")
+            
     }
     
-    public static func updateUserProfile(user: Model.User)  -> Observable<Model.User> {
+    public static func updateUserProfile(user: Model.User, deleteImageUrls: [String], images: [Data]?)  -> Observable<Bool> {
+        
         // TODO: - 서버에 유저 전체 정보 내려달라 한 뒤 업데이트
         var tempUser = CatSDKUser.user()
-        return CatSDKNetworkUser.rx.updateProfile(name: user.name ?? "", email: user.email ?? "", phoneNumber: user.phoneNumber ?? "", gender: user.gender?.serverValue() ?? "", addressId: user.area?.rawValue ?? -1)
+        return CatSDKNetworkUser.rx.updateProfile(name: user.name ?? "", email: user.email ?? "", phoneNumber: user.phoneNumber ?? "", gender: user.gender?.serverValue(), addressId: user.area?.serverValue(), imageDataList: images, deleteImageUrls: deleteImageUrls)
             .do { newUser in
                 tempUser.name = newUser.name
                 tempUser.email = newUser.email
@@ -93,7 +107,14 @@ public class CatSDKUser {
                 tempUser.imageUrl = newUser.imageUrl
                 CatSDKUser.updateUser(user: tempUser)
                 print("업데이트 된 유저", tempUser)
-            }.catch { _ in .just(.init(id: -99999))}
+            }.map { _ in true }
+            .catch { _ in .just(false) }
             .debug("유저 업데이트 서버 통신")
+    }
+    
+    public static func updateRole() -> Observable<Bool> {
+        return CatSDKNetworkUser.rx.updateRole()
+            .map { _ in true }
+            .catch { _ in .just(false) }
     }
 }
