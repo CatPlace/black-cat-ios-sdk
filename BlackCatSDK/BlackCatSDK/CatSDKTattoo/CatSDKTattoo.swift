@@ -24,12 +24,10 @@ public class CatSDKTattoo {
     }
     
     public static func recentViewTattoos() -> Observable<[Model.Tattoo]> {
-        print(UserDefaultManager.getRecentTattoos())
         return .just(UserDefaultManager.getRecentTattoos())
     }
     
     public static func recommendTattoos() -> Observable<[Model.Tattoo]> {
-        
         typealias CategoryId = Int
         typealias Count = Int
         
@@ -42,13 +40,11 @@ public class CatSDKTattoo {
                     categoryCount[$0] = 1
                 }
             }
-
         }
-        
         if let maxId = categoryCount.sorted(by: { $0.value > $1.value }).first?.key {
             return CatSDKNetworkTattoo.rx.fetchTattosInSpecificCategory(categoryID: maxId)
         } else {
-            return .just([])
+            return CatSDKNetworkTattoo.rx.fetchTattoos(page: 0, size: 10, sort: "likesCount", direction: "DESC")
         }
     }
     

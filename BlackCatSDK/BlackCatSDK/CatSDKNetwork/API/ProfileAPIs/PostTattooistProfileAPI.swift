@@ -27,10 +27,8 @@ class PostTattooistProfileAPI: ServiceAPI {
             var formDataList: [MultipartFormData] = [.init(provider: .data(userInfoData), name: "profileInfo", mimeType: "application/json")]
             
             dto.images.forEach { imageData in
-                print("🐷🐷🐷", imageData)
                 formDataList.append(.init(provider: .data(imageData), name: "images", fileName: "test.jpeg", mimeType: "image/jpeg"))
             }
-            print("멀티파트:", formDataList)
             return formDataList
         }
     }

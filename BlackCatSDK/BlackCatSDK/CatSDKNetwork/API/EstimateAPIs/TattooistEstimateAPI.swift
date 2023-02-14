@@ -18,7 +18,6 @@ class TattooistEstimateAPI: ServiceAPI {
     var task: Moya.Task { .requestPlain }
     
     init(tattooistId: Int) {
-        print(tattooistId, "💡💡💡💡")
         self.tattooistId = tattooistId
     }
 }

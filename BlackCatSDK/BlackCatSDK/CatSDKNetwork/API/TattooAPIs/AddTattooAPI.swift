@@ -27,14 +27,14 @@ struct AddTattooAPI: ServiceAPI {
         
         func converToMultiPartFormData(_ dto: DTO.Tattoo.Update.Request, _ images: [Data]) -> [MultipartFormData] {
             let tattooInfoData = try! JSONEncoder().encode(dto)
-            print("타투 인포:", dto)
+
             var formDataList: [MultipartFormData] = [.init(provider: .data(tattooInfoData), name: "tattooInfo", mimeType: "application/json")]
             
             images.forEach { imageData in
-                print("🐷🐷🐷", imageData)
+
                 formDataList.append(.init(provider: .data(imageData), name: "images", fileName: "test.jpeg", mimeType: "image/jpeg"))
             }
-            print("멀티파트:", formDataList)
+
             return formDataList
         }
     }

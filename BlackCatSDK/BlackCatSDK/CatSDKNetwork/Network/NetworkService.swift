@@ -53,7 +53,6 @@ class NetworkService: NetworkServable {
                     print(a)
                     _ = try response.filterSuccessfulStatusCodes()
                     let decodedData = try response.map(APIResponse<API.Response>.self)
-//                    print("decodedData:", decodedData.data)
                     if let data = decodedData.data {
                         completion(.success(data))
                     }
