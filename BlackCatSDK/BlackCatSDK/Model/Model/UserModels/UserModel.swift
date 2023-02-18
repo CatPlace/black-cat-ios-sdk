@@ -33,7 +33,7 @@ extension Model {
             switch serverValue {
             case "MALE": return .남자
             case "FEMALE": return .여자
-            default: return .남자
+            default: return nil
             }
         }
     }

@@ -12,7 +12,7 @@ class PostTattooistEstimateAPI: ServiceAPI {
     typealias Response = DTO.TattooistProfile.Estimate
     let request: DTO.TattooistProfile.Estimate
     
-    var path: String { "estimate/tattooists" }
+    var path: String { "estimate" }
     
     var method: Moya.Method { .post }
     

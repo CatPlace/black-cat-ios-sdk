@@ -86,7 +86,7 @@ public class CatSDKNetworkTattoo: CatSDKNetworkable {
         tattooIdList: [Int],
         completion: @escaping (Result<Bool, Error>) -> Void
     ) {
-        networkService.request(DeleteTattooAPI(request: .init(deletedTattooIds: tattooIdList))) { result in
+        networkService.request(DeleteTattooAPI(request: .init(tattooIds: tattooIdList))) { result in
             switch result {
             case .success(_):
                 completion(.success(true))
@@ -188,11 +188,8 @@ extension Reactive where Base: CatSDKNetworkTattoo {
     /// 타투 삭제
     public static func removeTattoo(
         tattooIdList: [Int]
-    ) -> Observable<Bool> {
-        Base.networkService.rx.request(DeleteTattooAPI(request: .init(deletedTattooIds: tattooIdList)))
-            .compactMap { _ in true }
-            .catch { _ in .just(false) }
-            .asObservable()
+    ) -> Observable<[Int]> {
+        Base.networkService.rx.request(DeleteTattooAPI(request: .init(tattooIds: tattooIdList))).map { $0.deletedTattooIds }.asObservable()
     }
     
     /// 타투이스트의 작품 조회

@@ -54,4 +54,10 @@ public class CatSDKTattooist {
         CatSDKNetworkEstimate.rx.postEstimate(description: estimate.description)
             .catch { _ in .just(.init(description: "error"))}
     }
+    
+    public static func deleteTattoo(tattooIds: [Int]) -> Observable<([Int], [Int])> {
+        CatSDKNetworkTattoo.rx.removeTattoo(tattooIdList: tattooIds)
+            .map { (beforeData: tattooIds, afterData: $0) }
+            .catch { _ in .just((beforeData: tattooIds, afterData: []))}
+    }
 }
