@@ -17,10 +17,10 @@ extension Model {
         public let address: String
         public let ownerId: Int
         public let tattooType: String
-        public let categoryId: Int
+        public let categoryId: [Int]
         public let likeCount: Int?
         
-        public static let empty: Tattoo = .init(id: 0, ownerName: "", price: 0, description: "", liked: false, imageURLStrings: [], address: "", ownerId: 0, tattooType: "", categoryId: 0)
+        public static let empty: Tattoo = .init(id: 0, ownerName: "", price: 0, description: "", liked: false, imageURLStrings: [], address: "", ownerId: 0, tattooType: "", categoryId: [])
         
         public init(
             id: Int,
@@ -32,7 +32,7 @@ extension Model {
             address: String,
             ownerId: Int,
             tattooType: String,
-            categoryId: Int,
+            categoryId: [Int],
             likeCount: Int? = nil
         ) {
             self.id = id

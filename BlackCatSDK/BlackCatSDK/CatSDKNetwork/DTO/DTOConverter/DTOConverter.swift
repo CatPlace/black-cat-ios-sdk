@@ -29,12 +29,12 @@ struct DTOConverter {
     // MARK: - Tattoo
     func convertTattooListDTOToModel(_ DTO: DTO.Tattoo.List) -> [Model.Tattoo] {
         DTO.tattoos.map { tattoo in
-                .init(id: tattoo.id, ownerName: tattoo.tattooistName ?? "", price: tattoo.price, description: tattoo.description, liked: tattoo.liked, imageURLStrings: tattoo.imageUrls, address: tattoo.address, ownerId: tattoo.tattooistId, tattooType: tattoo.tattooType, categoryId: tattoo.categoryId, likeCount: tattoo.likeCount)
+                .init(id: tattoo.id, ownerName: tattoo.tattooistName ?? "", price: tattoo.price, description: tattoo.description, liked: tattoo.liked, imageURLStrings: tattoo.imageUrls, address: tattoo.address, ownerId: tattoo.tattooistId, tattooType: tattoo.tattooType, categoryId: [tattoo.categoryId], likeCount: tattoo.likeCount)
         }
     }
     
     func convertTattooDetailDTOToModel(_ DTO: DTO.Tattoo.List.Tattoo) -> Model.Tattoo {
-        .init(id: DTO.id, ownerName: DTO.tattooistName ?? "", price: DTO.price, description: DTO.description, liked: DTO.liked, imageURLStrings: DTO.imageUrls, address: DTO.address, ownerId: DTO.tattooistId, tattooType: DTO.tattooType, categoryId: DTO.categoryId, likeCount: DTO.likeCount)
+        .init(id: DTO.id, ownerName: DTO.tattooistName ?? "", price: DTO.price, description: DTO.description, liked: DTO.liked, imageURLStrings: DTO.imageUrls, address: DTO.address, ownerId: DTO.tattooistId, tattooType: DTO.tattooType, categoryId: [DTO.categoryId], likeCount: DTO.likeCount)
         
     }
     

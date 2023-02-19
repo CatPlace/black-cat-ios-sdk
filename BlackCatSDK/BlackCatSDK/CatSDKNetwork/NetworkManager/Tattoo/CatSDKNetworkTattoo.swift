@@ -179,7 +179,8 @@ extension Reactive where Base: CatSDKNetworkTattoo {
     public static func tattooDetail(
         tattooID id: Int
     ) -> Observable<Model.Tattoo> {
-        Base.networkService.rx.request(TattooAPI(tattooId: id)).compactMap(Base.converter.convertTattooDetailDTOToModel)
+        Base.networkService.rx.request(TattooAPI(tattooId:id))
+            .compactMap(Base.converter.convertTattooDetailDTOToModel)
             .asObservable()
     }
     
