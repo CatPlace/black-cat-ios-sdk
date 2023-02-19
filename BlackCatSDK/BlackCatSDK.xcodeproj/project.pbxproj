@@ -102,7 +102,14 @@
 		8ECB3A71297E939A00C140D3 /* StatusOfBookmarkDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A70297E939A00C140D3 /* StatusOfBookmarkDTO.swift */; };
 		8ECB3A73297E947700C140D3 /* StatusOfBookmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A72297E947700C140D3 /* StatusOfBookmarkModel.swift */; };
 		8ECB3A75297E962100C140D3 /* BookmarkPostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A74297E962100C140D3 /* BookmarkPostAPI.swift */; };
-		8ECB3A79297E97DB00C140D3 /* StatusOfBookmarkPostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A78297E97DB00C140D3 /* StatusOfBookmarkPostAPI.swift */; };
+		8ECB3A79297E97DB00C140D3 /* StatusOfBookmarkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB3A78297E97DB00C140D3 /* StatusOfBookmarkAPI.swift */; };
+		8ED2FC8329A1D078003D9F3A /* CountOfBookmarkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2FC8229A1D078003D9F3A /* CountOfBookmarkAPI.swift */; };
+		8ED2FC8529A1D1A8003D9F3A /* CountOfBookmarkDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2FC8429A1D1A8003D9F3A /* CountOfBookmarkDTO.swift */; };
+		8ED2FC8729A1D2D6003D9F3A /* CountOfBookmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2FC8629A1D2D6003D9F3A /* CountOfBookmarkModel.swift */; };
+		8ED2FC8929A1D70C003D9F3A /* MultipleBookmarkPostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2FC8829A1D70C003D9F3A /* MultipleBookmarkPostAPI.swift */; };
+		8ED2FC8B29A1D747003D9F3A /* MultipleDeleteBookmarkedPostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2FC8A29A1D747003D9F3A /* MultipleDeleteBookmarkedPostAPI.swift */; };
+		8ED2FC8D29A1D89E003D9F3A /* BookmarkPostIdsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2FC8C29A1D89E003D9F3A /* BookmarkPostIdsDTO.swift */; };
+		8ED2FC8F29A1D953003D9F3A /* BookmarkPostidsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2FC8E29A1D953003D9F3A /* BookmarkPostidsModel.swift */; };
 		8EE81FA128F424BB001DB7E1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81FA028F424BB001DB7E1 /* Model.swift */; };
 		8EE81FAA28F43250001DB7E1 /* DTOConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE81FA928F43250001DB7E1 /* DTOConverter.swift */; };
 		8EE9A0DE28F3FCF2003D7761 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9A0DD28F3FCF2003D7761 /* NetworkService.swift */; };
@@ -228,7 +235,14 @@
 		8ECB3A70297E939A00C140D3 /* StatusOfBookmarkDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusOfBookmarkDTO.swift; sourceTree = "<group>"; };
 		8ECB3A72297E947700C140D3 /* StatusOfBookmarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusOfBookmarkModel.swift; sourceTree = "<group>"; };
 		8ECB3A74297E962100C140D3 /* BookmarkPostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkPostAPI.swift; sourceTree = "<group>"; };
-		8ECB3A78297E97DB00C140D3 /* StatusOfBookmarkPostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusOfBookmarkPostAPI.swift; sourceTree = "<group>"; };
+		8ECB3A78297E97DB00C140D3 /* StatusOfBookmarkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusOfBookmarkAPI.swift; sourceTree = "<group>"; };
+		8ED2FC8229A1D078003D9F3A /* CountOfBookmarkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountOfBookmarkAPI.swift; sourceTree = "<group>"; };
+		8ED2FC8429A1D1A8003D9F3A /* CountOfBookmarkDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountOfBookmarkDTO.swift; sourceTree = "<group>"; };
+		8ED2FC8629A1D2D6003D9F3A /* CountOfBookmarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountOfBookmarkModel.swift; sourceTree = "<group>"; };
+		8ED2FC8829A1D70C003D9F3A /* MultipleBookmarkPostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleBookmarkPostAPI.swift; sourceTree = "<group>"; };
+		8ED2FC8A29A1D747003D9F3A /* MultipleDeleteBookmarkedPostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleDeleteBookmarkedPostAPI.swift; sourceTree = "<group>"; };
+		8ED2FC8C29A1D89E003D9F3A /* BookmarkPostIdsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkPostIdsDTO.swift; sourceTree = "<group>"; };
+		8ED2FC8E29A1D953003D9F3A /* BookmarkPostidsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkPostidsModel.swift; sourceTree = "<group>"; };
 		8EE81FA028F424BB001DB7E1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8EE81FA928F43250001DB7E1 /* DTOConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTOConverter.swift; sourceTree = "<group>"; };
 		8EE9A0DD28F3FCF2003D7761 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -665,11 +679,14 @@
 		8ECB3A5C297E37A700C140D3 /* BookmarkAPIs */ = {
 			isa = PBXGroup;
 			children = (
+				8ECB3A78297E97DB00C140D3 /* StatusOfBookmarkAPI.swift */,
+				8ECB3A74297E962100C140D3 /* BookmarkPostAPI.swift */,
+				8ED2FC8829A1D70C003D9F3A /* MultipleBookmarkPostAPI.swift */,
+				8ECB3A6E297E931100C140D3 /* DeleteBookmarkedPostAPI.swift */,
+				8ED2FC8A29A1D747003D9F3A /* MultipleDeleteBookmarkedPostAPI.swift */,
 				8ECB3A5D297E380200C140D3 /* BookmarkListUserLikedAPI.swift */,
 				8ECB3A68297E4E3D00C140D3 /* UserListInSpecificBookmarkAPI.swift */,
-				8ECB3A6E297E931100C140D3 /* DeleteBookmarkedPostAPI.swift */,
-				8ECB3A74297E962100C140D3 /* BookmarkPostAPI.swift */,
-				8ECB3A78297E97DB00C140D3 /* StatusOfBookmarkPostAPI.swift */,
+				8ED2FC8229A1D078003D9F3A /* CountOfBookmarkAPI.swift */,
 			);
 			path = BookmarkAPIs;
 			sourceTree = "<group>";
@@ -677,9 +694,11 @@
 		8ECB3A5F297E382500C140D3 /* BookmarkDTOs */ = {
 			isa = PBXGroup;
 			children = (
+				8ECB3A70297E939A00C140D3 /* StatusOfBookmarkDTO.swift */,
+				8ED2FC8C29A1D89E003D9F3A /* BookmarkPostIdsDTO.swift */,
 				8ECB3A60297E384700C140D3 /* BookmarkListUserLikedDTO.swift */,
 				8ECB3A6A297E4E8B00C140D3 /* UserListInSpecificBookmarkDTO.swift */,
-				8ECB3A70297E939A00C140D3 /* StatusOfBookmarkDTO.swift */,
+				8ED2FC8429A1D1A8003D9F3A /* CountOfBookmarkDTO.swift */,
 			);
 			path = BookmarkDTOs;
 			sourceTree = "<group>";
@@ -687,9 +706,11 @@
 		8ECB3A62297E3C5F00C140D3 /* BookmarkModels */ = {
 			isa = PBXGroup;
 			children = (
+				8ECB3A72297E947700C140D3 /* StatusOfBookmarkModel.swift */,
+				8ED2FC8E29A1D953003D9F3A /* BookmarkPostidsModel.swift */,
 				8ECB3A66297E3D7C00C140D3 /* TattooBookmarkModel.swift */,
 				8ECB3A6C297E4FEA00C140D3 /* UserBookmarkPostModel.swift */,
-				8ECB3A72297E947700C140D3 /* StatusOfBookmarkModel.swift */,
+				8ED2FC8629A1D2D6003D9F3A /* CountOfBookmarkModel.swift */,
 			);
 			path = BookmarkModels;
 			sourceTree = "<group>";
@@ -970,6 +991,7 @@
 				7867504629276E81005139ED /* LoginDTO.swift in Sources */,
 				8E361A65291A4F7400785F62 /* PostMagazineDTO.swift in Sources */,
 				8E361A61291A491900785F62 /* MagazineDetail.swift in Sources */,
+				8ED2FC8B29A1D747003D9F3A /* MultipleDeleteBookmarkedPostAPI.swift in Sources */,
 				8E361A3F291A198E00785F62 /* CatSDKNetworkCategory.swift in Sources */,
 				781C5F7D28F5F2810022C8F3 /* CHIPageControllable.swift in Sources */,
 				8ECB3A5E297E380200C140D3 /* BookmarkListUserLikedAPI.swift in Sources */,
@@ -988,19 +1010,24 @@
 				780BF48B2990EE010087C477 /* TattooistProfileAPI.swift in Sources */,
 				8ECB3A71297E939A00C140D3 /* StatusOfBookmarkDTO.swift in Sources */,
 				8EE81FA128F424BB001DB7E1 /* Model.swift in Sources */,
-				8ECB3A79297E97DB00C140D3 /* StatusOfBookmarkPostAPI.swift in Sources */,
+				8ED2FC8D29A1D89E003D9F3A /* BookmarkPostIdsDTO.swift in Sources */,
+				8ECB3A79297E97DB00C140D3 /* StatusOfBookmarkAPI.swift in Sources */,
 				8ECB3A67297E3D7C00C140D3 /* TattooBookmarkModel.swift in Sources */,
 				B1D3363528F1C9AC00826636 /* UITableView+RxReusableKit.swift in Sources */,
 				788AA3EC298A4D5000736BAE /* CatSDKNetworkProfile.swift in Sources */,
 				8ECB3A61297E384700C140D3 /* BookmarkListUserLikedDTO.swift in Sources */,
 				788AA3F4298A594400736BAE /* UpdateDTO.swift in Sources */,
 				788AA3E8298952A800736BAE /* WithdrawalAPI.swift in Sources */,
+				8ED2FC8929A1D70C003D9F3A /* MultipleBookmarkPostAPI.swift in Sources */,
 				78277E8129669768004CFDF4 /* CatSDKTattoo.swift in Sources */,
+				8ED2FC8F29A1D953003D9F3A /* BookmarkPostidsModel.swift in Sources */,
+				8ED2FC8329A1D078003D9F3A /* CountOfBookmarkAPI.swift in Sources */,
 				8E361A43291A1C2F00785F62 /* CategoryListAPI.swift in Sources */,
 				780BF4892990ED5F0087C477 /* TattooistEstimateDTO.swift in Sources */,
 				8E361A5F291A478100785F62 /* MagazineDetailDTO.swift in Sources */,
 				8E7E9CC1291B861000D09157 /* AddressListAPI.swift in Sources */,
 				8E7E9CB2291B600D00D09157 /* CatSDKNetworkTattoo.swift in Sources */,
+				8ED2FC8729A1D2D6003D9F3A /* CountOfBookmarkModel.swift in Sources */,
 				8E361A4B291A363D00785F62 /* CatSDKNetworkable.swift in Sources */,
 				780BF4722990CB9E0087C477 /* TattooAPI.swift in Sources */,
 				780BF4852990ED290087C477 /* TattooistEstimateModel.swift in Sources */,
@@ -1017,6 +1044,7 @@
 				7867505129277910005139ED /* UpdateRoleAPI.swift in Sources */,
 				B1D3363128F1C97700826636 /* UITableView+ReusableKit.swift in Sources */,
 				8EE9A0DE28F3FCF2003D7761 /* NetworkService.swift in Sources */,
+				8ED2FC8529A1D1A8003D9F3A /* CountOfBookmarkDTO.swift in Sources */,
 				8ECB3A75297E962100C140D3 /* BookmarkPostAPI.swift in Sources */,
 				78C8D3FD2937A2AD006A4DF5 /* UserModel.swift in Sources */,
 				788AA3E42989353700736BAE /* UpdateProfileDTO.swift in Sources */,

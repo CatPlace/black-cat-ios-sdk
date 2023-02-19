@@ -9,8 +9,8 @@ import Foundation
 
 import Moya
 
-/// 특정 게시물이 좋아요가 눌러졌는지 확인하는 API
-struct StatusOfBookmarkPostAPI: ServiceAPI {
+/// 게시물 좋아요 조회
+struct StatusOfBookmarkAPI: ServiceAPI {
     typealias Response = DTO.Bookmark.StatusOfBookmark
 
     let postId: Int
@@ -22,12 +22,11 @@ struct StatusOfBookmarkPostAPI: ServiceAPI {
         self.postId = postId
         self.token = token
     }
-    var path: String { "likes/posts/1" }
+    var path: String { "likes/posts/\(postId)" }
     var method: Moya.Method { .get }
     var task: Moya.Task {
         .requestParameters(parameters: [
-            "AUTHORIZATION": token,
-            "postId": postId
+            "AUTHORIZATION": token
         ], encoding: URLEncoding.default)
     }
 }

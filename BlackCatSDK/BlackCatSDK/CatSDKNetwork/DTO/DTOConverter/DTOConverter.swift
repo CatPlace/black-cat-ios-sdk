@@ -85,6 +85,10 @@ struct DTOConverter {
     func convertStatusOfBookmarkDTOToModel(_ DTO: DTO.Bookmark.StatusOfBookmark) -> Model.StatusOfBookmark {
         .init(liked: DTO.liked)
     }
+
+    func convertMultipleBookmarkPostDTOToModel(_ DTO: DTO.Bookmark.PostIds) -> Model.PostIds {
+        .init(postIds: DTO.postIds)
+    }
     
     func convertUserListSpecificInBookmarkDTOToModel(_ DTO: DTO.Bookmark.UserListInSpecificBookmark) -> [Model.UserBookmarkPost] {
         DTO.content.map { user in
@@ -104,6 +108,10 @@ struct DTOConverter {
                       imageUrl: "https://blackcat.pe.kr/api/v1" + post.imageUrl,
                       createdDate: post.createdDate)
         }
+    }
+
+    func convertCountOfBookmarkDTOToModel(_ DTO: DTO.Bookmark.CountOfBookmark) -> Model.CountOfBookmark {
+        .init(counts: DTO.likesCount)
     }
     
     // MARK: - TattooistProfile

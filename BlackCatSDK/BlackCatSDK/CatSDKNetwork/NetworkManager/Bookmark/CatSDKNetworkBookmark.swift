@@ -18,7 +18,7 @@ public class CatSDKNetworkBookmark: CatSDKNetworkable {
         userToken: String,
         completion: @escaping (Result<Model.StatusOfBookmark, Error>) -> Void
     ) {
-        networkService.request(StatusOfBookmarkPostAPI(postId: postId, token: userToken)) { result in
+        networkService.request(StatusOfBookmarkAPI(postId: postId, token: userToken)) { result in
             switch result {
             case .success(let dto):
                 completion(.success(converter.convertStatusOfBookmarkDTOToModel(dto)))
@@ -44,6 +44,22 @@ public class CatSDKNetworkBookmark: CatSDKNetworkable {
         }
     }
 
+    /// 여러개 게시물을 좋아요 하는 함수
+    public static func multipleBookmarkPost(
+        postIds: [Int],
+        userToken: String,
+        completion: @escaping (Result<Model.PostIds, Error>) -> Void
+    ) {
+        networkService.request(MultipleBookmarkPostAPI(postIds: postIds, token: userToken)) { result in
+            switch result {
+            case .success(let dto):
+                completion(.success(converter.convertMultipleBookmarkPostDTOToModel(dto)))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+
     /// 게시물 좋아요 취소 함수
     public static func deleteBookmarkedPost(
         postId: Int,
@@ -54,6 +70,22 @@ public class CatSDKNetworkBookmark: CatSDKNetworkable {
             switch result {
             case .success(let dto):
                 completion(.success(converter.convertStatusOfBookmarkDTOToModel(dto)))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+
+    /// 여러개 게시물을 좋아요 취소하는 함수
+    public static func multipleBookmarkDelete(
+        postIds: [Int],
+        userToken: String,
+        completion: @escaping (Result<Model.PostIds, Error>) -> Void
+    ) {
+        networkService.request(MultipleDeleteBookmarkedPostAPI(postIds: postIds, token: userToken)) { result in
+            switch result {
+            case .success(let dto):
+                completion(.success(converter.convertMultipleBookmarkPostDTOToModel(dto)))
             case .failure(let error):
                 completion(.failure(error))
             }
@@ -90,8 +122,21 @@ public class CatSDKNetworkBookmark: CatSDKNetworkable {
             }
         }
     }
-    
-    
+
+    public static func countBookmark(
+        postId: Int,
+        userToken: String,
+        completion: @escaping (Result<Model.CountOfBookmark, Error>) -> Void
+    ) {
+        networkService.request(CountOfBookmarkAPI(postId: postId, token: userToken)) { result in
+            switch result {
+            case .success(let dto):
+                completion(.success(converter.convertCountOfBookmarkDTOToModel(dto)))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }
 
 extension Reactive where Base: CatSDKNetworkBookmark {
@@ -100,7 +145,7 @@ extension Reactive where Base: CatSDKNetworkBookmark {
         postId: Int,
         userToken: String
     ) -> Observable<Model.StatusOfBookmark> {
-        Base.networkService.rx.request(StatusOfBookmarkPostAPI(postId: postId, token: userToken))
+        Base.networkService.rx.request(StatusOfBookmarkAPI(postId: postId, token: userToken))
             .compactMap { Base.converter.convertStatusOfBookmarkDTOToModel($0) }
             .asObservable()
     }
@@ -139,6 +184,16 @@ extension Reactive where Base: CatSDKNetworkBookmark {
     public static func tattooBookmarkListInSpecificUser(userToken: String) -> Observable<[Model.TattooBookmark]> {
         Base.networkService.rx.request(BookmarkListUserLikedAPI(postType: .tattoo, token: userToken))
             .compactMap { Base.converter.convertBookmarkListUserLikedDTOToModel($0) }
+            .asObservable()
+    }
+
+    /// 게시물 수 좋아요 조회 함수
+    public static func countOfBookmark(
+        postId: Int,
+        userToken: String
+    ) -> Observable<Model.CountOfBookmark> {
+        Base.networkService.rx.request(CountOfBookmarkAPI(postId: postId, token: userToken))
+            .compactMap { Base.converter.convertCountOfBookmarkDTOToModel($0) }
             .asObservable()
     }
 }
