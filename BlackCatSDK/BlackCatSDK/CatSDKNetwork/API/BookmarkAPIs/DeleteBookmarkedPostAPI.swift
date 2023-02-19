@@ -13,13 +13,10 @@ struct DeleteBookmarkedPostAPI: ServiceAPI {
     typealias Response = DTO.Bookmark.StatusOfBookmark
 
     let postId: Int
-    let token: String
     init(
-        postId: Int,
-        token: String
+        postId: Int
     ) {
         self.postId = postId
-        self.token = token
     }
     var path: String { "likes/posts/\(postId)" }
     var method: Moya.Method { .delete }

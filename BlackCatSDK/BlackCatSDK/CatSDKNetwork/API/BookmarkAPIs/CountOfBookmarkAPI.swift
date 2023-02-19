@@ -13,13 +13,10 @@ struct CountOfBookmarkAPI: ServiceAPI {
     typealias Response = DTO.Bookmark.CountOfBookmark
 
     let postId: Int
-    let token: String
     init(
-        postId: Int,
-        token: String
+        postId: Int
     ) {
         self.postId = postId
-        self.token = token
     }
 
     var path: String { "likes/posts/\(postId)/count" }

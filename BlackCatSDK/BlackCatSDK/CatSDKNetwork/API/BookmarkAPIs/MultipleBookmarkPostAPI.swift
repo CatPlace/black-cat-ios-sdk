@@ -13,13 +13,10 @@ struct MultipleBookmarkPostAPI: ServiceAPI {
     typealias Response = DTO.Bookmark.PostIds
 
     let postIds: [Int]
-    let token: String
     init(
-        postIds: [Int],
-        token: String
+        postIds: [Int]
     ) {
         self.postIds = postIds
-        self.token = token
     }
     var path: String { "likes/posts" }
     var method: Moya.Method { .post }

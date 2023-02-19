@@ -23,6 +23,7 @@ extension DTO.Tattoo {
 
         struct Tattoo: Decodable {
             let id: Int
+            let title: String
             let price: Int
             let tattooistId: Int
             let tattooistName: String?
@@ -32,7 +33,9 @@ extension DTO.Tattoo {
             let tattooType: String
             let categoryId: Int
             let likeCount: Int?
-            let liked: Bool
+            let liked: Bool?
+            let createDate: String?
+            let profileImageUrls: [String]?
         }
 
         struct Pageable: Decodable {

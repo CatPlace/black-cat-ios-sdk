@@ -32,10 +32,8 @@ struct DTOConverter {
     
     // MARK: - Tattoo
     func convertTattooListDTOToModel(_ DTO: DTO.Tattoo.List) -> [Model.Tattoo] {
-        DTO.tattoos.compactMap { tattoo in
-            guard let tattooType = TattooType(rawValue: tattoo.tattooType) else { return nil }
-            
-            return .init(id: tattoo.id, ownerName: tattoo.tattooistName ?? "", price: tattoo.price, description: tattoo.description, liked: tattoo.liked, imageURLStrings: tattoo.imageUrls, address: tattoo.address, ownerId: tattoo.tattooistId, tattooType: tattooType, categoryId: [tattoo.categoryId], likeCount: tattoo.likeCount)
+        DTO.tattoos.map { tattoo in
+            convertTattooDetailDTOToModel(tattoo)
         }
     }
     
@@ -45,8 +43,7 @@ struct DTOConverter {
             return .init(id: 0)
         }
         
-        return .init(id: DTO.id, ownerName: DTO.tattooistName ?? "", price: DTO.price, description: DTO.description, liked: DTO.liked, imageURLStrings: DTO.imageUrls, address: DTO.address, ownerId: DTO.tattooistId, tattooType: tattooType, categoryId: [DTO.categoryId], likeCount: DTO.likeCount)
-        
+        return .init(id: DTO.id, title: DTO.title, price: DTO.price, ownerId: DTO.tattooistId, ownerName: DTO.tattooistName ?? "", description: DTO.description, address: DTO.address, imageURLStrings: DTO.imageUrls, tattooType: tattooType, categoryId: [DTO.categoryId], likeCount: DTO.likeCount, liked: DTO.liked, createDate: DTO.createDate, profileImageUrls: DTO.profileImageUrls?.first)
     }
     
     func convertTattooThumbnailDTOToModel(_ DTO: DTO.Tattoo.ThumbnailList.Response) -> [Model.TattooThumbnail] {
