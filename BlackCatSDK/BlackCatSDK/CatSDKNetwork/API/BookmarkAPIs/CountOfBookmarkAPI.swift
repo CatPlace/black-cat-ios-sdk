@@ -24,9 +24,5 @@ struct CountOfBookmarkAPI: ServiceAPI {
 
     var path: String { "likes/posts/\(postId)/count" }
     var method: Moya.Method { .get }
-    var task: Moya.Task {
-        .requestParameters(parameters: [
-            "AUTHORIZATION": token
-        ], encoding: URLEncoding.default)
-    }
+    var task: Moya.Task { .requestPlain }
 }

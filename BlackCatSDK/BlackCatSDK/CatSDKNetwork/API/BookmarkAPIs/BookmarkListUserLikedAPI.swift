@@ -26,9 +26,9 @@ struct BookmarkListUserLikedAPI: ServiceAPI {
     var method: Moya.Method { .get }
     var task: Moya.Task {
         .requestParameters(parameters: [
-            "AUTHORIZATION": token,
             "postType": postType.rawValue
-        ], encoding: URLEncoding.default)}
+        ], encoding: URLEncoding.default)
+    }
 }
 
 extension BookmarkListUserLikedAPI {

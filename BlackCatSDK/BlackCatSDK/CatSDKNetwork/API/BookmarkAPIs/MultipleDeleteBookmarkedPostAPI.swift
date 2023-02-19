@@ -21,12 +21,11 @@ struct MultipleDeleteBookmarkedPostAPI: ServiceAPI {
         self.postIds = postIds
         self.token = token
     }
-    var path: String { "likes/posts/1" }
+    var path: String { "likes/posts" }
     var method: Moya.Method { .delete }
     var task: Moya.Task {
         .requestParameters(parameters: [
-            "AUTHORIZATION": token,
             "postIds": postIds
-        ], encoding: URLEncoding.default)
+        ], encoding: URLEncoding.httpBody)
     }
 }

@@ -22,12 +22,9 @@ struct UserListInSpecificBookmarkAPI: ServiceAPI {
         self.postId = postId
         self.token = token
     }
-    var path: String { "likes/posts/1/users" }
+    var path: String { "likes/posts/\(postId)/users" }
     var method: Moya.Method { .get }
     var task: Moya.Task {
-        .requestParameters(parameters: [
-            "AUTHORIZATION": token,
-            "postId": postId
-        ], encoding: URLEncoding.default)
+        .requestPlain
     }
 }

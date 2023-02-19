@@ -684,8 +684,8 @@
 				8ED2FC8829A1D70C003D9F3A /* MultipleBookmarkPostAPI.swift */,
 				8ECB3A6E297E931100C140D3 /* DeleteBookmarkedPostAPI.swift */,
 				8ED2FC8A29A1D747003D9F3A /* MultipleDeleteBookmarkedPostAPI.swift */,
-				8ECB3A5D297E380200C140D3 /* BookmarkListUserLikedAPI.swift */,
 				8ECB3A68297E4E3D00C140D3 /* UserListInSpecificBookmarkAPI.swift */,
+				8ECB3A5D297E380200C140D3 /* BookmarkListUserLikedAPI.swift */,
 				8ED2FC8229A1D078003D9F3A /* CountOfBookmarkAPI.swift */,
 			);
 			path = BookmarkAPIs;

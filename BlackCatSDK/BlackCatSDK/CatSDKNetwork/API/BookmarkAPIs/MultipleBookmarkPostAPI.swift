@@ -21,12 +21,11 @@ struct MultipleBookmarkPostAPI: ServiceAPI {
         self.postIds = postIds
         self.token = token
     }
-    var path: String { "likes/posts/1" }
+    var path: String { "likes/posts" }
     var method: Moya.Method { .post }
     var task: Moya.Task {
         .requestParameters(parameters: [
-            "AUTHORIZATION": token,
             "postIds": postIds
-        ], encoding: URLEncoding.default)
+        ], encoding: URLEncoding.httpBody)
     }
 }

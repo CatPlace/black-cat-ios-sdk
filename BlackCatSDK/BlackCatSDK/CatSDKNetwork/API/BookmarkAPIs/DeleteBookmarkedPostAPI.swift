@@ -21,12 +21,7 @@ struct DeleteBookmarkedPostAPI: ServiceAPI {
         self.postId = postId
         self.token = token
     }
-    var path: String { "likes/posts/1" }
+    var path: String { "likes/posts/\(postId)" }
     var method: Moya.Method { .delete }
-    var task: Moya.Task {
-        .requestParameters(parameters: [
-            "AUTHORIZATION": token,
-            "postId": postId
-        ], encoding: URLEncoding.default)
-    }
+    var task: Moya.Task { .requestPlain }
 }

@@ -24,9 +24,5 @@ struct StatusOfBookmarkAPI: ServiceAPI {
     }
     var path: String { "likes/posts/\(postId)" }
     var method: Moya.Method { .get }
-    var task: Moya.Task {
-        .requestParameters(parameters: [
-            "AUTHORIZATION": token
-        ], encoding: URLEncoding.default)
-    }
+    var task: Moya.Task { .requestPlain }
 }
