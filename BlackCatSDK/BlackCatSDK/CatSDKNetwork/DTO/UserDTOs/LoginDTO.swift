@@ -18,6 +18,13 @@ extension DTO.User {
             let userId: Int
             let accessToken: String
             let role: String
+            let dateOfBirth: String?
+            let email: String?
+            let gender: String?
+            let userName: String?
+            let addressId: Int?
+            let phoneNumber: String?
+            let imageUrls: [String]
         }
     }
 }

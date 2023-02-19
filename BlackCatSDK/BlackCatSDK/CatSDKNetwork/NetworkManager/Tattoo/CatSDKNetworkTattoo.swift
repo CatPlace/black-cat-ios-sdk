@@ -86,7 +86,7 @@ public class CatSDKNetworkTattoo: CatSDKNetworkable {
         tattooIdList: [Int],
         completion: @escaping (Result<Bool, Error>) -> Void
     ) {
-        networkService.request(DeleteTattooAPI(request: .init(deletedTattooIds: tattooIdList))) { result in
+        networkService.request(DeleteTattooAPI(request: .init(tattooIds: tattooIdList))) { result in
             switch result {
             case .success(_):
                 completion(.success(true))
@@ -98,11 +98,12 @@ public class CatSDKNetworkTattoo: CatSDKNetworkable {
     
     /// 타투이스트의 작품 조회
     public static func fetchTattosInSpecificTattooist(
+        tattooistId: Int,
         page: Int? = nil,
         size: Int? = nil,
         completion: @escaping (Result<[Model.TattooThumbnail], Error>) -> Void
     ) {
-        networkService.request(TattooInSpecificTattooistAPI()) { result in
+        networkService.request(TattooInSpecificTattooistAPI(tattooistId: tattooistId)) { result in
             switch result {
             case .success(let DTO):
                 completion(.success(converter.convertTattooThumbnailDTOToModel(DTO)))
@@ -187,25 +188,24 @@ extension Reactive where Base: CatSDKNetworkTattoo {
     /// 타투 삭제
     public static func removeTattoo(
         tattooIdList: [Int]
-    ) -> Observable<Bool> {
-        Base.networkService.rx.request(DeleteTattooAPI(request: .init(deletedTattooIds: tattooIdList)))
-            .compactMap { _ in true }
-            .catch { _ in .just(false) }
-            .asObservable()
+    ) -> Observable<[Int]> {
+        Base.networkService.rx.request(DeleteTattooAPI(request: .init(tattooIds: tattooIdList))).map { $0.deletedTattooIds }.asObservable()
     }
     
     /// 타투이스트의 작품 조회
     public static func fetchTattosInSpecificTattooist(
+        tattooistId: Int,
         page: Int? = nil,
         size: Int? = nil
     ) -> Observable<[Model.TattooThumbnail]> {
-        Base.networkService.rx.request(TattooInSpecificTattooistAPI())
+        Base.networkService.rx.request(TattooInSpecificTattooistAPI(tattooistId: tattooistId))
             .compactMap(Base.converter.convertTattooThumbnailDTOToModel)
             .asObservable()
     }
     
     /// 타투 수정
     public static func updateTattoo(
+        tattooId: Int,
         tattooImageDatas: [Data],
         tattooInfo: Model.UpdateTattoo.Request
     ) -> Observable<Model.UpdateTattoo.Response> {

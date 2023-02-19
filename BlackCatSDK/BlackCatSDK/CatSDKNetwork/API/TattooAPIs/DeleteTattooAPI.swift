@@ -9,9 +9,9 @@ import Foundation
 import Moya
 
 class DeleteTattooAPI: ServiceAPI {
-    typealias Response = DTO.Tattoo.Delete
+    typealias Response = DTO.Tattoo.Delete.Response
     
-    let request: DTO.Tattoo.Delete
+    let request: DTO.Tattoo.Delete.Request
     var path: String {
         "tattoos"
     }
@@ -20,13 +20,18 @@ class DeleteTattooAPI: ServiceAPI {
         .requestJSONEncodable(request)
     }
     
-    init(request: DTO.Tattoo.Delete) {
+    init(request: DTO.Tattoo.Delete.Request) {
         self.request = request
     }
 }
 
 extension DTO.Tattoo {
-    struct Delete: Codable {
-        let deletedTattooIds: [Int]
+    struct Delete {
+        struct Request: Encodable {
+            let tattooIds: [Int]
+        }
+        struct Response: Decodable {
+            let deletedTattooIds: [Int]
+        }
     }
 }

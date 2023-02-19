@@ -10,8 +10,12 @@ import Moya
 
 class TattooInSpecificTattooistAPI: ServiceAPI {
     typealias Response = DTO.Tattoo.ThumbnailList.Response
-    
-    var path: String { "tattoos/users" }
+    let tattooistId: Int
+    var path: String { "tattoos/users/\(tattooistId)" }
     var method: Moya.Method { .get }
     var task: Moya.Task { .requestPlain }
+    
+    init(tattooistId: Int) {
+        self.tattooistId = tattooistId
+    }
 }

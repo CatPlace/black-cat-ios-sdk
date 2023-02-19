@@ -29,11 +29,11 @@ extension Model {
             }
         }
         
-        static public func clientValue(_ serverValue: String) -> Gender {
+        static public func clientValue(serverValue: String?) -> Gender? {
             switch serverValue {
             case "MALE": return .남자
             case "FEMALE": return .여자
-            default: return .남자
+            default: return nil
             }
         }
     }
@@ -63,6 +63,15 @@ extension Model {
                 return "제주"
             }
         }
+        
+        public func serverValue() -> Int {
+            self.rawValue + 1
+        }
+        
+        public static func clientValue(serverValue: Int?) -> Area? {
+            guard let serverValue else { return nil }
+            return .init(rawValue: serverValue - 1)
+        }
     }
     
     public enum UserType: Codable {
@@ -78,6 +87,17 @@ extension Model {
                 return "일반 회원"
             case .business:
                 return "타투이스트"
+            }
+        }
+        
+        public static func clientValue(serverValue: String) -> UserType? {
+            switch serverValue {
+            case "BASIC":
+                return .normal
+            case "TATTOOIST":
+                return .business
+            default:
+                return .guest
             }
         }
     }

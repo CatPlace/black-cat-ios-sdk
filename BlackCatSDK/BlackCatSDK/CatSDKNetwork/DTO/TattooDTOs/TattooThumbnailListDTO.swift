@@ -23,7 +23,7 @@ extension DTO.Tattoo {
             let empty: Bool
             
             struct Tattoo: Decodable {
-                let id: Int
+                let tattooId: Int
                 let imageUrl: String
             }
             

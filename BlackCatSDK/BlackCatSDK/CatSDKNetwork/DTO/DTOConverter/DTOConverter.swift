@@ -11,36 +11,47 @@ struct DTOConverter {
     // MARK: - Category
     func convertCategoryListDTOToModel(_ DTO: [DTO.Category.List]) -> [Model.Category] {
         DTO.map { category in
-            .init(id: category.id, name: category.name, count: category.count)
+                .init(id: category.id, name: category.name, count: category.count)
         }
     }
     
     // MARK: - USER
     func convertUserLoginDTOToModel(_ DTO: DTO.User.Login.Response) -> Model.User {
-        return .init(id: DTO.userId, jwt: DTO.accessToken)
+        guard let userType = Model.UserType.clientValue(serverValue: DTO.role) else {
+            // NOTE: 유저타입 에러 ! 서버개발자와 논의 !
+            return .init(id: -1)
+        }
+        return .init(id: DTO.userId, jwt: DTO.accessToken, name: DTO.userName, imageUrl: DTO.imageUrls.first, email: DTO.email, phoneNumber: DTO.phoneNumber, gender: Model.Gender.clientValue(serverValue: DTO.gender), area: Model.Area.clientValue(serverValue: DTO.addressId), userType: userType)
     }
     
     func convertUpdateUserProfileDTOToModel(_ DTO: DTO.User.UpdateProfile.Response) -> Model.User {
         
-        return .init(id: -1, name: DTO.name, imageUrl: DTO.imageUrl.first, email: DTO.email, phoneNumber: DTO.phoneNumber, gender: Model.Gender.clientValue(DTO.gender), area: .init(rawValue: DTO.addressId), userType: .guest)
+        return .init(id: -1, name: DTO.name, imageUrl: DTO.imageUrls.first, email: DTO.email, phoneNumber: DTO.phoneNumber, gender: Model.Gender.clientValue(serverValue: DTO.gender), area: Model.Area.clientValue(serverValue: DTO.addressId), userType: .guest)
     }
     
     
     // MARK: - Tattoo
     func convertTattooListDTOToModel(_ DTO: DTO.Tattoo.List) -> [Model.Tattoo] {
-        DTO.tattoos.map { tattoo in
-                .init(id: tattoo.id, ownerName: tattoo.tattooistName ?? "", price: tattoo.price, description: tattoo.description, liked: tattoo.liked, imageURLStrings: tattoo.imageUrls, address: tattoo.address, ownerId: tattoo.tattooistId, tattooType: tattoo.tattooType, categoryId: [tattoo.categoryId], likeCount: tattoo.likeCount)
+        DTO.tattoos.compactMap { tattoo in
+            guard let tattooType = TattooType(rawValue: tattoo.tattooType) else { return nil }
+            
+            return .init(id: tattoo.id, ownerName: tattoo.tattooistName ?? "", price: tattoo.price, description: tattoo.description, liked: tattoo.liked, imageURLStrings: tattoo.imageUrls, address: tattoo.address, ownerId: tattoo.tattooistId, tattooType: tattooType, categoryId: [tattoo.categoryId], likeCount: tattoo.likeCount)
         }
     }
     
     func convertTattooDetailDTOToModel(_ DTO: DTO.Tattoo.List.Tattoo) -> Model.Tattoo {
-        .init(id: DTO.id, ownerName: DTO.tattooistName ?? "", price: DTO.price, description: DTO.description, liked: DTO.liked, imageURLStrings: DTO.imageUrls, address: DTO.address, ownerId: DTO.tattooistId, tattooType: DTO.tattooType, categoryId: [DTO.categoryId], likeCount: DTO.likeCount)
+        guard let tattooType = TattooType(rawValue: DTO.tattooType) else {
+            // NOTE: 타투타입 에러 ! 서버개발자와 논의 !
+            return .init(id: 0)
+        }
+        
+        return .init(id: DTO.id, ownerName: DTO.tattooistName ?? "", price: DTO.price, description: DTO.description, liked: DTO.liked, imageURLStrings: DTO.imageUrls, address: DTO.address, ownerId: DTO.tattooistId, tattooType: tattooType, categoryId: [DTO.categoryId], likeCount: DTO.likeCount)
         
     }
     
     func convertTattooThumbnailDTOToModel(_ DTO: DTO.Tattoo.ThumbnailList.Response) -> [Model.TattooThumbnail] {
         DTO.tattoos.map { tattoo in
-                .init(tattooId: tattoo.id, imageUrlString: tattoo.imageUrl)
+                .init(tattooId: tattoo.tattooId, imageUrlString: tattoo.imageUrl)
         }
         
     }
@@ -50,11 +61,14 @@ struct DTOConverter {
     }
     
     func createPostTattooRequest(_ model: Model.UpdateTattoo.Request) -> DTO.Tattoo.Update.Request {
-        .init(tattooType: model.tattooType,
-              categoryId: model.categoryId,
+        
+        // TODO: - 옵셔널 처리 고민
+        .init(tattooType: model.tattooType!.rawValue,
+              categoryId: model.categoryId.first ?? 0,
               title: model.title,
-              price: model.price,
-              description: model.description
+              price: model.price ?? 0,
+              description: model.description,
+              deleteImageUrls: model.deleteImageUrls
         )
     }
     
@@ -94,10 +108,10 @@ struct DTOConverter {
     
     // MARK: - TattooistProfile
     func convertTattooistIntroduceToModel(_ DTO: DTO.TattooistProfile.Introduce.Response) -> Model.TattooistIntroduce {
-        .init(introduce: DTO.introduce, imageUrlString: DTO.imageUrls)
+        .init(introduce: DTO.introduce ?? "", imageUrlString: DTO.imageUrls.first)
     }
     func convertTattooistEstimateToModel(_ DTO: DTO.TattooistProfile.Estimate) -> Model.TattooistEstimate {
-        .init(description: DTO.description)
+        .init(description: DTO.description ?? "")
     }
     
     // MARK: - Magazine

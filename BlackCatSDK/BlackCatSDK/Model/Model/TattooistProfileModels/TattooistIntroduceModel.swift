@@ -8,8 +8,13 @@
 import Foundation
 
 extension Model {
-    public struct TattooistIntroduce {
-        let introduce: String
-        let imageUrlString: [String]
+    public struct TattooistIntroduce: Equatable, Codable {
+        public let introduce: String
+        public let imageUrlString: String?
+        
+        public init(introduce: String, imageUrlString: String? = nil) {
+            self.introduce = introduce
+            self.imageUrlString = imageUrlString
+        }
     }
 }

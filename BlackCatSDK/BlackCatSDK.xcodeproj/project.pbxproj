@@ -27,6 +27,8 @@
 		781C5F8028F5F2810022C8F3 /* CHIPageControlJaloro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C5F7C28F5F2810022C8F3 /* CHIPageControlJaloro.swift */; };
 		782728AF29597C1700049436 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782728AE29597C1700049436 /* UserDefaultManager.swift */; };
 		78277E8129669768004CFDF4 /* CatSDKTattoo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78277E8029669768004CFDF4 /* CatSDKTattoo.swift */; };
+		78280141299B656B00DC1509 /* CatSDKTattooist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78280140299B656B00DC1509 /* CatSDKTattooist.swift */; };
+		78280143299BDA7300DC1509 /* TattooistInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78280142299BDA7300DC1509 /* TattooistInfoModel.swift */; };
 		7867504629276E81005139ED /* LoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867504529276E81005139ED /* LoginDTO.swift */; };
 		7867504A29277833005139ED /* UpdateRoleDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867504929277833005139ED /* UpdateRoleDTO.swift */; };
 		7867504F29277899005139ED /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867504E29277899005139ED /* LoginAPI.swift */; };
@@ -161,6 +163,8 @@
 		781C5F7C28F5F2810022C8F3 /* CHIPageControlJaloro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlJaloro.swift; sourceTree = "<group>"; };
 		782728AE29597C1700049436 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		78277E8029669768004CFDF4 /* CatSDKTattoo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKTattoo.swift; sourceTree = "<group>"; };
+		78280140299B656B00DC1509 /* CatSDKTattooist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKTattooist.swift; sourceTree = "<group>"; };
+		78280142299BDA7300DC1509 /* TattooistInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooistInfoModel.swift; sourceTree = "<group>"; };
 		7867504529276E81005139ED /* LoginDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDTO.swift; sourceTree = "<group>"; };
 		7867504929277833005139ED /* UpdateRoleDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRoleDTO.swift; sourceTree = "<group>"; };
 		7867504E29277899005139ED /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
@@ -276,6 +280,7 @@
 			children = (
 				780BF4822990ECE10087C477 /* TattooistIntroduceModel.swift */,
 				780BF4842990ED290087C477 /* TattooistEstimateModel.swift */,
+				78280142299BDA7300DC1509 /* TattooistInfoModel.swift */,
 			);
 			path = TattooistProfileModels;
 			sourceTree = "<group>";
@@ -321,6 +326,14 @@
 				78277E8029669768004CFDF4 /* CatSDKTattoo.swift */,
 			);
 			path = CatSDKTattoo;
+			sourceTree = "<group>";
+		};
+		7828013F299B655A00DC1509 /* CatSDKTattooist */ = {
+			isa = PBXGroup;
+			children = (
+				78280140299B656B00DC1509 /* CatSDKTattooist.swift */,
+			);
+			path = CatSDKTattooist;
 			sourceTree = "<group>";
 		};
 		7867504429276E39005139ED /* UserDTOs */ = {
@@ -632,6 +645,7 @@
 				8EE9A0DB28F3FBCE003D7761 /* CatSDKNetwork */,
 				78C8D40A2937B142006A4DF5 /* CatSDKUser */,
 				78277E7F2966973F004CFDF4 /* CatSDKTattoo */,
+				7828013F299B655A00DC1509 /* CatSDKTattooist */,
 				8EE81F9F28F4249B001DB7E1 /* Model */,
 				B1D3362A28F1C8DA00826636 /* ThirdParty */,
 				8EC953B328EB25DA00E239CC /* BlackCatSDK.h */,
@@ -929,6 +943,7 @@
 				8E361A59291A441500785F62 /* MagazineModel.swift in Sources */,
 				78C8D4092937B0C8006A4DF5 /* BlackCatSocialLoginSDK.swift in Sources */,
 				788AA3E22989351400736BAE /* UpdateProfileAPI.swift in Sources */,
+				78280141299B656B00DC1509 /* CatSDKTattooist.swift in Sources */,
 				B1D3363328F1C98C00826636 /* UICollectionView+RxReusableKit.swift in Sources */,
 				8E7E9CC4291B866800D09157 /* AddressSearchDTO.swift in Sources */,
 				780BF4872990ED450087C477 /* TattooistProfileDTO.swift in Sources */,
@@ -945,6 +960,7 @@
 				8E361A56291A436C00785F62 /* MagazineListAPI.swift in Sources */,
 				8E361A49291A306700785F62 /* NetworkError.swift in Sources */,
 				780BF4832990ECE10087C477 /* TattooistIntroduceModel.swift in Sources */,
+				78280143299BDA7300DC1509 /* TattooistInfoModel.swift in Sources */,
 				7867504A29277833005139ED /* UpdateRoleDTO.swift in Sources */,
 				8E7E9CB5291B60C400D09157 /* TattooListDTO.swift in Sources */,
 				780BF47E2990DB470087C477 /* TattooThumbnailListDTO.swift in Sources */,

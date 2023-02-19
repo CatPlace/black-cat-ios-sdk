@@ -58,6 +58,10 @@ class BlackCatSocialLoginSDK: NSObject {
     }
     
     // MARK: - Functions
+    static func temp() -> Completable  {
+        UserApi.shared.rx.unlink()
+    }
+    
     /// 카카오 Access Token을 가져옵니다.
     func kakaoAccessToken() -> Observable<String> {
         let oAuthToken = UserApi.isKakaoTalkLoginAvailable()
@@ -69,6 +73,7 @@ class BlackCatSocialLoginSDK: NSObject {
             .debug("카카오 로그인 SDK")
             .map { $0.accessToken }
             .catch { _ in .just("") }
+            .debug("accessToken")
     }
     
     /// 애플 Identity Token을 가져옵니다.
