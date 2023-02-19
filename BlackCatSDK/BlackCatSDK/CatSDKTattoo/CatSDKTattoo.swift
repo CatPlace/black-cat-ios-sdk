@@ -51,4 +51,8 @@ public class CatSDKTattoo {
     public static func famousTattoos(page: Int, size: Int) -> Observable<[Model.Tattoo]> {
         return CatSDKNetworkTattoo.rx.fetchTattoos(page: page, size: size, sort: "likesCount", direction: "DESC")
     }
+    
+    public static func tattooDetail(tattooId: Int) -> Observable<Model.Tattoo> {
+        return CatSDKNetworkTattoo.rx.tattooDetail(tattooID: tattooId)
+    }
 }
