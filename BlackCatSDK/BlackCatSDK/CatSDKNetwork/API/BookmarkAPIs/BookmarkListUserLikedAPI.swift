@@ -13,9 +13,9 @@ import Moya
 struct BookmarkListUserLikedAPI: ServiceAPI {
     typealias Response = DTO.Bookmark.BookmarkListUserLiked
 
-    let postType: PostType
+    let postType: String
     init(
-        postType: PostType
+        postType: String
     ) {
         self.postType = postType
     }
@@ -23,14 +23,7 @@ struct BookmarkListUserLikedAPI: ServiceAPI {
     var method: Moya.Method { .get }
     var task: Moya.Task {
         .requestParameters(parameters: [
-            "postType": postType.rawValue
+            "postType": postType
         ], encoding: URLEncoding.default)
-    }
-}
-
-extension BookmarkListUserLikedAPI {
-    enum PostType: String {
-        case tattoo = "TATTOO"
-        case magazine = "MAGAZINE"
     }
 }

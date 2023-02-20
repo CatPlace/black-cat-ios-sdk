@@ -96,13 +96,17 @@ struct DTOConverter {
         }
     }
     
-    func convertBookmarkListUserLikedDTOToModel(_ DTO: DTO.Bookmark.BookmarkListUserLiked) -> [Model.TattooBookmark] {
-        DTO.content.map { post in
-                .init(likesId: post.likesId,
+    func convertBookmarkListUserLikedDTOToModel(_ DTO: DTO.Bookmark.BookmarkListUserLiked) -> [Model.Bookmark] {
+        DTO.content.compactMap { post in
+            guard let postType = PostType.clientValue(serverValue: post.postType) else {
+                // NOTE: 포스트 에러 ! 서버개발자와 논의 !
+                return .init(likesId: -1, postId: -1, postType: .tattoo, title: "", imageUrl: "", createdDate: "")
+            }
+                return .init(likesId: post.likesId,
                       postId: post.postId,
-                      postType: post.postType,
+                      postType: postType,
                       title: post.title,
-                      imageUrl: "https://blackcat.pe.kr/api/v1" + post.imageUrl,
+                      imageUrl: post.imageUrl,
                       createdDate: post.createdDate)
         }
     }

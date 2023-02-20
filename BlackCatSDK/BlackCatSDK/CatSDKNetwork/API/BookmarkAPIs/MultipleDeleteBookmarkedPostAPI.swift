@@ -23,6 +23,6 @@ struct MultipleDeleteBookmarkedPostAPI: ServiceAPI {
     var task: Moya.Task {
         .requestParameters(parameters: [
             "postIds": postIds
-        ], encoding: URLEncoding.httpBody)
+        ], encoding: JSONEncoding.default)
     }
 }

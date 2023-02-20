@@ -10,5 +10,11 @@ import Foundation
 extension Model {
     public struct PostIds {
         public let postIds: [Int]
+        
+        public init(postIds: [Int]) {
+            self.postIds = postIds
+        }
     }
+    
+    
 }
