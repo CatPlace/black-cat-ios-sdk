@@ -21,19 +21,16 @@ public class CatSDKTattooist {
     public static func profile(profileId: Int) -> Observable<Model.TattooistIntroduce> {
         CatSDKNetworkProfile.rx.profile(profileId: profileId)
             .catch { _ in .just(.init(introduce: "error", userImageUrlString: "", userName: "", addressId: 0))}
-            .debug("프로필 패치")
     }
     
     public static func products(tattooistId: Int) -> Observable<[Model.TattooThumbnail]> {
         CatSDKNetworkTattoo.rx.fetchTattosInSpecificTattooist(tattooistId: tattooistId)
             .catch { _ in .just([])}
-            .debug("타투 패치")
     }
     
     public static func priceInfo(tattooistId: Int) -> Observable<Model.TattooistEstimate> {
         CatSDKNetworkEstimate.rx.estimate(tattooistId: tattooistId)
             .catch { _ in .just(.init(description: "error"))}
-            .debug("견적 패치")
     }
     
     public static func updateProfile(introduce: String, deleteImageUrls: [String] = [], images: [Data] = []) -> Observable<Model.TattooistIntroduce> {
@@ -62,7 +59,6 @@ public class CatSDKTattooist {
     }
     
     public static func updateTattooist(deletedTattooId: Int) {
-        print(deletedTattooId, "💡💡💡")
         var tattooistInfo = UserDefaultManager.getTattooistInfo()
         tattooistInfo.tattoos.removeAll { tattoo in
             tattoo.tattooId == deletedTattooId

@@ -57,7 +57,6 @@ struct DTOConverter {
     }
     
     func convertTattooDetailDTOToModel(_ DTO: DTO.Tattoo.List.Tattoo) -> Model.Tattoo {
-        print(DTO, "😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡")
         guard let tattooType = TattooType(rawValue: DTO.tattooType) else {
             // NOTE: 타투타입 에러 ! 서버개발자와 논의 !
             return .init(id: 0)

@@ -85,11 +85,9 @@ public class CatSDKUser {
                     observer.onNext(false)
                 }
             return Disposables.create()
-        }.debug("뭘까")
-        .flatMap { _ in CatSDKNetworkUser.rx.withdrawal() }
+        }.flatMap { _ in CatSDKNetworkUser.rx.withdrawal() }
             .map { _ in true }
             .catch { _ in .just(false) }
-            .debug("탈퇴 결ㄹ과")
             
     }
     
@@ -106,10 +104,8 @@ public class CatSDKUser {
                 tempUser.area = newUser.area
                 tempUser.imageUrl = newUser.imageUrl
                 CatSDKUser.updateUser(user: tempUser)
-                print("업데이트 된 유저", tempUser)
             }.map { _ in true }
             .catch { _ in .just(false) }
-            .debug("유저 업데이트 서버 통신")
     }
     
     public static func updateRole() -> Observable<Bool> {

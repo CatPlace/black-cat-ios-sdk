@@ -70,10 +70,8 @@ class BlackCatSocialLoginSDK: NSObject {
         
         // TODO: - 에러처리
         return oAuthToken
-            .debug("카카오 로그인 SDK")
             .map { $0.accessToken }
             .catch { _ in .just("") }
-            .debug("accessToken")
     }
     
     /// 애플 Identity Token을 가져옵니다.

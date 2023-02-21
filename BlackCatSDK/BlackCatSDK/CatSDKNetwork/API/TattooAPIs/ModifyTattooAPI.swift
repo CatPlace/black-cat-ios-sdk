@@ -34,7 +34,6 @@ struct ModifyTattooAPI: ServiceAPI {
 
 
             var formDataList: [MultipartFormData] = [.init(provider: .data(tattooInfoData), name: "tattooInfo", mimeType: "application/json")]
-            print("😡😡😡😡", images)
             images.forEach { imageData in
 
                 formDataList.append(.init(provider: .data(imageData), name: "images", fileName: "test.jpeg", mimeType: "image/jpeg"))
