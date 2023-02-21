@@ -11,7 +11,7 @@ import Moya
 class PostTattooistProfileAPI: ServiceAPI {
     typealias Response = DTO.TattooistProfile.Introduce.Response
     let request: DTO.TattooistProfile.Introduce.Post.Request
-    var path: String { "profile/tattooists" }
+    var path: String { "profile" }
     
     var method: Moya.Method { .post }
     

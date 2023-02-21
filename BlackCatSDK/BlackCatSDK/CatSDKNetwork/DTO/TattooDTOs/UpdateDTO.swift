@@ -11,7 +11,7 @@ extension DTO.Tattoo {
     struct Update {
         struct Request: Encodable {
             let tattooType: String
-            let categoryId: Int
+            let categoryIds: [Int]
             let title: String
             let price: Int
             let description: String

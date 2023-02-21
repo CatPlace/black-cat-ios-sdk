@@ -15,18 +15,18 @@ extension Model {
         }
         
         public struct Request {
-            public let tattooType: TattooType?
+            public let tattooType: TattooType
             public let categoryId: [Int]
             public let title: String
-            public let price: Int?
+            public let price: Int
             public let description: String
             public let deleteImageUrls: [String]
             
             public init(
-                tattooType: TattooType? = nil,
-                categoryId: [Int] = [],
-                title: String = "",
-                price: Int? = nil,
+                tattooType: TattooType,
+                categoryId: [Int],
+                title: String,
+                price: Int,
                 description: String = "",
                 deleteImageUrls: [String] = []
             ) {

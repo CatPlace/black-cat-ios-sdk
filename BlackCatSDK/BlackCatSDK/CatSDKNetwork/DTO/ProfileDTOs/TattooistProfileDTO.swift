@@ -19,9 +19,14 @@ extension DTO.TattooistProfile {
                 }
             }
         }
+        
         struct Response: Decodable {
+            let profileId: Int
             let introduce: String?
             let imageUrls: [String]
+            let userName: String?
+            let addressId: Int?
+            let userImgUrls: [String]?
         }
     }
 }

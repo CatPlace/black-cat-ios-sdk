@@ -23,6 +23,14 @@ public class CatSDKTattoo {
         UserDefaultManager.updateRecentTattoos(tattoos: tattoos)
     }
     
+    public static func updateRecentViewTattoos(deletedTattooId: Int) {
+        var tattoos = UserDefaultManager.getRecentTattoos()
+        tattoos.removeAll { tattoo in
+            tattoo.id == deletedTattooId
+        }
+        UserDefaultManager.updateRecentTattoos(tattoos: tattoos)
+    }
+    
     public static func recentViewTattoos() -> Observable<[Model.Tattoo]> {
         return .just(UserDefaultManager.getRecentTattoos())
     }
@@ -33,7 +41,7 @@ public class CatSDKTattoo {
         
         var categoryCount: [CategoryId: Count] = [:]
         UserDefaultManager.getRecentTattoos().forEach {
-            $0.categoryId.forEach {
+            $0.categoryIds.forEach {
                 if let count = categoryCount[$0] {
                     categoryCount[$0] = count + 1
                 } else {
@@ -53,6 +61,24 @@ public class CatSDKTattoo {
     }
     
     public static func tattooDetail(tattooId: Int) -> Observable<Model.Tattoo> {
-        return CatSDKNetworkTattoo.rx.tattooDetail(tattooID: tattooId)
+        CatSDKNetworkTattoo.rx.tattooDetail(tattooID: tattooId)
+            .catch { _ in .just(.empty) }
     }
+    
+    public static func fetchedTattoo(categoryId: Int? = nil,
+                                     sort: String? = nil,
+                                     page: Int?,
+                                     size: Int?,
+                                     direction: String? = nil,
+                                     tattooTypes: [String]? = nil,
+                                     addressIds: [Int]? = nil
+    ) -> Observable<[Model.Tattoo]> {
+        
+        if let categoryId {
+            return CatSDKNetworkTattoo.rx.fetchTattosInSpecificCategory(categoryID: categoryId, page: page, size: size ?? 20, sort: sort, direction: direction, tattooTypes: tattooTypes, addressIds: addressIds)
+        } else {
+            return CatSDKNetworkTattoo.rx.fetchTattoos(page: page, size: size ?? 20, sort: sort, direction: direction, tattooTypes: tattooTypes, addressIds: addressIds)
+        }
+    }
+    
 }

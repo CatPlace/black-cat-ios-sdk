@@ -37,6 +37,9 @@ class NetworkService: NetworkServable {
 
         let provider = MoyaProvider<API>()
         let endpoint = MultiTarget.target(api)
+        print(endpoint.headers)
+        print("request😎")
+        dump(endpoint)
         provider.request(api) { result in
             switch result {
             case .success(let response):
@@ -46,8 +49,7 @@ class NetworkService: NetworkServable {
                         print(a)
                     }
                     print(response," ➡️")
-                    let a = try? JSONDecoder().decode(APIResponse<API.Response>.self, from: response.data)
-//                    print(a)
+
                     _ = try response.filterSuccessfulStatusCodes()
                     let decodedData = try response.map(APIResponse<API.Response>.self)
                     if let data = decodedData.data {
@@ -74,8 +76,9 @@ class NetworkService: NetworkServable {
                 print("인코딩 에러")
                 error = .mappingError
                 
-            case .objectMapping(let decodingError, _):
+            case .objectMapping(_, let response):
                 print("디코딩 에러")
+                print(String(data: response.data, encoding: .utf8))
                 error = .mappingError
             case .statusCode(let response):
                 switch response.statusCode {

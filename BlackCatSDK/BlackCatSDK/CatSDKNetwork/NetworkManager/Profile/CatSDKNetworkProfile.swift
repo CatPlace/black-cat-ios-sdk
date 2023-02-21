@@ -30,10 +30,10 @@ public class CatSDKNetworkProfile: CatSDKNetworkable {
     
     /// 타투이스트 프로필 조회
     public static func profile(
-        tattooistId: Int,
+        profileId: Int,
         completion: @escaping (Result<Model.TattooistIntroduce, Error>) -> Void
     ) {
-        networkService.request(TattooistProfileAPI(tattooistId: tattooistId)) { result in
+        networkService.request(TattooistProfileAPI(profileId: profileId)) { result in
             switch result {
             case .success(let DTO):
                 completion(.success(converter.convertTattooistIntroduceToModel(DTO)))
@@ -57,8 +57,8 @@ extension Reactive where Base: CatSDKNetworkProfile {
     }
     
     /// 타투이스트 프로필 조회
-    public static func profile(tattooistId: Int) -> Observable<Model.TattooistIntroduce> {
-        Base.networkService.rx.request(TattooistProfileAPI(tattooistId: tattooistId))
+    public static func profile(profileId: Int) -> Observable<Model.TattooistIntroduce> {
+        Base.networkService.rx.request(TattooistProfileAPI(profileId: profileId))
             .compactMap(Base.converter.convertTattooistIntroduceToModel)
             .asObservable()
     }

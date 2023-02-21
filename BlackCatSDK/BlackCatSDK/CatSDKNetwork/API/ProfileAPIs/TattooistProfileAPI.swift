@@ -10,14 +10,14 @@ import Moya
 
 class TattooistProfileAPI: ServiceAPI {
     typealias Response = DTO.TattooistProfile.Introduce.Response
-    var tattooistId: Int
-    var path: String { "profile/tattooists/\(tattooistId)" }
+    var profileId: Int
+    var path: String { "profile/\(profileId)" }
     
     var method: Moya.Method { .get }
     
     var task: Moya.Task { .requestPlain }
     
-    init(tattooistId: Int) {
-        self.tattooistId = tattooistId
+    init(profileId: Int) {
+        self.profileId = profileId
     }
 }

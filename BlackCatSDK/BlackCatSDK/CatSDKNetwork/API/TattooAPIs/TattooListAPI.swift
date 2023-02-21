@@ -16,16 +16,16 @@ struct TattooListAPI: ServiceAPI {
     var size: Int?
     var sort: String?
     var direction: String?
-    var tattooType: String?
-    var addressId: Int?
+    var tattooTypes: [String]?
+    var addressIds: [Int]?
     var parameter: [String: Any] {
         var paremeter: [String: Any] = [:]
         if page != nil { paremeter["page"] = page }
         if size != nil { paremeter["size"] = size }
         if sort != nil { paremeter["sort"] = sort }
         if direction != nil { paremeter["direction"] = direction }
-        if tattooType != nil { paremeter["tattooType"] = tattooType }
-        if addressId != nil { paremeter["addressId"] = addressId }
+        if tattooTypes != nil { paremeter["tattooTypes"] = tattooTypes }
+        if addressIds != nil { paremeter["addressIds"] = addressIds }
         return paremeter
     }
     var path: String = "tattoos"
@@ -39,14 +39,14 @@ struct TattooListAPI: ServiceAPI {
         size: Int? = nil,
         sort: String? = "likesCount",
         direction: String? = "DESC",
-        tattooType: String? = nil,
-        addressId: Int? = nil
+        tattooTypes: [String]? = nil,
+        addressIds: [Int]? = nil
     ) {
         self.page = page
         self.size = size
         self.sort = sort
         self.direction = direction
-        self.tattooType = tattooType
-        self.addressId = addressId
+        self.tattooTypes = tattooTypes
+        self.addressIds = addressIds
     }
 }

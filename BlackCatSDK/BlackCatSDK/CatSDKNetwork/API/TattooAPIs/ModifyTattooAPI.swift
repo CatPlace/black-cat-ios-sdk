@@ -15,17 +15,8 @@ struct ModifyTattooAPI: ServiceAPI {
     var tattooImageDataList: [Data]
     var tattooInfo: DTO.Tattoo.Update.Request
     var path: String { "tattoos/\(tattooId)" }
-    var method: Moya.Method { .post }
-    var multiPartFormDatas: [MultipartFormData] {
-        let tattooInfoData = try! JSONEncoder().encode(tattooInfo)
-        var formDatas: [MultipartFormData] = [.init(provider: .data(tattooInfoData), name: "tattooInfo")]
-        tattooImageDataList.forEach { imageData in
-            formDatas.append(.init(provider: .data(imageData), name: "images"))
-        }
-
-        return formDatas
-    }
-    var task: Moya.Task { .uploadMultipart(multiPartFormDatas) }
+    var method: Moya.Method { .patch }
+    var task: Moya.Task
     
     init(
         tattooId: Int,
@@ -35,5 +26,21 @@ struct ModifyTattooAPI: ServiceAPI {
         self.tattooId = tattooId
         self.tattooImageDataList = tattooImageDataList
         self.tattooInfo = tattooInfo
+        
+        self.task = .uploadMultipart(converToMultiPartFormData(tattooInfo, tattooImageDataList))
+        
+        func converToMultiPartFormData(_ dto: DTO.Tattoo.Update.Request, _ images: [Data]) -> [MultipartFormData] {
+            let tattooInfoData = try! JSONEncoder().encode(dto)
+
+
+            var formDataList: [MultipartFormData] = [.init(provider: .data(tattooInfoData), name: "tattooInfo", mimeType: "application/json")]
+            print("😡😡😡😡", images)
+            images.forEach { imageData in
+
+                formDataList.append(.init(provider: .data(imageData), name: "images", fileName: "test.jpeg", mimeType: "image/jpeg"))
+            }
+
+            return formDataList
+        }
     }
 }

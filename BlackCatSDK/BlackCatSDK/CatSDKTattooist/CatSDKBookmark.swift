@@ -37,5 +37,9 @@ public class CatSDKBookmark {
         CatSDKNetworkBookmark.rx.multipleBookmarkDelete(postIds: indexList)
             .catch { _ in .just(.init(postIds: [-1])) }
     }
+    
+    public static func isBookmarked(postId: Int) -> Observable<Bool> {
+        CatSDKNetworkBookmark.rx.statusOfBookmark(postId: postId).map { $0.liked }
+    }
 }
 

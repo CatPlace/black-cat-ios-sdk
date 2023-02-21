@@ -18,9 +18,9 @@ public class CatSDKTattooist {
         UserDefaultManager.updateTattooistInfo(tattooistInfo: tattooistInfo)
     }
     
-    public static func profile(tattooistId: Int) -> Observable<Model.TattooistIntroduce> {
-        CatSDKNetworkProfile.rx.profile(tattooistId: tattooistId)
-            .catch { _ in .just(.init(introduce: "error"))}
+    public static func profile(profileId: Int) -> Observable<Model.TattooistIntroduce> {
+        CatSDKNetworkProfile.rx.profile(profileId: profileId)
+            .catch { _ in .just(.init(introduce: "error", userImageUrlString: "", userName: "", addressId: 0))}
             .debug("프로필 패치")
     }
     
@@ -39,12 +39,12 @@ public class CatSDKTattooist {
     public static func updateProfile(introduce: String, deleteImageUrls: [String] = [], images: [Data] = []) -> Observable<Model.TattooistIntroduce> {
         
         CatSDKNetworkProfile.rx.postProfile(introduce: introduce, deleteImageUrls: deleteImageUrls, images: images)
-            .catch { _ in .just(.init(introduce: "error"))}
+            .catch { _ in .just(.init(introduce: "error", userImageUrlString: "", userName: "'", addressId: 0))}
     }
     
-    public static func updateProduct(tattooistId: Int?, tattooImageDatas: [Data], tattooInfo: Model.UpdateTattoo.Request) -> Observable<Model.TattooThumbnail> {
-        if let tattooistId {
-            return CatSDKNetworkTattoo.rx.updateTattoo(tattooId: tattooistId, tattooImageDatas: tattooImageDatas, tattooInfo: tattooInfo).map { .init(tattooId: $0.tattooId, imageUrlString: $0.imageUrls.first ?? "") }.catch { _ in .just(.init(tattooId: -1, imageUrlString: "")) }
+    public static func updateProduct(tattooId: Int?, tattooImageDatas: [Data], tattooInfo: Model.UpdateTattoo.Request) -> Observable<Model.TattooThumbnail> {
+        if let tattooId {
+            return CatSDKNetworkTattoo.rx.updateTattoo(tattooId: tattooId, tattooImageDatas: tattooImageDatas, tattooInfo: tattooInfo).map { .init(tattooId: $0.tattooId, imageUrlString: $0.imageUrls.first ?? "") }.catch { _ in .just(.init(tattooId: -1, imageUrlString: "")) }
         } else {
             return CatSDKNetworkTattoo.rx.addTattoo(tattooImageDatas: tattooImageDatas, postTattooModel: .init(tattooType: tattooInfo.tattooType, categoryId: tattooInfo.categoryId, title: tattooInfo.title, price: tattooInfo.price, description: tattooInfo.description, deleteImageUrls: tattooInfo.deleteImageUrls)).map { .init(tattooId: $0.tattooId, imageUrlString: $0.imageUrls.first ?? "") }.catch { _ in .just(.init(tattooId: -1, imageUrlString: "")) }
         }
@@ -60,4 +60,14 @@ public class CatSDKTattooist {
             .map { (beforeData: tattooIds, afterData: $0) }
             .catch { _ in .just((beforeData: tattooIds, afterData: []))}
     }
+    
+    public static func updateTattooist(deletedTattooId: Int) {
+        print(deletedTattooId, "💡💡💡")
+        var tattooistInfo = UserDefaultManager.getTattooistInfo()
+        tattooistInfo.tattoos.removeAll { tattoo in
+            tattoo.tattooId == deletedTattooId
+        }
+        UserDefaultManager.updateTattooistInfo(tattooistInfo: tattooistInfo)
+    }
+    
 }

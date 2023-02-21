@@ -22,7 +22,11 @@ extension ServiceAPI {
         return URL(string: BlackCatKEY.urlString)!
     }
 
-    var headers: [String : String]? { [
-        "Authorization": "Bearer \(CatSDKUser.user().jwt ?? BlackCatKEY.testJWT)"
-    ] }
+    var headers: [String : String]? {
+        if let jwt = CatSDKUser.user().jwt {
+            return ["Authorization": "Bearer \(jwt)"]
+        } else {
+            return nil
+        }
+    }
 }

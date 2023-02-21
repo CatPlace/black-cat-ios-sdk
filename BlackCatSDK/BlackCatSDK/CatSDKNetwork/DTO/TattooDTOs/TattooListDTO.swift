@@ -8,6 +8,7 @@
 import Foundation
 
 extension DTO.Tattoo {
+    
     struct List: Decodable {
         let tattoos: [Tattoo]
         let pageable: Pageable
@@ -26,14 +27,14 @@ extension DTO.Tattoo {
             let title: String
             let price: Int
             let tattooistId: Int
+            let profileId: Int?
             let tattooistName: String?
             let description: String
             let address: String
             let imageUrls: [String]
             let tattooType: String
-            let categoryId: Int
+            let categoryIds: [Int]
             let likeCount: Int?
-            let liked: Bool?
             let createDate: String?
             let profileImageUrls: [String]?
         }
