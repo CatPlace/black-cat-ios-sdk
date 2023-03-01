@@ -88,7 +88,6 @@
 		8E7E9CCD291BBCDB00D09157 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E9CCC291BBCDB00D09157 /* AddressModel.swift */; };
 		8E7E9CCF291BBD0F00D09157 /* CatSDKNetworkAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E9CCE291BBD0F00D09157 /* CatSDKNetworkAddress.swift */; };
 		8E88488F2949D5110039F99A /* UpdateTattooModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E88488E2949D5110039F99A /* UpdateTattooModel.swift */; };
-		8EC953BB28EB25DA00E239CC /* BlackCatSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC953B028EB25DA00E239CC /* BlackCatSDK.framework */; };
 		8EC953C028EB25DA00E239CC /* BlackCatSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC953BF28EB25DA00E239CC /* BlackCatSDKTests.swift */; };
 		8EC953C128EB25DA00E239CC /* BlackCatSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EC953B328EB25DA00E239CC /* BlackCatSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8EC953CB28EB25E500E239CC /* BlackCatSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC953CA28EB25E500E239CC /* BlackCatSDK.swift */; };
@@ -283,7 +282,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EC953BB28EB25DA00E239CC /* BlackCatSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
