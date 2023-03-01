@@ -26,6 +26,13 @@ public enum PostType: Int, CaseIterable {
         default: return nil
         }
     }
+    
+    public func asKorean() -> String {
+        switch self {
+        case .tattoo: return "타투"
+        case .tattooist: return "타투이스트"
+        }
+    }
 }
 
 public class CatSDKBookmark {

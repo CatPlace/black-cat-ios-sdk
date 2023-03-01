@@ -27,7 +27,6 @@ extension DTO.Tattoo {
             let title: String
             let price: Int
             let tattooistId: Int
-            let profileId: Int?
             let tattooistName: String?
             let description: String
             let address: String

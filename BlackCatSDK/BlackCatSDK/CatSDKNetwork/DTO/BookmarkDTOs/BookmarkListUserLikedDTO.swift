@@ -19,7 +19,7 @@ extension DTO.Bookmark {
         let first, empty: Bool
 
         struct Content: Decodable {
-            let likesId, postId: Int
+            let likesId, postId, userId: Int
             let postType, createdDate: String
             let title: String?
             let imageUrl: String?

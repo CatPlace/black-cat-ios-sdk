@@ -50,7 +50,7 @@ public class CatSDKTattoo {
             }
         }
         if let maxId = categoryCount.sorted(by: { $0.value > $1.value }).first?.key {
-            return CatSDKNetworkTattoo.rx.fetchTattosInSpecificCategory(categoryID: maxId)
+            return CatSDKNetworkTattoo.rx.fetchTattosInSpecificCategory(categoryID: maxId, page: 0, size: 10, sort: "likesCount", direction: "DESC")
         } else {
             return CatSDKNetworkTattoo.rx.fetchTattoos(page: 0, size: 10, sort: "likesCount", direction: "DESC")
         }
@@ -75,9 +75,9 @@ public class CatSDKTattoo {
     ) -> Observable<[Model.Tattoo]> {
         
         if let categoryId {
-            return CatSDKNetworkTattoo.rx.fetchTattosInSpecificCategory(categoryID: categoryId, page: page, size: size ?? 20, sort: sort, direction: direction, tattooTypes: tattooTypes, addressIds: addressIds)
+            return CatSDKNetworkTattoo.rx.fetchTattosInSpecificCategory(categoryID: categoryId, page: page, size: size ?? 1000, sort: sort, direction: direction, tattooTypes: tattooTypes, addressIds: addressIds)
         } else {
-            return CatSDKNetworkTattoo.rx.fetchTattoos(page: page, size: size ?? 20, sort: sort, direction: direction, tattooTypes: tattooTypes, addressIds: addressIds)
+            return CatSDKNetworkTattoo.rx.fetchTattoos(page: page, size: size ?? 1000, sort: sort, direction: direction, tattooTypes: tattooTypes, addressIds: addressIds)
         }
     }
     

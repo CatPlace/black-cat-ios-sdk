@@ -11,11 +11,11 @@ extension Model {
     public struct TattooistIntroduce: Equatable, Codable {
         
         public let profileId: Int
-        public let introduce: String
+        public var introduce: String
         public let userImageUrlString: String?
         public let userName: String?
         public let addressId: Int?
-        public let imageUrlString: String?
+        public var imageUrlString: String?
         
         public init(
             profileId: Int = -1,

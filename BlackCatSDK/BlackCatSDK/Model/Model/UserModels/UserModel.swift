@@ -112,7 +112,6 @@ extension Model {
         public var gender: Gender?
         public var area: Area?
         public var userType: UserType
-        public var profileId: Int?
         
         public init(
             id: Int,
@@ -123,8 +122,7 @@ extension Model {
             phoneNumber: String? = nil,
             gender: Gender? = nil,
             area: Area? = nil,
-            userType: UserType = .guest,
-            profileId: Int? = nil
+            userType: UserType = .guest
         ) {
             self.id = id
             self.jwt = jwt
@@ -135,7 +133,6 @@ extension Model {
             self.gender = gender
             self.area = area
             self.userType = userType
-            self.profileId = profileId
         }
     }
     

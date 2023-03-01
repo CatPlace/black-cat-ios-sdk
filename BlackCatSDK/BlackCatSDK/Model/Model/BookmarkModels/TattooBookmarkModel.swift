@@ -11,6 +11,7 @@ extension Model {
     public struct Bookmark {
         public let likesId: Int
         public let postId: Int
+        public let userId: Int
         public let postType: PostType
         public let title: String
         public let imageUrl: String?
@@ -19,6 +20,7 @@ extension Model {
         public init(
             likesId: Int = 0,
             postId: Int,
+            userId: Int,
             postType: PostType,
             title: String = "",
             imageUrl: String?,
@@ -26,6 +28,7 @@ extension Model {
         ) {
             self.likesId = likesId
             self.postId = postId
+            self.userId = userId
             self.postType = postType
             self.title = title
             self.imageUrl = imageUrl

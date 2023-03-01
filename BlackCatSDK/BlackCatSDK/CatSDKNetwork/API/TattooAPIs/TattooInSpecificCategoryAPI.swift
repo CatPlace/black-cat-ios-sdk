@@ -28,12 +28,14 @@ struct TattooInSpecificCategoryAPI: ServiceAPI {
 //        if direction != nil { paremeter["direction"] = direction }
         if tattooTypes != nil { paremeter["tattooTypes"] = tattooTypes }
         if addressIds != nil { paremeter["addressIds"] = addressIds }
+        print(paremeter,"🌈🌈🌈")
         return paremeter
     }
     var path: String { "tattoos/categories/\(categoryID)" }
     var method: Moya.Method { .get }
     var task: Moya.Task {
-        .requestParameters(parameters: parameter, encoding: URLEncoding.queryString)
+        let e = URLEncoding(destination: .queryString, arrayEncoding: .noBrackets)
+        return .requestParameters(parameters: parameter, encoding: e)
     }
     
     init(

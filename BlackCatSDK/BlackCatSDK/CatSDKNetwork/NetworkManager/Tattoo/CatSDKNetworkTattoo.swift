@@ -165,13 +165,13 @@ extension Reactive where Base: CatSDKNetworkTattoo {
     public static func fetchTattosInSpecificCategory(
         categoryID id : Int,
         page: Int? = nil,
-        size: Int = 3,
+        size: Int? = 3,
         sort: String? = nil,
         direction: String? = "DESC",
         tattooTypes: [String]? = nil,
         addressIds: [Int]? = nil
     ) -> Observable<[Model.Tattoo]> {
-        Base.networkService.rx.request(TattooInSpecificCategoryAPI(categoryID: id, tattooTypes: tattooTypes, addressIds: addressIds))
+        Base.networkService.rx.request(TattooInSpecificCategoryAPI(categoryID: id, size: size, tattooTypes: tattooTypes, addressIds: addressIds))
             .compactMap { Base.converter.convertTattooListDTOToModel($0) }
             .asObservable()
     }

@@ -30,8 +30,7 @@ struct DTOConverter {
             phoneNumber: DTO.phoneNumber,
             gender: Model.Gender.clientValue(serverValue: DTO.gender),
             area: Model.Area.clientValue(serverValue: DTO.addressId),
-            userType: userType,
-            profileId: DTO.profileId
+            userType: userType
         )
     }
     
@@ -67,7 +66,6 @@ struct DTOConverter {
             title: DTO.title,
             price: DTO.price,
             ownerId: DTO.tattooistId,
-            profileId: DTO.profileId ?? -1,
             ownerName: DTO.tattooistName ?? "",
             description: DTO.description,
             address: DTO.address,
@@ -134,10 +132,11 @@ struct DTOConverter {
         DTO.content.compactMap { post in
             guard let postType = PostType.clientValue(serverValue: post.postType) else {
                 // NOTE: 포스트 에러 ! 서버개발자와 논의 !
-                return .init(likesId: -1, postId: -1, postType: .tattoo, title: "", imageUrl: "", createdDate: "")
+                return .init(likesId: -1, postId: -1, userId: -1, postType: .tattoo, title: "", imageUrl: "", createdDate: "")
             }
             return .init(likesId: post.likesId,
                          postId: post.postId,
+                         userId: post.userId,
                          postType: postType,
                          title: post.title ?? "",
                          imageUrl: post.imageUrl,

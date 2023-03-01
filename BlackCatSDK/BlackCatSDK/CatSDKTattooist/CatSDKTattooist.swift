@@ -18,8 +18,8 @@ public class CatSDKTattooist {
         UserDefaultManager.updateTattooistInfo(tattooistInfo: tattooistInfo)
     }
     
-    public static func profile(profileId: Int) -> Observable<Model.TattooistIntroduce> {
-        CatSDKNetworkProfile.rx.profile(profileId: profileId)
+    public static func profile(tattooistId: Int) -> Observable<Model.TattooistIntroduce> {
+        CatSDKNetworkProfile.rx.profile(tattooistId: tattooistId)
             .catch { _ in .just(.init(introduce: "error", userImageUrlString: "", userName: "", addressId: 0))}
     }
     

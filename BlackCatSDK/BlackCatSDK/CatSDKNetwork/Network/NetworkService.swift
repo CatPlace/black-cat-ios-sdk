@@ -39,7 +39,7 @@ class NetworkService: NetworkServable {
         let endpoint = MultiTarget.target(api)
         print(endpoint.headers)
         print("request😎")
-        dump(endpoint)
+        dump(endpoint.target.task)
         provider.request(api) { result in
             switch result {
             case .success(let response):
@@ -49,7 +49,8 @@ class NetworkService: NetworkServable {
                         print(a)
                     }
                     print(response," ➡️")
-
+                    let a = try? JSONDecoder().decode(APIResponse<API.Response>.self, from: response.data)
+                    print(a)
                     _ = try response.filterSuccessfulStatusCodes()
                     let decodedData = try response.map(APIResponse<API.Response>.self)
                     if let data = decodedData.data {

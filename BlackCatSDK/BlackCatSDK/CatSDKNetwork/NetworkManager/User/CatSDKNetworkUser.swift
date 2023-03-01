@@ -76,6 +76,7 @@ extension Reactive where Base: CatSDKNetworkUser {
     ) -> Observable<Model.User> {
         Base.networkService.rx.request(LoginAPI(request: .init(providerType: providerType,
                                                                providerToken: providerToken)))
+        .debug("??")
         .compactMap(Base.converter.convertUserLoginDTOToModel)
         .asObservable()
     }
