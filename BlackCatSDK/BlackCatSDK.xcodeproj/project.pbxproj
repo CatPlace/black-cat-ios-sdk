@@ -189,7 +189,6 @@
 		78C8D3FC2937A2AD006A4DF5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		78C8D4082937B0C8006A4DF5 /* BlackCatSocialLoginSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCatSocialLoginSDK.swift; sourceTree = "<group>"; };
 		78C8D40B2937B188006A4DF5 /* CatSDKUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKUser.swift; sourceTree = "<group>"; };
-		78C8D43D293B9FD8006A4DF5 /* BlackCatKEY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BlackCatKEY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C8D43F293BA098006A4DF5 /* BlackCatKEY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BlackCatKEY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E361A3C291A186600785F62 /* CategoryListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListDTO.swift; sourceTree = "<group>"; };
 		8E361A3E291A198E00785F62 /* CatSDKNetworkCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKNetworkCategory.swift; sourceTree = "<group>"; };
@@ -454,7 +453,6 @@
 			isa = PBXGroup;
 			children = (
 				78C8D43F293BA098006A4DF5 /* BlackCatKEY.framework */,
-				78C8D43D293B9FD8006A4DF5 /* BlackCatKEY.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
