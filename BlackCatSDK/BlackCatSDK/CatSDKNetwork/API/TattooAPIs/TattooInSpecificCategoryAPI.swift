@@ -23,9 +23,7 @@ struct TattooInSpecificCategoryAPI: ServiceAPI {
         var paremeter: [String: Any] = [:]
         if page != nil { paremeter["page"] = page }
         if size != nil { paremeter["size"] = size }
-        // TODO: - 특정 카테고리 api는 sort가 없는가 ? 물어보기
-//        if sort != nil { paremeter["sort"] = sort }
-//        if direction != nil { paremeter["direction"] = direction }
+        if sort != nil { paremeter["sort"] = [sort, direction ?? "DESC"] }
         if tattooTypes != nil { paremeter["tattooTypes"] = tattooTypes }
         if addressIds != nil { paremeter["addressIds"] = addressIds }
         print(paremeter,"🌈🌈🌈")
@@ -34,8 +32,7 @@ struct TattooInSpecificCategoryAPI: ServiceAPI {
     var path: String { "tattoos/categories/\(categoryID)" }
     var method: Moya.Method { .get }
     var task: Moya.Task {
-        let e = URLEncoding(destination: .queryString, arrayEncoding: .noBrackets)
-        return .requestParameters(parameters: parameter, encoding: e)
+        return .requestParameters(parameters: parameter, encoding: URLEncoding(destination: .queryString, arrayEncoding: .noBrackets))
     }
     
     init(
