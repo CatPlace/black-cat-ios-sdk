@@ -26,13 +26,12 @@ struct TattooInSpecificCategoryAPI: ServiceAPI {
         if sort != nil { paremeter["sort"] = [sort, direction ?? "DESC"] }
         if tattooTypes != nil { paremeter["tattooTypes"] = tattooTypes }
         if addressIds != nil { paremeter["addressIds"] = addressIds }
-        print(paremeter,"🌈🌈🌈")
         return paremeter
     }
     var path: String { "tattoos/categories/\(categoryID)" }
     var method: Moya.Method { .get }
     var task: Moya.Task {
-        return .requestParameters(parameters: parameter, encoding: URLEncoding(destination: .queryString, arrayEncoding: .noBrackets))
+        return .requestParameters(parameters: parameter, encoding: URLEncoding(destination: .queryString, arrayEncoding: .brackets))
     }
     
     init(
