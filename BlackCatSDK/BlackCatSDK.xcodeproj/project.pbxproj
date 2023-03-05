@@ -53,8 +53,6 @@
 		78C8D3FD2937A2AD006A4DF5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8D3FC2937A2AD006A4DF5 /* UserModel.swift */; };
 		78C8D4092937B0C8006A4DF5 /* BlackCatSocialLoginSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8D4082937B0C8006A4DF5 /* BlackCatSocialLoginSDK.swift */; };
 		78C8D40C2937B188006A4DF5 /* CatSDKUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8D40B2937B188006A4DF5 /* CatSDKUser.swift */; };
-		78C8D440293BA098006A4DF5 /* BlackCatKEY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C8D43F293BA098006A4DF5 /* BlackCatKEY.framework */; };
-		78C8D441293BA098006A4DF5 /* BlackCatKEY.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78C8D43F293BA098006A4DF5 /* BlackCatKEY.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8E361A3D291A186600785F62 /* CategoryListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A3C291A186600785F62 /* CategoryListDTO.swift */; };
 		8E361A3F291A198E00785F62 /* CatSDKNetworkCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A3E291A198E00785F62 /* CatSDKNetworkCategory.swift */; };
 		8E361A41291A1B6F00785F62 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E361A40291A1B6F00785F62 /* CategoryModel.swift */; };
@@ -142,7 +140,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				78C8D441293BA098006A4DF5 /* BlackCatKEY.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,7 +185,6 @@
 		78C8D3FC2937A2AD006A4DF5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		78C8D4082937B0C8006A4DF5 /* BlackCatSocialLoginSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCatSocialLoginSDK.swift; sourceTree = "<group>"; };
 		78C8D40B2937B188006A4DF5 /* CatSDKUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKUser.swift; sourceTree = "<group>"; };
-		78C8D43F293BA098006A4DF5 /* BlackCatKEY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BlackCatKEY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E361A3C291A186600785F62 /* CategoryListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListDTO.swift; sourceTree = "<group>"; };
 		8E361A3E291A198E00785F62 /* CatSDKNetworkCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKNetworkCategory.swift; sourceTree = "<group>"; };
 		8E361A40291A1B6F00785F62 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
@@ -260,7 +256,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78C8D440293BA098006A4DF5 /* BlackCatKEY.framework in Frameworks */,
 				787D5811293CC26000A3E610 /* KakaoSDKUser in Frameworks */,
 				787D580B293CC26000A3E610 /* KakaoSDK in Frameworks */,
 				787D581A293CC27600A3E610 /* RxKakaoSDKUser in Frameworks */,
@@ -450,7 +445,6 @@
 		78C8D439293B9F31006A4DF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				78C8D43F293BA098006A4DF5 /* BlackCatKEY.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -896,7 +890,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					8EC953AF28EB25DA00E239CC = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -1076,6 +1070,7 @@
 		8EC953C228EB25DA00E239CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1139,6 +1134,7 @@
 		8EC953C328EB25DA00E239CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1196,7 +1192,8 @@
 		8EC953C528EB25DA00E239CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1214,7 +1211,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.BlackCatSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cat.blackCatSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1226,7 +1223,8 @@
 		8EC953C628EB25DA00E239CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1244,7 +1242,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.BlackCatSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cat.blackCatSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
