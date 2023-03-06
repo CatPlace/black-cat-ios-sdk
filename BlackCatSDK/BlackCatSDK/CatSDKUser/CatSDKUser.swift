@@ -77,15 +77,7 @@ public class CatSDKUser {
     }
     
     public static func withdrawal() -> Observable<Bool> {
-        return Observable.create { observer in
-            _ = BlackCatSocialLoginSDK.temp()
-                .subscribe {
-                    observer.onNext(true)
-                } onError: { _ in
-                    observer.onNext(false)
-                }
-            return Disposables.create()
-        }.flatMap { _ in CatSDKNetworkUser.rx.withdrawal() }
+        return CatSDKNetworkUser.rx.withdrawal()
             .map { _ in true }
             .catch { _ in .just(false) }
             

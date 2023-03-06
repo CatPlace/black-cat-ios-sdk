@@ -58,7 +58,7 @@ class BlackCatSocialLoginSDK: NSObject {
     }
     
     // MARK: - Functions
-    static func temp() -> Completable  {
+    static func unlink() -> Completable  {
         UserApi.shared.rx.unlink()
     }
     
