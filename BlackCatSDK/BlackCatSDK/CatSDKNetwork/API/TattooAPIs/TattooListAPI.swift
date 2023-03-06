@@ -22,7 +22,10 @@ struct TattooListAPI: ServiceAPI {
         var paremeter: [String: Any] = [:]
         if page != nil { paremeter["page"] = page }
         if size != nil { paremeter["size"] = size }
-        if sort != nil { paremeter["sort"] = [sort, direction ?? "DESC"] }
+        
+        if let sort, let direction {
+            paremeter["sort"] = [sort, direction]
+        }
         if tattooTypes != nil { paremeter["tattooTypes"] = tattooTypes }
         if addressIds != nil { paremeter["addressIds"] = addressIds }
         return paremeter
@@ -30,7 +33,7 @@ struct TattooListAPI: ServiceAPI {
     var path: String = "tattoos"
     var method: Moya.Method { .get }
     var task: Moya.Task {
-        .requestParameters(parameters: parameter, encoding: URLEncoding(destination: .queryString, arrayEncoding: .brackets))
+        return .requestParameters(parameters: parameter, encoding: URLEncoding(destination: .queryString, arrayEncoding: .noBrackets))
     }
     
     init(
