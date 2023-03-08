@@ -37,9 +37,10 @@ class NetworkService: NetworkServable {
 
         let provider = MoyaProvider<API>()
         let endpoint = MultiTarget.target(api)
-        print(endpoint.headers)
+//        print(endpoint.headers)
         print("request😎")
         dump(endpoint.target.task)
+        print(endpoint.target.path)
         provider.request(api) { result in
             switch result {
             case .success(let response):
@@ -79,13 +80,15 @@ class NetworkService: NetworkServable {
                 
             case .objectMapping(_, let response):
                 print("디코딩 에러")
-                print(String(data: response.data, encoding: .utf8))
                 error = .mappingError
             case .statusCode(let response):
                 switch response.statusCode {
                 case 400..<500:
                     do {
                         let errorModel = try response.map(NetworkErrorResponse.self)
+                        if errorModel.errorCode == 1006 {
+                            CatSDKUser.updateUser(user: .init(id: -2))
+                        }
                         error = .clientError(errorModel.errorCode, errorModel.message)
                     } catch {
                         let error = NetworkError.mappingError
