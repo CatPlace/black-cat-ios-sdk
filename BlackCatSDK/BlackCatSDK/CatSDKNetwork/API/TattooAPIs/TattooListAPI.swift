@@ -33,7 +33,7 @@ struct TattooListAPI: ServiceAPI {
     var path: String = "tattoos"
     var method: Moya.Method { .get }
     var task: Moya.Task {
-        return .requestParameters(parameters: parameter, encoding: URLEncoding.default)
+        return .requestParameters(parameters: parameter, encoding: BlackCatQueryStringEncoding.default)
     }
     
     init(

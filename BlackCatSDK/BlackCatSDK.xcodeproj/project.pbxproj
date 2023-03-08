@@ -50,6 +50,7 @@
 		788AA3EC298A4D5000736BAE /* CatSDKNetworkProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788AA3EB298A4D5000736BAE /* CatSDKNetworkProfile.swift */; };
 		788AA3EE298A4D6200736BAE /* CatSDKNetworkEstimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788AA3ED298A4D6200736BAE /* CatSDKNetworkEstimate.swift */; };
 		788AA3F4298A594400736BAE /* UpdateDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788AA3F3298A594400736BAE /* UpdateDTO.swift */; };
+		78B602D829B900A4004678A2 /* CatSDKEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B602D729B900A4004678A2 /* CatSDKEncoding.swift */; };
 		78C8D3FD2937A2AD006A4DF5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8D3FC2937A2AD006A4DF5 /* UserModel.swift */; };
 		78C8D4092937B0C8006A4DF5 /* BlackCatSocialLoginSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8D4082937B0C8006A4DF5 /* BlackCatSocialLoginSDK.swift */; };
 		78C8D40C2937B188006A4DF5 /* CatSDKUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8D40B2937B188006A4DF5 /* CatSDKUser.swift */; };
@@ -182,6 +183,7 @@
 		788AA3EB298A4D5000736BAE /* CatSDKNetworkProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKNetworkProfile.swift; sourceTree = "<group>"; };
 		788AA3ED298A4D6200736BAE /* CatSDKNetworkEstimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKNetworkEstimate.swift; sourceTree = "<group>"; };
 		788AA3F3298A594400736BAE /* UpdateDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDTO.swift; sourceTree = "<group>"; };
+		78B602D729B900A4004678A2 /* CatSDKEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKEncoding.swift; sourceTree = "<group>"; };
 		78C8D3FC2937A2AD006A4DF5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		78C8D4082937B0C8006A4DF5 /* BlackCatSocialLoginSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCatSocialLoginSDK.swift; sourceTree = "<group>"; };
 		78C8D40B2937B188006A4DF5 /* CatSDKUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSDKUser.swift; sourceTree = "<group>"; };
@@ -739,6 +741,7 @@
 				8E361A46291A2FEC00785F62 /* NetworkService+Rx.swift */,
 				8E361A48291A306700785F62 /* NetworkError.swift */,
 				8E361A4A291A363D00785F62 /* CatSDKNetworkable.swift */,
+				78B602D729B900A4004678A2 /* CatSDKEncoding.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -951,6 +954,7 @@
 				8E361A4F291A3E3900785F62 /* CatSDKNetworkMagazine.swift in Sources */,
 				8EE81FAA28F43250001DB7E1 /* DTOConverter.swift in Sources */,
 				8E88488F2949D5110039F99A /* UpdateTattooModel.swift in Sources */,
+				78B602D829B900A4004678A2 /* CatSDKEncoding.swift in Sources */,
 				8E7E9CC7291B9D6B00D09157 /* TattooModel.swift in Sources */,
 				8E7E9CCF291BBD0F00D09157 /* CatSDKNetworkAddress.swift in Sources */,
 				780BF47C2990D90F0087C477 /* TattooThumbnailModel.swift in Sources */,
