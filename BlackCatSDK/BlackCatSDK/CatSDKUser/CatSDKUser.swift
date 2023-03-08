@@ -55,8 +55,12 @@ public class CatSDKUser {
             .catch { error in .just(.init(id: -2))}
     }
     
-    public static func imageUrlString() -> Observable<String?> {
-        UserDefaultManager.imageUrlString()
+    public static func imageUrlStringObservable() -> Observable<String?> {
+        UserDefaultManager.imageUrlStringObservable()
+    }
+    
+    public static func userIdObservable() -> Observable<Int> {
+        UserDefaultManager.userIdObservable()
     }
     
     public static func userType() -> Model.UserType {
@@ -81,6 +85,12 @@ public class CatSDKUser {
             .map { _ in true }
             .catch { _ in .just(false) }
             
+    }
+    
+    public static func initLocalData() {
+        UserDefaultManager.updateUser(user: .init(id: -1))
+        UserDefaultManager.updateRecentTattoos(tattoos: [])
+        UserDefaultManager.updateTattooistInfo(tattooistInfo: .empty)
     }
     
     public static func updateUserProfile(user: Model.User, deleteImageUrls: [String], images: [Data]?)  -> Observable<Bool> {

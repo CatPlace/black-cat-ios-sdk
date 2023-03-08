@@ -13,12 +13,13 @@ import RxRelay
 
 public struct UserDefaultManager {
     static let userImageUrlString = PublishRelay<String?>()
-    
+    static let userIdRelay = PublishRelay<Int>()
     /// -1: 둘러보기, -2: 로그인 하지 않은 상태
     @UserDefault(key: "user", defaultValue: Model.User(id: -2))
     private static var user: Model.User {
         didSet {
             userImageUrlString.accept(user.imageUrl)
+            userIdRelay.accept(user.id)
         }
     }
 
@@ -70,8 +71,12 @@ extension UserDefaultManager {
         UserDefaultManager.user = user
     }
     
-    public static func imageUrlString() -> Observable<String?> {
+    public static func imageUrlStringObservable() -> Observable<String?> {
         return userImageUrlString.distinctUntilChanged()
+    }
+    
+    public static func userIdObservable() -> Observable<Int> {
+        return userIdRelay.distinctUntilChanged()
     }
 }
 
