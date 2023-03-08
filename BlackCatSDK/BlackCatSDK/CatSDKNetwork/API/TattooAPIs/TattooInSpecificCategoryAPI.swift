@@ -33,7 +33,7 @@ struct TattooInSpecificCategoryAPI: ServiceAPI {
     var path: String { "tattoos/categories/\(categoryID)" }
     var method: Moya.Method { .get }
     var task: Moya.Task {
-        return .requestParameters(parameters: parameter, encoding: URLEncoding(destination: .queryString, arrayEncoding: .noBrackets))
+        return .requestParameters(parameters: parameter, encoding: URLEncoding.default)
     }
     
     init(
