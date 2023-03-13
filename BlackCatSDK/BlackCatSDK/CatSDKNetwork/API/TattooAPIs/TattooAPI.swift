@@ -19,6 +19,7 @@ class TattooAPI: ServiceAPI {
     var task: Moya.Task {
         .requestPlain
     }
+    var headers: [String : String]? { return nil }
     
     init(tattooId: Int) {
         self.tattooId = tattooId

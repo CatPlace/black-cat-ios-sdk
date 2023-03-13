@@ -15,4 +15,5 @@ struct AddressListAPI: ServiceAPI {
     var path: String = "addresses"
     var method: Moya.Method { .get }
     var task: Moya.Task { .requestPlain }
+    var headers: [String : String]? { return nil }
 }

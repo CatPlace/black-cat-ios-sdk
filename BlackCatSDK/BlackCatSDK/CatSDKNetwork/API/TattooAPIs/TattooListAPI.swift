@@ -35,6 +35,7 @@ struct TattooListAPI: ServiceAPI {
     var task: Moya.Task {
         return .requestParameters(parameters: parameter, encoding: BlackCatQueryStringEncoding.default)
     }
+    var headers: [String : String]? { return nil }
     
     init(
         page: Int? = nil,

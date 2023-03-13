@@ -14,6 +14,7 @@ class TattooInSpecificTattooistAPI: ServiceAPI {
     var path: String { "tattoos/users/\(tattooistId)" }
     var method: Moya.Method { .get }
     var task: Moya.Task { .requestPlain }
+    var headers: [String : String]? { return nil }
     
     init(tattooistId: Int) {
         self.tattooistId = tattooistId

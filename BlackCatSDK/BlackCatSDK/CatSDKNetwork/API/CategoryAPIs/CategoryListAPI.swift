@@ -15,4 +15,5 @@ struct CategoryListAPI: ServiceAPI {
     var path: String = "categories"
     var method: Moya.Method { .get }
     var task: Moya.Task { .requestPlain }
+    var headers: [String : String]? { return nil }
 }

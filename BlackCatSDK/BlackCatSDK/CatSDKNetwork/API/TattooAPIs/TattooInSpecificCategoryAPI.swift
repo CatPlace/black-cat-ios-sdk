@@ -35,6 +35,7 @@ struct TattooInSpecificCategoryAPI: ServiceAPI {
     var task: Moya.Task {
         return .requestParameters(parameters: parameter, encoding: BlackCatQueryStringEncoding.default)
     }
+    var headers: [String : String]? { return nil }
     
     init(
         categoryID: Int,

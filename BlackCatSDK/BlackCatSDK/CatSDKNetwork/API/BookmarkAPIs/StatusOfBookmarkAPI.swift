@@ -12,7 +12,7 @@ import Moya
 /// 게시물 좋아요 조회
 struct StatusOfBookmarkAPI: ServiceAPI {
     typealias Response = DTO.Bookmark.StatusOfBookmark
-
+    
     let postId: Int
     init(postId: Int) {
         self.postId = postId
