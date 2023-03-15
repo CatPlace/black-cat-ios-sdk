@@ -50,14 +50,14 @@ public class CatSDKTattoo {
             }
         }
         if let maxId = categoryCount.sorted(by: { $0.value > $1.value }).first?.key {
-            return CatSDKNetworkTattoo.rx.fetchTattosInSpecificCategory(categoryID: maxId, page: 0, size: 10, sort: "likesCount", direction: "DESC").catch { _ in .just([])}
+            return CatSDKNetworkTattoo.rx.fetchTattosInSpecificCategory(categoryID: maxId, page: 0, size: 10, sort: "likesCount,id", direction: "DESC").catch { _ in .just([])}
         } else {
-            return CatSDKNetworkTattoo.rx.fetchTattoos(page: 0, size: 10, sort: "likesCount", direction: "DESC").catch { _ in .just([])}
+            return CatSDKNetworkTattoo.rx.fetchTattoos(page: 0, size: 10, sort: "likesCount,id", direction: "DESC").catch { _ in .just([])}
         }
     }
     
     public static func famousTattoos(page: Int, size: Int) -> Observable<[Model.Tattoo]> {
-        return CatSDKNetworkTattoo.rx.fetchTattoos(page: page, size: size, sort: "likesCount", direction: "DESC").catch { _ in .just([])}
+        return CatSDKNetworkTattoo.rx.fetchTattoos(page: page, size: size, sort: "likesCount,id", direction: "DESC").catch { _ in .just([])}
     }
     
     public static func tattooDetail(tattooId: Int) -> Observable<Model.Tattoo> {
