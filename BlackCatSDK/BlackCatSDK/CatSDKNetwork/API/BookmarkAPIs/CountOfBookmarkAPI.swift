@@ -13,9 +13,7 @@ struct CountOfBookmarkAPI: ServiceAPI {
     typealias Response = DTO.Bookmark.CountOfBookmark
     
     let postId: Int
-    init(
-        postId: Int
-    ) {
+    init(postId: Int) {
         self.postId = postId
     }
     

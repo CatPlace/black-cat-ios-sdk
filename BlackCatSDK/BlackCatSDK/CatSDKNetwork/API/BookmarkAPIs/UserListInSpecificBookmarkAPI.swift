@@ -14,9 +14,7 @@ struct UserListInSpecificBookmarkAPI: ServiceAPI {
     typealias Response = DTO.Bookmark.UserListInSpecificBookmark
 
     let postId: Int
-    init(
-        postId: Int
-    ) {
+    init(postId: Int) {
         self.postId = postId
     }
     var path: String { "likes/posts/\(postId)/users" }
